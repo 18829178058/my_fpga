@@ -191,7 +191,7 @@ always@(posedge clk_in or negedge rst_n)
 	always@ (*)
 			if(beep_switch_en == 1'b0)
 				begin		
-					case(cnt_num) //歌曲小星星
+					case(cnt_num) //歌曲 小星星
 						6'd0   :   freq  =	DOH;
 						6'd1   :   freq  =	DOH;
 						6'd2   :   freq  =	SOH;
@@ -227,7 +227,7 @@ always@(posedge clk_in or negedge rst_n)
 						endcase
 				end
 			else 
-				begin		
+				begin	
 					case(cnt_num)//歌曲两只老虎
 						6'd0   :   freq  =	DOM;
 						6'd1   :   freq  =	REM;
