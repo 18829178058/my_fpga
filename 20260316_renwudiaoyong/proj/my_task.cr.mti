@@ -1,0 +1,8 @@
+D:/FPGALearn/20260316_2/src/sort4_tb.v {1 {vlog -work work -vopt -stats=none D:/FPGALearn/20260316_2/src/sort4_tb.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module sort4_tb
+
+Top level modules:
+	sort4_tb
+
+} {} {}}
