@@ -1,0 +1,76 @@
+module top
+(
+	input clk,
+	input rst_n,
+	input [3:0] key;
+	output [7:0] rgb,
+	output hsync,
+	output vsync
+);
+
+	wire vga_clk;
+
+my_pll my_pll_inst(
+	.inclk0(clk),
+	.c0(vga_clk)
+	);
+	
+	wire key_out1;
+	wire key_out2;
+	wire key_out3;
+	wire key_out4;
+	
+	key_filter key_filter_inst1(
+							.clk(clk), 
+							.rst_n(rst_n), 
+							.key_in(key[0]), 
+							.key_pose(key_out1), 
+							.key_nege()
+						);
+						
+						
+	key_filter key_filter_inst2(
+							.clk(clk), 
+							.rst_n(rst_n), 
+							.key_in(key[1]), 
+							.key_pose(key_out2), 
+							.key_nege()
+						);
+						
+						
+						
+	key_filter key_filter_inst3(
+							.clk(clk), 
+							.rst_n(rst_n), 
+							.key_in(key[2]), 
+							.key_pose(key_out3), 
+							.key_nege()
+						);
+						
+						
+	key_filter key_filter_inst4(
+							.clk(clk), 
+							.rst_n(rst_n), 
+							.key_in(key[3]), 
+							.key_pose(key_out4), 
+							.key_nege()
+						);
+	wire up,
+	wire down,
+	wire left,
+	wire right
+
+	key_ctrl	key_ctrl(
+						.clk(),
+						.rst_n(rst_n),
+						.key_out1(key_out1),
+						.key_out2(key_out2),
+						.key_out3(key_out3),
+						.key_out4(key_out4),
+						.up(up),
+						.down(down),
+						.left(left),
+						.right(right)
+					);
+
+endmodule
