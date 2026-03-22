@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
@@ -68,7 +69,7 @@ set rc [catch {
   set_param tcl.collectionResultDisplayLimit 0
   set_param xicom.use_bs_reader 1
   open_checkpoint hs_ad_da_routed.dcp
-  set_property webtalk.parent_dir D:/XilinxFPGA/exam20260316_AD_DA/proj/project_1/project_1.cache/wt [current_project]
+  set_property webtalk.parent_dir D:/GitHub/my_fpga/2_XilinxFpga_AMD/exam20260316_AD_DA/proj/project_1/project_1.cache/wt [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force hs_ad_da.mmi }
   write_bitstream -force hs_ad_da.bit 
