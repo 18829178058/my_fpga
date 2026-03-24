@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Mar 22 20:05:37 2026
+| Date         : Mon Mar 23 00:04:23 2026
 | Host         : LAPTOP-ECP6913Q running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file hs_ad_da_timing_summary_routed.rpt -pb hs_ad_da_timing_summary_routed.pb -rpx hs_ad_da_timing_summary_routed.rpx -warn_on_violation
 | Design       : hs_ad_da

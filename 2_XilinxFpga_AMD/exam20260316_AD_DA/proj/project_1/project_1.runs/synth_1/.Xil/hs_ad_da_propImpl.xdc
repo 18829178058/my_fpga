@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/XilinxFPGA/exam20260316_AD_DA/proj/project_1/project_1.srcs/constrs_1/new/my_constraints.xdc rfile:../../../project_1.srcs/constrs_1/new/my_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/GitHub/my_fpga/2_XilinxFpga_AMD/exam20260316_AD_DA/proj/project_1/project_1.srcs/constrs_1/new/my_constraints.xdc rfile:../../../project_1.srcs/constrs_1/new/my_constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN U18} [get_ports sys_clk]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
