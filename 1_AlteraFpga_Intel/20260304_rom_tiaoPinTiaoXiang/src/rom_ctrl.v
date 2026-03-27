@@ -1,0 +1,23 @@
+module	rom_ctrl
+(
+	input clk,
+	input rst_n,
+	output [7:0] addr
+);
+
+	reg [31:0]	addr_cnt;
+	
+	
+	parameter F = 1000;									//目标频率
+	parameter [63:0] B = (F * (2 ** 32)) / 50_000_000;	//频率控制字
+	
+	always @(posedge clk or negedge rst_n)
+	begin
+		if(!rst_n)
+			addr_cnt <= 32'b0;
+		else
+			addr_cnt <= addr_cnt + B;
+	end
+	
+	assign addr = addr_cnt[31:24]	+	32; //32为初始相位45°
+endmodule

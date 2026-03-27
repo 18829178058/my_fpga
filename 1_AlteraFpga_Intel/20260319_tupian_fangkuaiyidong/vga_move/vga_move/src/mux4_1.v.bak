@@ -1,0 +1,22 @@
+module mux4_1(q1, q2, q3, q4, data_sel, q);
+	
+	input [7:0] q1,q2,q3,q4;
+	
+	input [1:0] data_sel;
+	
+	output [7:0] q;
+	
+	always @ (*)
+		begin
+			case(data_sel)
+				0	:	q = q1;
+				1	:	q = q2;
+				2	:	q = q3;
+				3	:	q = q4;
+				default	:	
+			endcase
+		end
+
+
+
+endmodule 

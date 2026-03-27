@@ -1,0 +1,20 @@
+module top_module (
+    input a, b, c, d, e,
+    output [24:0] out );//
+
+    reg [4:0] index;
+    wire temp_value = {a,b,c,d,e};
+    
+    genvar i;
+    genvar j;
+    
+    generate
+        for(j = 0; j < 5 ;j = i + 1)
+            for(i = 0; i < 5 ;i = i + 1)
+                begin
+                    index = 0;
+                    out[index] = ~a[j]^a[i];
+                    index = index + 1'b1;
+                end
+    endgenerate
+endmodule

@@ -1,0 +1,48 @@
+# Reading D:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do my_proj_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260129_LiuShiDeng/src {D:/FPGALearn/Learn20260129_LiuShiDeng/src/Led_LiuShuiDeng.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:27:35 on Feb 01,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGALearn/Learn20260129_LiuShiDeng/src" D:/FPGALearn/Learn20260129_LiuShiDeng/src/Led_LiuShuiDeng.v 
+# -- Compiling module Led_LiuShuiDeng
+# 
+# Top level modules:
+# 	Led_LiuShuiDeng
+# End time: 15:27:35 on Feb 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260129_LiuShiDeng/project/../src {D:/FPGALearn/Learn20260129_LiuShiDeng/project/../src/Led_LiuShuiDeng_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:27:35 on Feb 01,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGALearn/Learn20260129_LiuShiDeng/project/../src" D:/FPGALearn/Learn20260129_LiuShiDeng/project/../src/Led_LiuShuiDeng_tb.v 
+# -- Compiling module Led_LiuShuiDeng_tb
+# 
+# Top level modules:
+# 	Led_LiuShuiDeng_tb
+# End time: 15:27:35 on Feb 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  Led_LiuShuiDeng_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" Led_LiuShuiDeng_tb 
+# Start time: 15:27:35 on Feb 01,2026
+# Loading work.Led_LiuShuiDeng_tb
+# Loading work.Led_LiuShuiDeng
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Break in Module Led_LiuShuiDeng_tb at D:/FPGALearn/Learn20260129_LiuShiDeng/project/../src/Led_LiuShuiDeng_tb.v line 17

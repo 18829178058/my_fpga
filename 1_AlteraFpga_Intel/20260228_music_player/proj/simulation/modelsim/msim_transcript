@@ -1,0 +1,48 @@
+# Reading D:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do my_proj_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGALearn/20260228_music_player/src {D:/FPGALearn/20260228_music_player/src/music_player.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:23 on Feb 28,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGALearn/20260228_music_player/src" D:/FPGALearn/20260228_music_player/src/music_player.v 
+# -- Compiling module music_player
+# 
+# Top level modules:
+# 	music_player
+# End time: 16:12:23 on Feb 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/FPGALearn/20260228_music_player/src {D:/FPGALearn/20260228_music_player/src/key_delate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:23 on Feb 28,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGALearn/20260228_music_player/src" D:/FPGALearn/20260228_music_player/src/key_delate.v 
+# -- Compiling module key_delate
+# 
+# Top level modules:
+# 	key_delate
+# End time: 16:12:23 on Feb 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGALearn/20260228_music_player/proj/../src {D:/FPGALearn/20260228_music_player/proj/../src/test_bench.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:12:23 on Feb 28,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGALearn/20260228_music_player/proj/../src" D:/FPGALearn/20260228_music_player/proj/../src/test_bench.v 
+# -- Compiling module test_bench
+# ** Error: D:/FPGALearn/20260228_music_player/proj/../src/test_bench.v(23): (vlog-13008) Unsized literal value 10000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd10000000000) or reduce the literal value to fit in 32 bits.
+# ** Error: D:/FPGALearn/20260228_music_player/proj/../src/test_bench.v(24): (vlog-13008) Unsized literal value 10000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd10000000000) or reduce the literal value to fit in 32 bits.
+# ** Error: D:/FPGALearn/20260228_music_player/proj/../src/test_bench.v(26): (vlog-13008) Unsized literal value 5000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd5000000000) or reduce the literal value to fit in 32 bits.
+# End time: 16:12:23 on Feb 28,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: D:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./my_proj_run_msim_rtl_verilog.do line 11
+# D:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+D:/FPGALearn/20260228_music_player/proj/../src {D:/FPGALearn/20260228_music_player/proj/../src/test_bench.v}"

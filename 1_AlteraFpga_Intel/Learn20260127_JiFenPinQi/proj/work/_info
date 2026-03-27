@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA_lite/18.0/modelsim_ase/win32aloem
+vAssignment1
+Z0 !s110 1772117492
+!i10b 1
+!s100 P_a5]a<;i<B^EV7VPaQP>2
+IH7mDidzHGW36hWS2zD03V0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/FPGALearn/Learn20260127_JiFenPinQi/proj
+w1772116596
+8D:/FPGALearn/20260226_chapter2_1/src/Assignment1.v
+FD:/FPGALearn/20260226_chapter2_1/src/Assignment1.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1772117492.000000
+!s107 D:/FPGALearn/20260226_chapter2_1/src/Assignment1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/FPGALearn/20260226_chapter2_1/src/Assignment1.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@assignment1
+vAssignment1_tb
+R0
+!i10b 1
+!s100 Ne>;dDf]:eac?e_dPhh7b0
+IIBmcm7g6];3R80VTaVkR[1
+R1
+R2
+w1772117484
+8D:\FPGALearn\20260226_chapter2_1\src\Assignment1_tb.v
+FD:\FPGALearn\20260226_chapter2_1\src\Assignment1_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:\FPGALearn\20260226_chapter2_1\src\Assignment1_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\FPGALearn\20260226_chapter2_1\src\Assignment1_tb.v|
+!i113 1
+R5
+R6
+n@assignment1_tb
+vclk_gen_5
+Z7 !s110 1769522299
+!i10b 1
+!s100 zO=:LN6@8hm8M7X0`3F6=2
+IABM@z2>4C8FSn<6>0JSTa1
+R1
+R2
+w1769521670
+8D:/FPGALearn/Learn20260127_JiFenPinQi/src/clk_gen_5.v
+FD:/FPGALearn/Learn20260127_JiFenPinQi/src/clk_gen_5.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1769522299.000000
+!s107 D:/FPGALearn/Learn20260127_JiFenPinQi/src/clk_gen_5.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/FPGALearn/Learn20260127_JiFenPinQi/src/clk_gen_5.v|
+!i113 1
+R5
+R6
+vclk_gen_5_tb
+R7
+!i10b 1
+!s100 7JC<fZ01;E0cT4ZbXB3Qj0
+I[e]H6Kc_igEDbFm]>DjC91
+R1
+R2
+w1769521852
+8D:/FPGALearn/Learn20260127_JiFenPinQi/src/clk_gen_5_tb.v
+FD:/FPGALearn/Learn20260127_JiFenPinQi/src/clk_gen_5_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/FPGALearn/Learn20260127_JiFenPinQi/src/clk_gen_5_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/FPGALearn/Learn20260127_JiFenPinQi/src/clk_gen_5_tb.v|
+!i113 1
+R5
+R6

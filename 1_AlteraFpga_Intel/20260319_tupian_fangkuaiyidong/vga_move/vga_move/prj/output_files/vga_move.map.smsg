@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at move_ctrl.v(82): always construct contains both blocking and non-blocking assignments File: D:/FPGALearn/20260319_tupian_fangkuaiyidong/vga_move/vga_move/src/move_ctrl.v Line: 82
+Warning (10268): Verilog HDL information at vga.v(83): always construct contains both blocking and non-blocking assignments File: D:/FPGALearn/20260319_tupian_fangkuaiyidong/vga_move/vga_move/src/vga.v Line: 83

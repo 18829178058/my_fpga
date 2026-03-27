@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenSegmentOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenSegmentOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenSegmentOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenSegmentOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenSegmentOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenSegmentOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenSegmentOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

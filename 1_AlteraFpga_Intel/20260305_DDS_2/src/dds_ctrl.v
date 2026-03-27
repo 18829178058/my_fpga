@@ -1,0 +1,35 @@
+module dds_ctrl
+(
+	input clk,
+	input rst_n,
+	input [13:0] wave_f,
+	input [2:0] wave_a,
+	input [1:0] wave_sel,
+	output [10:0] wave_data
+);
+
+wire [31:0] f_word;
+
+f_word_cal f_word_cal_inst(	.wave_f(wave_f), .f_word(f_word));
+
+wire [9:0] addr;
+addr_ctrl addr_ctrl_inst
+(
+	.clk(clk),
+	.rst_n(rst_n),
+	.f_word(f_word),
+	.wave_sel(wave_sel),
+	.addr(addr)
+);
+
+wire [7:0] q;
+
+my_rom my_rom_inst (
+	.address(addr),
+	.clock(clk),
+	.q(q)
+	);
+
+assign wave_data = q * wave_a;
+
+endmodule

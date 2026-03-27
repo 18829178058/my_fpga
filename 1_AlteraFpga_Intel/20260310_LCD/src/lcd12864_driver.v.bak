@@ -1,0 +1,199 @@
+// LCD12864 FPGA驱动模块（Verilog）
+// 适配50MHz系统时钟，并行8位接口，仅实现写操作（显示固定字符）
+module lcd12864_driver(
+    input         clk_50m,    // 50MHz系统时钟
+    input         rst_n,      // 复位信号，低有效
+    // LCD12864接口
+    output reg    lcd_rs,     // 指令/数据选择：0=指令，1=数据
+    output reg    lcd_rw,     // 读写选择：0=写，1=读（此处固定为0）
+    output reg    lcd_e,      // 使能信号，下降沿锁存数据
+    output reg [7:0] lcd_data,// 8位数据总线
+    output reg    lcd_rst     // LCD复位，低有效
+);
+
+// 时钟分频：50MHz -> 1MHz（计数到49时翻转）
+reg [5:0] clk_div_cnt;
+reg       clk_1m;           // 1MHz时钟
+always @(posedge clk_50m or negedge rst_n) begin
+    if(!rst_n) begin
+        clk_div_cnt <= 6'd0;
+        clk_1m      <= 1'b0;
+    end else begin
+        if(clk_div_cnt == 6'd49) begin  // 50MHz/50=1MHz
+            clk_div_cnt <= 6'd0;
+            clk_1m      <= ~clk_1m;
+        end else begin
+            clk_div_cnt <= clk_div_cnt + 6'd1;
+        end
+    end
+end
+
+// 状态机定义（初始化+显示流程）
+localparam S_RST       = 0;  // 复位LCD
+localparam S_INIT_1    = 1;  // 发送指令：显示模式设置（8位接口，2行，5*8点阵）
+localparam S_INIT_2    = 2;  // 发送指令：显示开/关控制（显示开，光标关）
+localparam S_INIT_3    = 3;  // 发送指令：显示清屏
+localparam S_INIT_4    = 4;  // 发送指令：设置显示起始地址（第一行第一个位置）
+localparam S_DISP_DATA = 5;  // 发送显示数据（固定字符）
+localparam S_IDLE      = 6;  // 空闲状态
+
+reg [2:0] curr_state;  // 当前状态
+reg [2:0] next_state;  // 下一个状态
+reg [15:0] delay_cnt;  // 延时计数器（用于初始化等待）
+reg [3:0] data_cnt;    // 显示数据计数器
+
+// 第一段状态机：状态跳转
+always @(posedge clk_1m or negedge rst_n) begin
+    if(!rst_n) begin
+        curr_state <= S_RST;
+    end else begin
+        curr_state <= next_state;
+    end
+end
+
+// 第二段状态机：组合逻辑，确定下一个状态
+always @(*) begin
+    case(curr_state)
+        S_RST: begin
+            // 复位延时1ms后进入初始化
+            if(delay_cnt == 16'd1000) next_state = S_INIT_1;
+            else next_state = S_RST;
+        end
+        S_INIT_1: begin
+            // 指令发送完成（延时200us）
+            if(delay_cnt == 16'd200) next_state = S_INIT_2;
+            else next_state = S_INIT_1;
+        end
+        S_INIT_2: begin
+            if(delay_cnt == 16'd200) next_state = S_INIT_3;
+            else next_state = S_INIT_2;
+        end
+        S_INIT_3: begin
+            if(delay_cnt == 16'd200) next_state = S_INIT_4;
+            else next_state = S_INIT_3;
+        end
+        S_INIT_4: begin
+            if(delay_cnt == 16'd200) next_state = S_DISP_DATA;
+            else next_state = S_INIT_4;
+        end
+        S_DISP_DATA: begin
+            // 发送8个字符后进入空闲
+            if(data_cnt == 4'd8) next_state = S_IDLE;
+            else next_state = S_DISP_DATA;
+        end
+        S_IDLE: next_state = S_IDLE;  // 空闲，保持显示
+        default: next_state = S_RST;
+    endcase
+end
+
+// 第三段状态机：时序输出（控制LCD引脚）
+always @(posedge clk_1m or negedge rst_n) begin
+    if(!rst_n) begin
+        lcd_rst    <= 1'b0;    // 复位低有效
+        lcd_rs     <= 1'b0;
+        lcd_rw     <= 1'b0;    // 固定为写操作
+        lcd_e      <= 1'b0;
+        lcd_data   <= 8'h00;
+        delay_cnt  <= 16'd0;
+        data_cnt   <= 4'd0;
+    end else begin
+        case(curr_state)
+            S_RST: begin
+                lcd_rst <= 1'b0;  // 保持复位
+                delay_cnt <= delay_cnt + 16'd1;
+                if(delay_cnt == 16'd1000) begin
+                    lcd_rst <= 1'b1;  // 复位结束
+                    delay_cnt <= 16'd0;
+                end
+            end
+            S_INIT_1: begin
+                // 发送指令：0x38（8位接口，2行，5*8点阵）
+                lcd_rs <= 1'b0;  // 指令模式
+                lcd_rw <= 1'b0;
+                lcd_e  <= 1'b1;  // 使能拉高
+                lcd_data <= 8'h38;
+                delay_cnt <= delay_cnt + 16'd1;
+                if(delay_cnt == 16'd200) begin
+                    lcd_e <= 1'b0;  // 使能拉低，锁存指令
+                    delay_cnt <= 16'd0;
+                end
+            end
+            S_INIT_2: begin
+                // 发送指令：0x0C（显示开，光标关，闪烁关）
+                lcd_rs <= 1'b0;
+                lcd_rw <= 1'b0;
+                lcd_e  <= 1'b1;
+                lcd_data <= 8'h0C;
+                delay_cnt <= delay_cnt + 16'd1;
+                if(delay_cnt == 16'd200) begin
+                    lcd_e <= 1'b0;
+                    delay_cnt <= 16'd0;
+                end
+            end
+            S_INIT_3: begin
+                // 发送指令：0x01（清屏）
+                lcd_rs <= 1'b0;
+                lcd_rw <= 1'b0;
+                lcd_e  <= 1'b1;
+                lcd_data <= 8'h01;
+                delay_cnt <= delay_cnt + 16'd1;
+                if(delay_cnt == 16'd200) begin
+                    lcd_e <= 1'b0;
+                    delay_cnt <= 16'd0;
+                end
+            end
+            S_INIT_4: begin
+                // 发送指令：0x80（设置显示起始地址：第一行第一个位置）
+                lcd_rs <= 1'b0;
+                lcd_rw <= 1'b0;
+                lcd_e  <= 1'b1;
+                lcd_data <= 8'h80;
+                delay_cnt <= delay_cnt + 16'd1;
+                if(delay_cnt == 16'd200) begin
+                    lcd_e <= 1'b0;
+                    delay_cnt <= 16'd0;
+                end
+            end
+            S_DISP_DATA: begin
+                lcd_rs <= 1'b1;  // 数据模式
+                lcd_rw <= 1'b0;
+                lcd_e  <= 1'b1;
+                // 发送字符：H e l l o F P G A（ASCII码）
+                case(data_cnt)
+                    4'd0: lcd_data <= 8'h48;  // H
+                    4'd1: lcd_data <= 8'h65;  // e
+                    4'd2: lcd_data <= 8'h6C;  // l
+                    4'd3: lcd_data <= 8'h6C;  // l
+                    4'd4: lcd_data <= 8'h6F;  // o
+                    4'd5: lcd_data <= 8'h46;  // F
+                    4'd6: lcd_data <= 8'h50;  // P
+                    4'd7: lcd_data <= 8'h47;  // G
+                    4'd8: lcd_data <= 8'h41;  // A
+                    default: lcd_data <= 8'h00;
+                endcase
+                delay_cnt <= delay_cnt + 16'd1;
+                if(delay_cnt == 16'd200) begin
+                    lcd_e <= 1'b0;          // 锁存数据
+                    delay_cnt <= 16'd0;
+                    data_cnt <= data_cnt + 4'd1;  // 下一个字符
+                end
+            end
+            S_IDLE: begin
+                // 空闲状态，保持最后一次输出
+                lcd_rs <= 1'b0;
+                lcd_rw <= 1'b0;
+                lcd_e  <= 1'b0;
+                lcd_data <= 8'h00;
+            end
+            default: begin
+                lcd_rst <= 1'b0;
+                lcd_rs  <= 1'b0;
+                lcd_rw  <= 1'b0;
+                lcd_e   <= 1'b0;
+                lcd_data<= 8'h00;
+            end
+        endcase
+    end
+end
+
+endmodule

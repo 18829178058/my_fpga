@@ -1,0 +1,22 @@
+`timescale 1ns/1ps
+
+module  vga_tb;
+
+	reg clk, rst_n;
+	
+	reg key;
+	
+	wire hsync, vsync;
+	
+	wire [7:0] rgb;
+	
+	top  dut(
+					.clk(clk), 
+					.rst_n(rst_n), 
+					.key(), 
+					.hsync(hsync), 
+					.vsync(vsync), 
+					.rgb(rgb)
+				);
+
+endmodule 

@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGALearn/20280301/src/Assignment2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Assignment2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGALearn/20280301/src/Assignment2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Assignment2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGALearn/20280301/proj/my_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,99 @@
+module math_clk
+(
+	input clk,
+	input rst_n,
+	output reg [23:0] data
+);
+
+	
+	//parameter CNT_MAX = 50_000_000;		//一秒种计数
+	parameter CNT_MAX = 25_000;			//一秒分频计数
+
+	reg clk_1S;
+	reg [25:0] cnt;
+	wire add_cnt_flag;
+	wire end_cnt_flag;
+	
+//一秒分频
+	always@ (posedge clk or negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					cnt <= 0;
+					clk_1S <= 0;
+				end
+			else
+				if(add_cnt_flag)
+					if(end_cnt_flag)
+						begin
+							cnt <= 0;
+							clk_1S <= ~clk_1S;
+						end
+					else
+						begin
+							cnt <= cnt + 1;
+							clk_1S <= clk_1S;
+						end
+				else
+					begin
+						cnt <= cnt;
+						clk_1S <= clk_1S;
+					end
+						
+		
+		end
+		
+		assign add_cnt_flag = 1'b1;
+		assign end_cnt_flag = add_cnt_flag && cnt == CNT_MAX - 1'b1;
+		
+		
+//时钟逻辑
+
+	always@ (posedge clk_1S or negedge rst_n)
+		begin
+			if(!rst_n)
+				data <= 24'h0;
+			else
+				if(data[3:0] < 9) 	//秒钟个位
+					data[3:0] <= data[3:0] + 1'b1;
+				else
+					if(data[7:4] < 5)	//秒钟十位
+						begin
+							data[3:0] <= 0;
+							data[7:4] <= data[7:4]  + 1'b1;
+						end
+					else
+						if(data[11:8] < 9)	//分钟个位
+							begin
+								data[7:0] <= 0;
+								data[11:8] <= data[11:8]  + 1'b1;
+							end
+					else
+						if(data[15:12] < 5)	//分钟十位
+							begin
+								data[11:0] <= 0;
+								data[15:12] <= data[15:12]  + 1'b1;
+							end
+						else
+							if(data == 24'h235959)
+								begin
+									data <= 0;
+								end
+							else
+								if(data[19:16] < 9) //时钟个位
+									begin
+										data[15:0]	<= 0;
+										data[19:16] <= data[19:16] + 1'b1;
+									end
+								else
+									if(data[23:20] < 2)  //时钟十位
+										begin
+											data[19:0] <= 0;
+											data[23:20] <= data[23:20] + 1'b1;
+										end
+									else
+										begin
+											data <= 0;
+										end
+		end	
+endmodule

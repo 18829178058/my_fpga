@@ -1,0 +1,14 @@
+module f_word_cal(wave_f, f_word);
+	
+	input [13:0] wave_f;
+	
+	output [31:0] f_word;
+	
+	wire	[63:0]	b_word;
+	
+	assign b_word	=	(wave_f * (2 ** 32)) / 50_000_000;//频率控制字
+	
+	assign f_word	=	b_word[31:0];//频率控制字的高32位
+
+
+endmodule 

@@ -1,0 +1,82 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zxope/Desktop/exam01/prj01/sim
+T_opt
+!s110 1768881133
+VL11::Yn6_IXTfeH<fhdA01
+Z1 04 6 4 work sub_tb fast 0
+=1-00e070bf6a84-696efbed-2c2-69e8
+o-quiet -auto_acc_if_foreign -work my_work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.5;63
+R0
+T_opt1
+!s110 1768881274
+VJ]H4XWX4g:005iV76TW5m0
+R1
+=1-00e070bf6a84-696efc7a-c2-586c
+Z4 o-quiet -auto_acc_if_foreign -work my_work +acc
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1768957934
+V1YMM^m`Uj_R^@Y@[WSmcf3
+R1
+=1-00e070bf6a84-697027ee-2f1-2648
+R4
+R2
+n@_opt2
+R3
+R0
+vsub
+Z5 !s110 1769045644
+!i10b 1
+!s100 8O3KLmBCMRUZPN0II8OEV2
+IlUnKI7NU;eJJ`dHAhfM@^3
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1768786409
+8../src/sub.v
+F../src/sub.v
+L0 1
+Z7 OL;L;10.5;63
+r1
+!s85 0
+31
+Z8 !s108 1769045644.000000
+Z9 !s107 ../src/sub_tb.v|../src/sub.v|
+Z10 !s90 -reportprogress|300|-work|my_work|../src/sub.v|../src/sub_tb.v|
+!i113 0
+Z11 o-work my_work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vsub_tb
+R5
+!i10b 1
+!s100 YBPc4Q[hnMSk2[lT8E`kY2
+ION1n=1:Dk1H4aJoG4Ti9n2
+R6
+R0
+w1768534287
+8../src/sub_tb.v
+F../src/sub_tb.v
+L0 2
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2

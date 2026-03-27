@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGALearn/Learn20260206_ipCore/proj/simulation/modelsim
+vipCore
+Z1 !s110 1770374074
+!i10b 1
+!s100 iYhBn_8gzgWaQZDgOQfoW0
+IA:H3Jhd]41RWjoCCiSTB21
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1770373888
+8D:/FPGALearn/Learn20260206_ipCore/src/ipCore.v
+FD:/FPGALearn/Learn20260206_ipCore/src/ipCore.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1770374074.000000
+!s107 D:/FPGALearn/Learn20260206_ipCore/src/ipCore.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/Learn20260206_ipCore/src|D:/FPGALearn/Learn20260206_ipCore/src/ipCore.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260206_ipCore/src
+Z6 tCvgOpt 0
+nip@core
+vipCore_tb
+R1
+!i10b 1
+!s100 PK^BVEaOMYYdeBZa;;``b1
+IU]2h@m@?`fP6g_@Sze9>m0
+R2
+R0
+w1770374058
+8D:/FPGALearn/Learn20260206_ipCore/proj/../src/ipCore_tb.v
+FD:/FPGALearn/Learn20260206_ipCore/proj/../src/ipCore_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/Learn20260206_ipCore/proj/../src/ipCore_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/Learn20260206_ipCore/proj/../src|D:/FPGALearn/Learn20260206_ipCore/proj/../src/ipCore_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260206_ipCore/proj/../src
+R6
+nip@core_tb
+vpll
+R1
+!i10b 1
+!s100 O@jh@6Fn2jCi^JgEB<CY?1
+I1jOe8Nl?6V``giCLA;>Gb3
+R2
+R0
+w1770372768
+8D:/FPGALearn/Learn20260206_ipCore/ip/pll.v
+FD:/FPGALearn/Learn20260206_ipCore/ip/pll.v
+L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/Learn20260206_ipCore/ip/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/Learn20260206_ipCore/ip|D:/FPGALearn/Learn20260206_ipCore/ip/pll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260206_ipCore/ip
+R6
+vpll_altpll
+R1
+!i10b 1
+!s100 bail@jC7IODff2knn<iU^2
+I4foji=N9Tn4]j@1cm1hhM1
+R2
+R0
+w1770373351
+8D:/FPGALearn/Learn20260206_ipCore/proj/db/pll_altpll.v
+FD:/FPGALearn/Learn20260206_ipCore/proj/db/pll_altpll.v
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/Learn20260206_ipCore/proj/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/Learn20260206_ipCore/proj/db|D:/FPGALearn/Learn20260206_ipCore/proj/db/pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260206_ipCore/proj/db
+R6

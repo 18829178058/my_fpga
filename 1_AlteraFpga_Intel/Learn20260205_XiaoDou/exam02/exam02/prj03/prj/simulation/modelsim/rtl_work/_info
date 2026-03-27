@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zxope/Desktop/exam02/prj03/prj/simulation/modelsim
+vkey_delet
+!s110 1770257151
+!i10b 1
+!s100 e<^<NfGVRzm[IPbShFCem1
+I_<`HIm_f]6nn1`]j]f6>43
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1770256080
+8C:/Users/zxope/Desktop/exam02/prj03/src/key_delet.v
+FC:/Users/zxope/Desktop/exam02/prj03/src/key_delet.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1770257151.000000
+!s107 C:/Users/zxope/Desktop/exam02/prj03/src/key_delet.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zxope/Desktop/exam02/prj03/src|C:/Users/zxope/Desktop/exam02/prj03/src/key_delet.v|
+!i113 1
+Z3 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/zxope/Desktop/exam02/prj03/src
+Z4 tCvgOpt 0
+vkey_delet_tb
+!s110 1770257152
+!i10b 1
+!s100 ^g2@lYk<IZVSE310C]TfT3
+IKSl9AC:8WOgRmEziO_66m2
+R1
+R0
+w1770256850
+8C:/Users/zxope/Desktop/exam02/prj03/prj/../src/key_delet_tb.v
+FC:/Users/zxope/Desktop/exam02/prj03/prj/../src/key_delet_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1770257152.000000
+!s107 C:/Users/zxope/Desktop/exam02/prj03/prj/../src/key_delet_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zxope/Desktop/exam02/prj03/prj/../src|C:/Users/zxope/Desktop/exam02/prj03/prj/../src/key_delet_tb.v|
+!i113 1
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/zxope/Desktop/exam02/prj03/prj/../src
+R4

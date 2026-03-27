@@ -1,0 +1,15 @@
+module top(clk, rst_n, row, col, sel, seg);
+
+	input clk, rst_n;
+	
+	input [3:0] row;
+	
+	output [3:0] col;
+	
+	output [2:0] sel;
+	
+	output [7:0] seg;
+
+
+
+endmodule 

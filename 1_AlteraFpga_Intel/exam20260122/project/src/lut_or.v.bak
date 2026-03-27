@@ -1,0 +1,15 @@
+module lut_or (
+    input  a,
+	input  b,
+    output  reg c
+);
+  
+reg  [4:0]    lut2;
+wire [1:0]    addr;
+assign    addr = {a,b};
+always    @(*)
+          lut2 = 2'b1110;
+
+assign  c = lut2[addr];
+
+endmodule

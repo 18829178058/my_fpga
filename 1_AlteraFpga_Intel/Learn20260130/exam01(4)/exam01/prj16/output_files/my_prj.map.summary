@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Jan 29 10:52:08 2026
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : my_prj
+Top-level Entity Name : ben_driver
+Family : Cyclone IV E
+Total logic elements : 1,190
+    Total combinational functions : 749
+    Dedicated logic registers : 870
+Total registers : 870
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 114,688
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

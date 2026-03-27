@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGALearn/20260228_music_player/proj/simulation/modelsim
+vkey_delate
+Z1 !s110 1772266343
+!i10b 1
+!s100 ozW3C[9<ed6J^@7akjhZb0
+I^Q=8=gg;`[`V_j>TzELW72
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1770360635
+8D:/FPGALearn/20260228_music_player/src/key_delate.v
+FD:/FPGALearn/20260228_music_player/src/key_delate.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1772266343.000000
+!s107 D:/FPGALearn/20260228_music_player/src/key_delate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260228_music_player/src|D:/FPGALearn/20260228_music_player/src/key_delate.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260228_music_player/src
+Z7 tCvgOpt 0
+vmusic_player
+R1
+!i10b 1
+!s100 5cgg6JG4`WEHiE6=4ncHD0
+IXkKl][GK?:nAX24O4cRX@2
+R2
+R0
+w1772265237
+8D:/FPGALearn/20260228_music_player/src/music_player.v
+FD:/FPGALearn/20260228_music_player/src/music_player.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/20260228_music_player/src/music_player.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260228_music_player/src|D:/FPGALearn/20260228_music_player/src/music_player.v|
+!i113 1
+R5
+R6
+R7

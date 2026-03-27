@@ -1,0 +1,20 @@
+module memory_init (
+    input  [7:0] a,
+	input  [7:0] b,
+	input  [7:0] c,
+	input  [1:0] sel,
+	input wire sys_clk,      // 系统时钟
+    output  [7:0] d
+);
+  
+
+always @(posedge sys_clk)  
+begin
+    if(sel == 0)
+	    d <= a;
+	else if(sel ==  1)
+		d <= b;
+	else if(sel == 2 || sel == 3)
+	    d <= c;
+end
+endmodule

@@ -1,0 +1,34 @@
+`timescale          1ns/1ns
+module			    index_tb;
+
+
+//减法器参数输入
+
+reg[3:0]			a;	//加法器参数a[7:0]
+
+initial				begin
+					#200      	;
+					a=   		4'b0001;
+					
+					#200      	;
+					a=   		4'b0011;
+					
+					#200      	;
+					a=   		4'b0111;
+					
+					#200      	;
+					a=   		4'b1111;
+					
+					#200      	;
+					
+
+end
+
+wire			y;	//检测结果输出
+
+index				index_ins
+(
+				.a(a),	//加法器参数a[3:0]
+				.y(y)	//减法器运算结果输出
+);
+endmodule 

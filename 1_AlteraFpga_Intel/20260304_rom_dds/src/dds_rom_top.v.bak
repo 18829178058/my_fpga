@@ -1,0 +1,29 @@
+module dds_rom_top
+(
+	input clk,
+	input rst_n,
+	input key_in,
+	output [7:0]q
+);
+
+wire [7:0] addr;
+
+rom_ctrl rom_ctrl
+
+
+my_rom my_rom 
+(
+	.address(addr),
+	.clock(clk),
+	.q(q)
+);
+
+dds_rom_ctrl dds_rom_ctrl
+(
+	.clk(clk),
+	.rst_n(rst_n),
+	.key(key_in),
+	.addr(addr)
+);
+
+endmodule

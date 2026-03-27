@@ -1,0 +1,30 @@
+|decode_3to8
+clk => decode[0]~reg0.CLK
+clk => decode[1]~reg0.CLK
+clk => decode[2]~reg0.CLK
+clk => decode[3]~reg0.CLK
+clk => decode[4]~reg0.CLK
+clk => decode[5]~reg0.CLK
+clk => decode[6]~reg0.CLK
+clk => decode[7]~reg0.CLK
+rst_n => decode[0]~reg0.ACLR
+rst_n => decode[1]~reg0.ACLR
+rst_n => decode[2]~reg0.ACLR
+rst_n => decode[3]~reg0.ACLR
+rst_n => decode[4]~reg0.ACLR
+rst_n => decode[5]~reg0.ACLR
+rst_n => decode[6]~reg0.ACLR
+rst_n => decode[7]~reg0.ACLR
+code[0] => Decoder0.IN2
+code[1] => Decoder0.IN1
+code[2] => Decoder0.IN0
+decode[0] <= decode[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+decode[1] <= decode[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+decode[2] <= decode[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+decode[3] <= decode[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+decode[4] <= decode[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+decode[5] <= decode[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+decode[6] <= decode[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+decode[7] <= decode[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

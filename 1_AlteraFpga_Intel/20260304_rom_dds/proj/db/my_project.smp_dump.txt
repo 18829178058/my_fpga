@@ -1,0 +1,7 @@
+
+State Machine - |dds_rom_top|dds_rom_ctrl:dds_rom_ctrl|state_c
+Name state_c.SIN state_c.SANJIAOBO state_c.JUCHI state_c.FANGBO 
+state_c.FANGBO 0 0 0 0 
+state_c.JUCHI 0 0 1 1 
+state_c.SANJIAOBO 0 1 0 1 
+state_c.SIN 1 0 0 1 

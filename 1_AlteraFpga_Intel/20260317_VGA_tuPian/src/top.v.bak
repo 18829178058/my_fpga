@@ -1,0 +1,25 @@
+module top
+(
+	clk,
+	rst_n,
+	rgb,
+	hsyns,
+	vsync
+);
+
+
+my_pll my_pll_inst 
+(
+	.inclk0(clk),
+	.c0(c0)
+);
+
+vga vga(
+	.clk(c0), 
+	.rst_n(rst_n), 
+	.rgb(rgb), 
+	.hsyns(hsyns), 
+	.vsync(vsync)
+);
+
+endmodule

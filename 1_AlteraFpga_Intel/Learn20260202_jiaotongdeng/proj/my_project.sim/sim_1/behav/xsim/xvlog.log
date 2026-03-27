@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGALearn/Learn20260202_jiaotongdeng/src/traffic_signal_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module traffic_signal
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGALearn/Learn20260202_jiaotongdeng/src/traffic_signal_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module traffic_signal_tb

@@ -1,0 +1,125 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\dell\Desktop\ZX\3.13\VGA\prj\simulation\modelsim
+vkey_filter
+Igkm0nn;ZIC[@nN306Z`W90
+VI1<L:ED^liAPO6dfUQ3<62
+Z1 dC:\Users\dell\Desktop\ZX\3.13\VGA\prj\simulation\modelsim
+w1772682991
+8C:/Users/dell/Desktop/ZX/3.13/VGA/src/key_filter.v
+FC:/Users/dell/Desktop/ZX/3.13/VGA/src/key_filter.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/src -O0
+!i10b 1
+!s100 nPPA5]567AA2gi8RhFIG41
+!s85 0
+!s108 1773375009.670000
+!s107 C:/Users/dell/Desktop/ZX/3.13/VGA/src/key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/src|C:/Users/dell/Desktop/ZX/3.13/VGA/src/key_filter.v|
+!s101 -O0
+vtop
+IH`N<[:NafP6b2KD8bi>kH0
+VJO^9bTUV3B:W9GG?LW=VD0
+R1
+w1773370701
+8C:/Users/dell/Desktop/ZX/3.13/VGA/src/top.v
+FC:/Users/dell/Desktop/ZX/3.13/VGA/src/top.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 P=Rb>f7a:[U8MYWH_`Qf^3
+!s85 0
+!s108 1773375010.117000
+!s107 C:/Users/dell/Desktop/ZX/3.13/VGA/src/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/src|C:/Users/dell/Desktop/ZX/3.13/VGA/src/top.v|
+!s101 -O0
+vvga
+I9o`iOB]ih:772i5_`deE22
+VaJSE_ImOEmK[Bg2fNF:I@1
+R1
+w1773374762
+8C:/Users/dell/Desktop/ZX/3.13/VGA/src/vga.v
+FC:/Users/dell/Desktop/ZX/3.13/VGA/src/vga.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 0:15gRE8UP]XjFLKaldJV0
+!s85 0
+!s108 1773375010.317000
+!s107 C:/Users/dell/Desktop/ZX/3.13/VGA/src/vga.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/src|C:/Users/dell/Desktop/ZX/3.13/VGA/src/vga.v|
+!s101 -O0
+vvga_pll
+I[^61ZcTCVzOnmlC8ZCm^F0
+V7HjmL^IiPnFPR?Wb0gS;]0
+R1
+w1773365343
+8C:/Users/dell/Desktop/ZX/3.13/VGA/ip/vga_pll.v
+FC:/Users/dell/Desktop/ZX/3.13/VGA/ip/vga_pll.v
+L0 39
+R2
+r1
+31
+R3
+!i10b 1
+!s100 EgZP1E0OBFMUn[2XSWgaC2
+!s85 0
+!s108 1773375009.885000
+!s107 C:/Users/dell/Desktop/ZX/3.13/VGA/ip/vga_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/ip|C:/Users/dell/Desktop/ZX/3.13/VGA/ip/vga_pll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/ip -O0
+vvga_pll_altpll
+IAcO712X>3O9S27Sd[[RQ^1
+V?Va_NZhJ;O^iAPkM@]3SN1
+R1
+w1773366560
+8C:/Users/dell/Desktop/ZX/3.13/VGA/prj/db/vga_pll_altpll.v
+FC:/Users/dell/Desktop/ZX/3.13/VGA/prj/db/vga_pll_altpll.v
+L0 29
+R2
+r1
+31
+R3
+!i10b 1
+!s100 k3aXhBXiH3[Pl@ci_IO`e2
+!s85 0
+!s108 1773375010.520000
+!s107 C:/Users/dell/Desktop/ZX/3.13/VGA/prj/db/vga_pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/prj/db|C:/Users/dell/Desktop/ZX/3.13/VGA/prj/db/vga_pll_altpll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/prj/db -O0
+vvga_tb
+!i10b 1
+!s100 @H8n:Dj0nQQFCE[knU1Wf3
+IfCU7YR4k>DQTkCVC[mekD2
+VH`EXIGXhkSH116jRgZ7g:1
+R1
+w1773374985
+8C:/Users/dell/Desktop/ZX/3.13/VGA/prj/../sim/vga_tb.v
+FC:/Users/dell/Desktop/ZX/3.13/VGA/prj/../sim/vga_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1773375010.807000
+!s107 C:/Users/dell/Desktop/ZX/3.13/VGA/prj/../sim/vga_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/prj/../sim|C:/Users/dell/Desktop/ZX/3.13/VGA/prj/../sim/vga_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/prj/../sim -O0

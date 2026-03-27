@@ -1,0 +1,16 @@
+module decode_3to8
+(
+    input a,
+	input b,
+	input c,
+	output [7:0] d
+);
+
+wire temp_1;
+assign temp_1 = {a,b,c};
+
+always @(*) begin
+        d[temp_1] = a*2*2+b*2+c*1;
+end
+
+endmodule

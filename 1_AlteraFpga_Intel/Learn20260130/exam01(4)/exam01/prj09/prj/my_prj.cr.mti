@@ -1,0 +1,15 @@
+C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design_tb.v {1 {vlog -work work -stats=none C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cnt_design_tb
+
+Top level modules:
+	cnt_design_tb
+
+} {} {}} C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design.v {1 {vlog -work work -stats=none C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cnt_design
+
+Top level modules:
+	cnt_design
+
+} {} {}}

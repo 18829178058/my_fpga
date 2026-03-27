@@ -1,0 +1,204 @@
+//三段式实现矩阵键盘
+module	keyboard
+(
+	input clk,
+	input rst_n,
+	input [3:0] row,				//行
+	output reg [3:0] col,			//列
+	output reg [3:0] key_data,		//输出
+	output reg flag
+);
+
+//内部参数
+	parameter	CNT_MAX = 25_000;		//扫描计数器
+	
+	parameter IDLE = 2'b00,				//初始状态
+			  SCAN = 2'b01,				//扫描
+			  DOUT = 2'b10;				//按键确认与结果输出
+
+//内部变量
+	reg [14:0] 	cnt_1ms;					//扫描计数，分频器
+	wire 		add_cnt_1ms;
+	wire 		end_cnt_1ms;
+	
+	reg			clk_1ms;					//1KHz,1ms时钟
+	
+	reg			c_state, n_state;
+	reg [7:0]	coordinate;					//坐标
+	reg [3:0]	cnt_filter;					//消抖	
+	
+	
+//1ms分频	
+	always@(posedge clk or negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					cnt_1ms <= 15'd0;
+					clk_1ms <= 0;
+				end
+			else
+				if(add_cnt_1ms)
+					if(end_cnt_1ms)
+						begin
+							cnt_1ms <= 15'd0;
+							clk_1ms = ~clk_1ms;
+						end
+					else
+						begin
+							cnt_1ms <= cnt_1ms + 1'b1;
+							clk_1ms <= clk_1ms;
+						end
+				else
+					begin
+						cnt_1ms <= cnt_1ms;
+						clk_1ms <= clk_1ms;
+					end
+		end
+		
+		assign add_cnt_1ms = 1'b1;
+		assign end_cnt_1ms = add_cnt_1ms && cnt_1ms == CNT_MAX - 1'b1;
+
+
+//时序逻辑秒数状态转移
+always @(posedge clk_1ms or negedge rst_n)
+	begin
+		if(!rst_n)
+			begin
+				c_state <= IDLE;
+			end
+		else
+			begin
+				c_state <= n_state;
+			end
+	end
+
+//状态机第二段，组合逻辑描述状态转移逻辑
+
+always @ (*)
+	begin
+		case(c_state)
+			IDLE : 	begin
+						if(row != 4'b1111)
+							if(cnt_filter < 9)    //消抖
+								n_state = IDLE;
+							else
+								n_state = SCAN;
+						else
+							n_state = IDLE;
+					end
+					
+			SCAN :	begin
+						if(row == 4'b1111)
+							n_state = SCAN;
+						else
+							n_state = DOUT;
+					end
+					
+			DOUT :	begin
+						if(row == 4'b1111)
+							if(cnt_filter < 9)
+								n_state = DOUT;
+							else
+								n_state	= IDLE;
+			
+					end
+			default : n_state = IDLE;
+		endcase
+	end
+
+//状态机第三段，时序逻辑描述输出
+always @ (posedge clk_1ms or negedge rst_n)
+	begin
+		if(!rst_n)
+			begin
+				col <= 4'b0000;
+			end
+		else
+			case(c_state)
+				IDLE :	begin
+							if(row != 4'b1111 && cnt_filter == 9)
+								col <= 4'b0111;
+							else
+								col <= 4'b0000;
+						end
+				
+				SCAN :	begin
+							if(row == 4'b1111)
+								col <= {col[2:0], col[3]};
+							else
+								col <= 4'b0000;
+						end
+				
+				DOUT :	begin
+							col <= 4'b0000;
+						end
+						
+				default : col <=4'b0000;
+			endcase
+	end
+
+always@ (posedge clk_1ms or negedge rst_n)
+	begin
+		if(!rst_n)
+			cnt_filter <= 4'b0;
+		else
+			if(((c_state == IDLE && row != 4'b1111) || (c_state == DOUT && row == 4'b1111)) && (cnt_filter < 9))
+				cnt_filter <= cnt_filter + 1'b1;
+			else
+				cnt_filter <= 4'b0;
+	end
+
+
+
+always@(posedge clk_1ms or negedge rst_n)
+	begin
+		if(!rst_n)
+			flag <= 0;
+		else
+			if(c_state ==SCAN && row != 4'b1111)
+				flag <= 1;
+			else
+				flag <= 0;
+	end
+	
+always@ (posedge clk_1ms or negedge rst_n)
+	begin
+		if(!rst_n)
+			coordinate <= 0;
+		else
+			if(c_state == SCAN && row != 4'b1111)
+				coordinate <= {row, col};
+			else
+				coordinate <= coordinate;		
+	end
+
+	always@(*)
+		begin
+				if(!rst_n)
+					key_data = 0;
+				else
+					case(coordinate)
+						//第一行
+						8'b1110_1110	:	key_data	=	4'h0;	//第一列
+						8'b1110_1101	:	key_data	=	4'h1;	//第二列
+						8'b1110_1011	:	key_data	=	4'h2;	//第三列
+						8'b1110_0111	:	key_data	=	4'h3;	//第四列
+						//第二行
+						8'b1101_1110	:	key_data	=	4'h4;
+						8'b1101_1101	:	key_data	=	4'h5;
+						8'b1101_1011	:	key_data	=	4'h6;
+						8'b1101_0111	:	key_data	=	4'h7;
+						//第三行
+						8'b1011_1110	:	key_data	=	4'h8;
+						8'b1011_1101	:	key_data	=	4'h9;
+						8'b1011_1011	:	key_data	=	4'ha;
+						8'b1011_0111	:	key_data	=	4'hb;
+						//第四行
+						8'b0111_1110	:	key_data	=	4'hc;
+						8'b0111_1101	:	key_data	=	4'hd;
+						8'b0111_1011	:	key_data	=	4'he;
+						8'b0111_0111	:	key_data	=	4'hf;
+						//default : key_data	=	4'hf;
+				endcase
+		end
+endmodule

@@ -1,0 +1,27 @@
+`timescale 1ns/1ns
+module seven_segment_display_tb;
+
+
+   reg clk;
+   reg rst_n;
+   wire [2:0] sel1;
+   wire [7:0] sevenSegmentOut1;
+
+initial begin
+    clk = 1'b0;
+	rst_n = 1'b0;
+	# 53;
+	rst_n = 1'b1;
+end
+   
+always #10 clk = ~clk;//产生50MHz的时钟信号
+
+seven_segment_display seven_segment_display_inst
+(
+   .clk(clk),
+   .rst_n(rst_n),
+   .sel(sel1),
+   .sevenSegmentOut(sevenSegmentOut1)
+);
+
+endmodule

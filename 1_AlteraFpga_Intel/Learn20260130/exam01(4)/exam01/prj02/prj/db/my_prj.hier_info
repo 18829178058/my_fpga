@@ -1,0 +1,19 @@
+|memery
+rddata[0] <= mem.DATAOUT
+rddata[1] <= mem.DATAOUT1
+rddata[2] <= mem.DATAOUT2
+rddata[3] <= mem.DATAOUT3
+rddata[4] <= mem.DATAOUT4
+rddata[5] <= mem.DATAOUT5
+rddata[6] <= mem.DATAOUT6
+rddata[7] <= mem.DATAOUT7
+addr[0] => mem.RADDR
+addr[1] => mem.RADDR1
+addr[2] => mem.RADDR2
+addr[3] => mem.RADDR3
+addr[4] => mem.RADDR4
+addr[5] => mem.RADDR5
+addr[6] => mem.RADDR6
+addr[7] => mem.RADDR7
+
+

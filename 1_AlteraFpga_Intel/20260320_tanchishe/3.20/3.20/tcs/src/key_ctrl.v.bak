@@ -1,0 +1,78 @@
+module key_ctrl(clk, rst_n, key_out1, key_out2, key_out3, key_out4, up, down, left, right);
+
+	input clk, rst_n;
+	
+	input key_out1, key_out2, key_out3, key_out4;
+	
+	output	up, down, left, right;
+	
+//按键控制移动方向,移动方向保持
+//up
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					up <= 0;
+				end
+			else
+				if(key_out1)
+					up <= 1;
+				else
+					if(key_out2 || key_out3 || key_out4)
+						up <= 0;
+					else
+						up <= up;
+		end
+		
+//down
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					down <= 0;
+				end
+			else
+				if(key_out2)
+					down <= 1;
+				else
+					if(key_out1 || key_out3 || key_out4)
+						down <= 0;
+					else
+						down <= down;
+		end
+	
+//left
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					left <= 0;
+				end
+			else
+				if(key_out3)
+					left <= 1;
+				else
+					if(key_out2 || key_out1 || key_out4)
+						left <= 0;
+					else
+						left <= left;
+		end
+
+//right
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					right <= 0;
+				end
+			else
+				if(key_out4)
+					right <= 1;
+				else
+					if(key_out2 || key_out3 || key_out1)
+						right <= 0;
+					else
+						right <= right;
+		end
+		
+endmodule 

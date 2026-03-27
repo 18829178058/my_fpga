@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGALearn/20260211_2/proj/simulation/modelsim
+vquestion_13
+Z1 !s110 1770825032
+!i10b 1
+!s100 9XV9cejAR1h1OL1GCB9:h0
+I]GCMC:nWeZ[]cZ5i;NLCi3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1770824904
+8D:/FPGALearn/20260211_2/src/question_13.v
+FD:/FPGALearn/20260211_2/src/question_13.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1770825032.000000
+!s107 D:/FPGALearn/20260211_2/src/question_13.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260211_2/src|D:/FPGALearn/20260211_2/src/question_13.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260211_2/src
+Z6 tCvgOpt 0
+vquestion_13_tb
+R1
+!i10b 1
+!s100 JzOnh>i3N=K_@cQM_on1O3
+IHe6LRcGgdk;[TC6FHKk7f0
+R2
+R0
+w1770824973
+8D:/FPGALearn/20260211_2/proj/../src/question_13_tb.v
+FD:/FPGALearn/20260211_2/proj/../src/question_13_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/20260211_2/proj/../src/question_13_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260211_2/proj/../src|D:/FPGALearn/20260211_2/proj/../src/question_13_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260211_2/proj/../src
+R6

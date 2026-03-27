@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGALearn/exam20260122/project/proj/simulation/modelsim
+vlut_and
+Z1 !s110 1769354920
+!i10b 1
+!s100 dC?zS=<_dlV_0Zn>G[a]71
+I1zOFXX=?XCk6nQZ`Zj@Yh3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1769352750
+8D:/FPGALearn/exam20260122/project/src/lut_and.v
+FD:/FPGALearn/exam20260122/project/src/lut_and.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1769354920.000000
+!s107 D:/FPGALearn/exam20260122/project/src/lut_and.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/exam20260122/project/src|D:/FPGALearn/exam20260122/project/src/lut_and.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/FPGALearn/exam20260122/project/src
+Z7 tCvgOpt 0
+vlut_not
+R1
+!i10b 1
+!s100 MlQ]zUe4<RDz=W4_oG?d82
+IHM2Y1kC<SB6nB2PiEbNS?0
+R2
+R0
+w1769351819
+8D:/FPGALearn/exam20260122/project/src/lut_not.v
+FD:/FPGALearn/exam20260122/project/src/lut_not.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/exam20260122/project/src/lut_not.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/exam20260122/project/src|D:/FPGALearn/exam20260122/project/src/lut_not.v|
+!i113 1
+R5
+R6
+R7
+vlut_or
+R1
+!i10b 1
+!s100 4Q[<^`P[TA`DX:[gSQOI53
+IBhbDg33G7dH>llf]jX9oH0
+R2
+R0
+w1769354897
+8D:/FPGALearn/exam20260122/project/src/lut_or.v
+FD:/FPGALearn/exam20260122/project/src/lut_or.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/exam20260122/project/src/lut_or.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/exam20260122/project/src|D:/FPGALearn/exam20260122/project/src/lut_or.v|
+!i113 1
+R5
+R6
+R7
+vlut_xor
+R1
+!i10b 1
+!s100 ;gS>l`a_:`;kgl`26b2@H1
+I3EB_?<VmDZU]h9CL_57G:1
+R2
+R0
+w1769352200
+8D:/FPGALearn/exam20260122/project/src/lut_xor.v
+FD:/FPGALearn/exam20260122/project/src/lut_xor.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/exam20260122/project/src/lut_xor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/exam20260122/project/src|D:/FPGALearn/exam20260122/project/src/lut_xor.v|
+!i113 1
+R5
+R6
+R7
+vlut_xor_tb
+R1
+!i10b 1
+!s100 PJjRAkzHjXWn>G6@^]F[h3
+Ig3^BQ11ELzoSSS9;a[;cX2
+R2
+R0
+w1769351705
+8D:/FPGALearn/exam20260122/project/proj/../src/lut_xor_tb.v
+FD:/FPGALearn/exam20260122/project/proj/../src/lut_xor_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/exam20260122/project/proj/../src/lut_xor_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/exam20260122/project/proj/../src|D:/FPGALearn/exam20260122/project/proj/../src/lut_xor_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/exam20260122/project/proj/../src
+R7

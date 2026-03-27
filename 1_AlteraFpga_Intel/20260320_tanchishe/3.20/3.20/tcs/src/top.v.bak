@@ -1,0 +1,14 @@
+module top(clk, key, rgb, hsync, vsync);
+	
+	input clk;
+	
+	input [3:0]key;
+	
+	output [7:0] rgb;
+	
+	output hsync;
+	
+	output vsync;
+
+
+endmodule 

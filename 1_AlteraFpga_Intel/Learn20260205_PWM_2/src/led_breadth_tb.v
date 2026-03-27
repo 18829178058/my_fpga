@@ -1,0 +1,32 @@
+`timescale 1ns/1ps
+
+module led_breadth_tb;
+
+	reg clk,rst_n;
+	
+	
+	
+    wire  led;
+
+
+
+led_breadth dut(
+					.clk(clk), 
+					.rst_n(rst_n), 
+					.led(led)
+				);  
+
+    defparam  dut.CNT_MAX_2US = 10;
+	 defparam  dut.CNT_MAX_2MS = 100;
+    defparam  dut.CNT_MAX_2S = 100;
+
+initial begin
+	clk = 0; rst_n = 0;
+	#100 rst_n = 1;
+
+
+end
+
+always #10 clk = ~clk;
+
+endmodule

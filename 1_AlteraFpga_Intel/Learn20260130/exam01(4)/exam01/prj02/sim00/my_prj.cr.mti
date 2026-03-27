@@ -1,0 +1,8 @@
+C:/Users/zxope/Desktop/exam01/prj02/src/memery_tb.v {1 {vlog -work my_new_work -stats=none C:/Users/zxope/Desktop/exam01/prj02/src/memery_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module memery_tb
+
+Top level modules:
+	memery_tb
+
+} {} {}}

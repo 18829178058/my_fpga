@@ -1,0 +1,10 @@
+//大四加三
+module adjust(adjust_in, adjust_out);
+	
+	input [3:0] adjust_in;
+	output	[3:0]	adjust_out;
+	
+	assign	adjust_out	=	(adjust_in > 4)	?	adjust_in + 3	:	adjust_in;
+
+
+endmodule 

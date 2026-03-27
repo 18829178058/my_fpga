@@ -1,0 +1,101 @@
+//苹果随机生成，随机生成
+module apple(clk, rst_n, apple_en, apple_x, apple_y);
+	
+	input clk, rst_n;
+	
+	input apple_en;
+	
+	output reg [9:0] apple_x;
+	output reg [9:0] apple_y;
+	
+//参数声明
+	parameter	he	=	640,
+					ve	=	480,
+					SIZE	=	40;//边长
+					
+	reg	[15:0]	count_x, count_y;
+	
+	reg	[9:0]		apple_x_r, apple_y_r;
+	
+//产生随机数,伪随机数LFSR
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					count_x <= 16'h9876;
+				end
+			else
+				count_x <= {count_x[14:0], count_x[15]^count_x[13]^count_x[10]^count_x[8]};
+		end
+	
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					count_y <= 16'h1234;
+				end
+			else
+				count_y <= {count_y[14:0], count_y[15]^count_y[13]^count_y[10]^count_y[8]};
+		end
+	
+//分辨率640*480，边框40，apple_en,坐标必须是40的整数倍
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					apple_x_r <= SIZE * 2;
+				end
+			else
+				if(apple_en)
+					if(count_x > SIZE)	//左
+						apple_x_r <= (count_x % (he - SIZE * 2))/40*40;//生成一个0至559的随机数，然后除以40乘以40，取40的整倍数
+					else
+						apple_x_r <= SIZE;
+				else
+					apple_x_r <= apple_x_r;
+		end
+	
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					apple_y_r <= SIZE * 3;
+				end
+			else
+				if(apple_en)
+					if(count_y > SIZE)	//左
+						apple_y_r <= (count_y % (ve - SIZE * 2))/40*40;//生成一个0至479的随机数，然后除以40乘以40，取40的整倍数
+					else
+						apple_x_r <= SIZE;
+				else
+					apple_y_r <= apple_y_r;
+					
+		end
+//排除0
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					apple_x <= 0;
+				end
+			else
+				if(apple_x_r = 0)
+					apple_x <= SIZE;
+				else
+					apple_x <= apple_x_r;
+		end
+	
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					apple_x <= 0;
+				end
+			else
+				if(apple_y_r = 0)
+					apple_y <= SIZE;
+				else
+					apple_y <= apple_y_r;
+		end
+
+endmodule 

@@ -1,0 +1,43 @@
+module keyboard_top
+(
+	input clk,
+	input rst_n,
+	input [3:0] row,
+	output [3:0] col,
+	output [2:0] sel,
+	output [7:0] seg
+);
+
+wire [3:0] key_data;
+
+	keyboard keyboard_inst
+	(
+		.clk(clk),
+		.rst_n(rst_n),
+		.row(row),				//行
+		.col(col),			//列
+		.key_data(key_data),		//输出
+		.flag()
+	);
+	
+	wire [7:0]	key_data_bcd;
+	
+	bin_bcd #( .BIN_WIDTH(4),
+			   .BCD_WIDTH(8))
+	bin_bcd_inst
+	(
+		.bin(key_data),
+		.bcd(key_data_bcd)
+	);
+	
+	seg_driver	seg_driver_inst
+	(
+		.clk(clk),					//系统时钟
+		.rst_n(rst_n),				//系统复位
+		.data({16'b0, key_data_bcd}),			//需要译码的数据
+		
+		.sel(sel),		//片选信号
+		.seg(seg)		//段选信号
+	);
+
+endmodule

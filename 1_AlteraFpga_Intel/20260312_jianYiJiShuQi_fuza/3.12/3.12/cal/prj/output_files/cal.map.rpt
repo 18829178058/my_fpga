@@ -1,0 +1,1147 @@
+Analysis & Synthesis report for cal
+Thu Mar 12 10:31:46 2026
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |top|cal_v2:c1|c_state
+ 10. State Machine - |top|keyboard:k1|state
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: keyboard:k1
+ 16. Parameter Settings for User Entity Instance: cal_v2:c1
+ 17. Parameter Settings for User Entity Instance: bin_bcd:comb_3
+ 18. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[0].m1
+ 19. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[1].m1
+ 20. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[2].m1
+ 21. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[3].m1
+ 22. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[4].m1
+ 23. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[5].m1
+ 24. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[6].m1
+ 25. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[7].m1
+ 26. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[8].m1
+ 27. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[9].m1
+ 28. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[10].m1
+ 29. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[11].m1
+ 30. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[12].m1
+ 31. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[13].m1
+ 32. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[14].m1
+ 33. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[15].m1
+ 34. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[16].m1
+ 35. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[17].m1
+ 36. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[18].m1
+ 37. Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[19].m1
+ 38. Parameter Settings for User Entity Instance: seg_driver:s1
+ 39. Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_add_sub:Add4
+ 40. Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_mult:Mult0
+ 41. Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_divide:Div2
+ 42. Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_divide:Div0
+ 43. Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_divide:Div1
+ 44. lpm_mult Parameter Settings by Entity Instance
+ 45. Port Connectivity Checks: "bin_bcd:comb_3|move:M[19].m1"
+ 46. Port Connectivity Checks: "bin_bcd:comb_3|move:M[0].m1|adjust:a[0].a1"
+ 47. Port Connectivity Checks: "bin_bcd:comb_3|move:M[0].m1"
+ 48. Elapsed Time Per Partition
+ 49. Analysis & Synthesis Messages
+ 50. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Mar 12 10:31:46 2026       ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                      ; cal                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,541                                       ;
+;     Total combinational functions  ; 1,539                                       ;
+;     Dedicated logic registers      ; 114                                         ;
+; Total registers                    ; 114                                         ;
+; Total pins                         ; 21                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 6                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                                      ; top                ; cal                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; ../src/move.v                    ; yes             ; User Verilog HDL File        ; C:/Users/dell/Desktop/ZX/3.12/cal/src/move.v                       ;         ;
+; ../src/bin_bcd.v                 ; yes             ; User Verilog HDL File        ; C:/Users/dell/Desktop/ZX/3.12/cal/src/bin_bcd.v                    ;         ;
+; ../src/adjust.v                  ; yes             ; User Verilog HDL File        ; C:/Users/dell/Desktop/ZX/3.12/cal/src/adjust.v                     ;         ;
+; ../src/seg_driver.v              ; yes             ; User Verilog HDL File        ; C:/Users/dell/Desktop/ZX/3.12/cal/src/seg_driver.v                 ;         ;
+; ../src/keyboard.v                ; yes             ; User Verilog HDL File        ; C:/Users/dell/Desktop/ZX/3.12/cal/src/keyboard.v                   ;         ;
+; ../src/top.v                     ; yes             ; User Verilog HDL File        ; C:/Users/dell/Desktop/ZX/3.12/cal/src/top.v                        ;         ;
+; ../src/cal_v2.v                  ; yes             ; User Verilog HDL File        ; C:/Users/dell/Desktop/ZX/3.12/cal/src/cal_v2.v                     ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/aglobal131.inc          ;         ;
+; db/add_sub_mvi.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/add_sub_mvi.tdf           ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; db/mult_rct.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/mult_rct.tdf              ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; e:/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; db/lpm_divide_bkm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/lpm_divide_bkm.tdf        ;         ;
+; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/sign_div_unsign_3nh.tdf   ;         ;
+; db/alt_u_div_q9f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/alt_u_div_q9f.tdf         ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/add_sub_7pc.tdf           ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/add_sub_8pc.tdf           ;         ;
+; db/lpm_divide_tim.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/lpm_divide_tim.tdf        ;         ;
+; db/sign_div_unsign_llh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/sign_div_unsign_llh.tdf   ;         ;
+; db/alt_u_div_u6f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/ZX/3.12/cal/prj/db/alt_u_div_u6f.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 1,541       ;
+;                                             ;             ;
+; Total combinational functions               ; 1539        ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 677         ;
+;     -- 3 input functions                    ; 466         ;
+;     -- <=2 input functions                  ; 396         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 1080        ;
+;     -- arithmetic mode                      ; 459         ;
+;                                             ;             ;
+; Total registers                             ; 114         ;
+;     -- Dedicated logic registers            ; 114         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 21          ;
+; Embedded Multiplier 9-bit elements          ; 6           ;
+; Maximum fan-out node                        ; rst_n~input ;
+; Maximum fan-out                             ; 141         ;
+; Total fan-out                               ; 5365        ;
+; Average fan-out                             ; 3.15        ;
++---------------------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |top                                      ; 1539 (1)          ; 114 (0)      ; 0           ; 6            ; 0       ; 3         ; 21   ; 0            ; |top                                                                                                                                 ; work         ;
+;    |bin_bcd:comb_3|                       ; 206 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3                                                                                                                  ; work         ;
+;       |move:M[10].m1|                     ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[10].m1                                                                                                    ; work         ;
+;          |adjust:a[3].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[10].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[10].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[10].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[11].m1|                     ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[11].m1                                                                                                    ; work         ;
+;          |adjust:a[3].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[11].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[11].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[11].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[12].m1|                     ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[12].m1                                                                                                    ; work         ;
+;          |adjust:a[2].a1|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[12].m1|adjust:a[2].a1                                                                                     ; work         ;
+;          |adjust:a[3].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[12].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[12].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[12].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[13].m1|                     ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[13].m1                                                                                                    ; work         ;
+;          |adjust:a[2].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[13].m1|adjust:a[2].a1                                                                                     ; work         ;
+;          |adjust:a[3].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[13].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[13].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[13].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[14].m1|                     ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[14].m1                                                                                                    ; work         ;
+;          |adjust:a[2].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[14].m1|adjust:a[2].a1                                                                                     ; work         ;
+;          |adjust:a[3].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[14].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[14].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[14].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[15].m1|                     ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[15].m1                                                                                                    ; work         ;
+;          |adjust:a[1].a1|                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[15].m1|adjust:a[1].a1                                                                                     ; work         ;
+;          |adjust:a[2].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[15].m1|adjust:a[2].a1                                                                                     ; work         ;
+;          |adjust:a[3].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[15].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[15].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[15].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[16].m1|                     ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[16].m1                                                                                                    ; work         ;
+;          |adjust:a[1].a1|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[16].m1|adjust:a[1].a1                                                                                     ; work         ;
+;          |adjust:a[2].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[16].m1|adjust:a[2].a1                                                                                     ; work         ;
+;          |adjust:a[3].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[16].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[16].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[16].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[17].m1|                     ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[17].m1                                                                                                    ; work         ;
+;          |adjust:a[1].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[17].m1|adjust:a[1].a1                                                                                     ; work         ;
+;          |adjust:a[2].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[17].m1|adjust:a[2].a1                                                                                     ; work         ;
+;          |adjust:a[3].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[17].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[17].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[17].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[18].m1|                     ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[18].m1                                                                                                    ; work         ;
+;          |adjust:a[0].a1|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[18].m1|adjust:a[0].a1                                                                                     ; work         ;
+;          |adjust:a[1].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[18].m1|adjust:a[1].a1                                                                                     ; work         ;
+;          |adjust:a[2].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[18].m1|adjust:a[2].a1                                                                                     ; work         ;
+;          |adjust:a[3].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[18].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[18].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[18].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[19].m1|                     ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[19].m1                                                                                                    ; work         ;
+;          |adjust:a[1].a1|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[19].m1|adjust:a[1].a1                                                                                     ; work         ;
+;          |adjust:a[2].a1|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[19].m1|adjust:a[2].a1                                                                                     ; work         ;
+;          |adjust:a[3].a1|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[19].m1|adjust:a[3].a1                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[19].m1|adjust:a[4].a1                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[19].m1|adjust:a[5].a1                                                                                     ; work         ;
+;       |move:M[3].m1|                      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[3].m1                                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[3].m1|adjust:a[5].a1                                                                                      ; work         ;
+;       |move:M[4].m1|                      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[4].m1                                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[4].m1|adjust:a[5].a1                                                                                      ; work         ;
+;       |move:M[5].m1|                      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[5].m1                                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[5].m1|adjust:a[5].a1                                                                                      ; work         ;
+;       |move:M[6].m1|                      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[6].m1                                                                                                     ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[6].m1|adjust:a[5].a1                                                                                      ; work         ;
+;       |move:M[7].m1|                      ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[7].m1                                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[7].m1|adjust:a[4].a1                                                                                      ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[7].m1|adjust:a[5].a1                                                                                      ; work         ;
+;       |move:M[8].m1|                      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[8].m1                                                                                                     ; work         ;
+;          |adjust:a[4].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[8].m1|adjust:a[4].a1                                                                                      ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[8].m1|adjust:a[5].a1                                                                                      ; work         ;
+;       |move:M[9].m1|                      ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[9].m1                                                                                                     ; work         ;
+;          |adjust:a[3].a1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[9].m1|adjust:a[3].a1                                                                                      ; work         ;
+;          |adjust:a[4].a1|                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[9].m1|adjust:a[4].a1                                                                                      ; work         ;
+;          |adjust:a[5].a1|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|bin_bcd:comb_3|move:M[9].m1|adjust:a[5].a1                                                                                      ; work         ;
+;    |cal_v2:c1|                            ; 1191 (270)        ; 49 (49)      ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |top|cal_v2:c1                                                                                                                       ; work         ;
+;       |lpm_add_sub:Add4|                  ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_add_sub:Add4                                                                                                      ; work         ;
+;          |add_sub_mvi:auto_generated|     ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_add_sub:Add4|add_sub_mvi:auto_generated                                                                           ; work         ;
+;       |lpm_divide:Div0|                   ; 212 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div0                                                                                                       ; work         ;
+;          |lpm_divide_tim:auto_generated|  ; 212 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div0|lpm_divide_tim:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_llh:divider| ; 212 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div0|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider                                             ; work         ;
+;                |alt_u_div_u6f:divider|    ; 212 (212)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div0|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider|alt_u_div_u6f:divider                       ; work         ;
+;       |lpm_divide:Div1|                   ; 228 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div1                                                                                                       ; work         ;
+;          |lpm_divide_tim:auto_generated|  ; 228 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div1|lpm_divide_tim:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_llh:divider| ; 228 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div1|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider                                             ; work         ;
+;                |alt_u_div_u6f:divider|    ; 228 (228)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div1|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider|alt_u_div_u6f:divider                       ; work         ;
+;       |lpm_divide:Div2|                   ; 436 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div2                                                                                                       ; work         ;
+;          |lpm_divide_bkm:auto_generated|  ; 436 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div2|lpm_divide_bkm:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_3nh:divider| ; 436 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div2|lpm_divide_bkm:auto_generated|sign_div_unsign_3nh:divider                                             ; work         ;
+;                |alt_u_div_q9f:divider|    ; 436 (435)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div2|lpm_divide_bkm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_q9f:divider                       ; work         ;
+;                   |add_sub_8pc:add_sub_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cal_v2:c1|lpm_divide:Div2|lpm_divide_bkm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_q9f:divider|add_sub_8pc:add_sub_1 ; work         ;
+;       |lpm_mult:Mult0|                    ; 4 (0)             ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |top|cal_v2:c1|lpm_mult:Mult0                                                                                                        ; work         ;
+;          |mult_rct:auto_generated|        ; 4 (4)             ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |top|cal_v2:c1|lpm_mult:Mult0|mult_rct:auto_generated                                                                                ; work         ;
+;    |keyboard:k1|                          ; 72 (72)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:k1                                                                                                                     ; work         ;
+;    |seg_driver:s1|                        ; 69 (69)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_driver:s1                                                                                                                   ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 3           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 6           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 3           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |top|cal_v2:c1|c_state                               ;
++-----------------+-----------------+----------------+-----------------+
+; Name            ; c_state.ONE_NUM ; c_state.RESULT ; c_state.TWO_NUM ;
++-----------------+-----------------+----------------+-----------------+
+; c_state.ONE_NUM ; 0               ; 0              ; 0               ;
+; c_state.TWO_NUM ; 1               ; 0              ; 1               ;
+; c_state.RESULT  ; 1               ; 1              ; 0               ;
++-----------------+-----------------+----------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------+
+; State Machine - |top|keyboard:k1|state          ;
++------------+----------+------------+------------+
+; Name       ; state.00 ; state.DOUT ; state.SCAN ;
++------------+----------+------------+------------+
+; state.00   ; 0        ; 0          ; 0          ;
+; state.SCAN ; 1        ; 0          ; 1          ;
+; state.DOUT ; 1        ; 1          ; 0          ;
++------------+----------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++-----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal  ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------+------------------------+
+; cal_v2:c1|dout[4]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[5]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[6]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[7]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[8]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[9]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[10]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[11]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[12]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[13]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[14]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[15]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[16]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[17]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[19]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[18]                                  ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[3]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[2]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[1]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; cal_v2:c1|dout[0]                                   ; cal_v2:c1|Selector67 ; yes                    ;
+; keyboard:k1|key_data[3]                             ; keyboard:k1|WideOr0  ; yes                    ;
+; keyboard:k1|key_data[2]                             ; keyboard:k1|WideOr0  ; yes                    ;
+; keyboard:k1|key_data[1]                             ; keyboard:k1|WideOr0  ; yes                    ;
+; keyboard:k1|key_data[0]                             ; keyboard:k1|WideOr0  ; yes                    ;
+; Number of user-specified and inferred latches = 24  ;                      ;                        ;
++-----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; seg_driver:s1|dot                     ; Stuck at VCC due to stuck port data_in ;
+; keyboard:k1|cnt[0]                    ; Merged with seg_driver:s1|cnt_time[0]  ;
+; keyboard:k1|cnt[1]                    ; Merged with seg_driver:s1|cnt_time[1]  ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 114   ;
+; Number of registers using Synchronous Clear  ; 19    ;
+; Number of registers using Synchronous Load   ; 27    ;
+; Number of registers using Asynchronous Clear ; 114   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 63    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 7:1                ; 4 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top|cal_v2:c1|symbol[1]        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top|keyboard:k1|coordinate[7]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|keyboard:k1|cnt_filter[0]  ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|keyboard:k1|col[0]         ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 24 LEs               ; 3 LEs                  ; Yes        ; |top|seg_driver:s1|temp_data[2] ;
+; 9:1                ; 20 bits   ; 120 LEs       ; 40 LEs               ; 80 LEs                 ; Yes        ; |top|cal_v2:c1|num2[8]          ;
+; 15:1               ; 16 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; Yes        ; |top|cal_v2:c1|num1[16]         ;
+; 15:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |top|cal_v2:c1|num1[3]          ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 40 LEs               ; 20 LEs                 ; No         ; |top|cal_v2:c1|Selector9        ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 60 LEs               ; 20 LEs                 ; No         ; |top|cal_v2:c1|result[1]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keyboard:k1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; CNT_MAX        ; 25000 ; Signed Integer                  ;
+; IDLE           ; 00    ; Unsigned Binary                 ;
+; SCAN           ; 01    ; Unsigned Binary                 ;
+; DOUT           ; 10    ; Unsigned Binary                 ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cal_v2:c1 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; ONE_NUM        ; 00    ; Unsigned Binary               ;
+; TWO_NUM        ; 01    ; Unsigned Binary               ;
+; RESULT         ; 10    ; Unsigned Binary               ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                     ;
+; BCD_WIDTH      ; 24    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[0].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[1].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[2].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[3].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[4].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[5].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[6].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[7].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[8].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[9].m1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                  ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[10].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[11].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[12].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[13].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[14].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[15].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[16].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[17].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[18].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_bcd:comb_3|move:M[19].m1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BIN_WIDTH      ; 20    ; Signed Integer                                   ;
+; BCD_WIDTH      ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: seg_driver:s1 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; CNT_MAX        ; 50000 ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_add_sub:Add4 ;
++------------------------+--------------+-------------------------------------+
+; Parameter Name         ; Value        ; Type                                ;
++------------------------+--------------+-------------------------------------+
+; LPM_WIDTH              ; 20           ; Untyped                             ;
+; LPM_REPRESENTATION     ; UNSIGNED     ; Untyped                             ;
+; LPM_DIRECTION          ; DEFAULT      ; Untyped                             ;
+; ONE_INPUT_IS_CONSTANT  ; NO           ; Untyped                             ;
+; LPM_PIPELINE           ; 0            ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5            ; Untyped                             ;
+; REGISTERED_AT_END      ; 0            ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5            ; Untyped                             ;
+; USE_CS_BUFFERS         ; 1            ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                             ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                  ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                             ;
+; USE_WYS                ; OFF          ; Untyped                             ;
+; STYLE                  ; FAST         ; Untyped                             ;
+; CBXI_PARAMETER         ; add_sub_mvi  ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                      ;
++------------------------+--------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_mult:Mult0           ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 20           ; Untyped             ;
+; LPM_WIDTHB                                     ; 20           ; Untyped             ;
+; LPM_WIDTHP                                     ; 40           ; Untyped             ;
+; LPM_WIDTHR                                     ; 40           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_rct     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_divide:Div2 ;
++------------------------+----------------+----------------------------------+
+; Parameter Name         ; Value          ; Type                             ;
++------------------------+----------------+----------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                          ;
+; LPM_WIDTHD             ; 20             ; Untyped                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                          ;
+; CBXI_PARAMETER         ; lpm_divide_bkm ; Untyped                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                   ;
++------------------------+----------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------+
+; Parameter Name         ; Value          ; Type                             ;
++------------------------+----------------+----------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                          ;
+; CBXI_PARAMETER         ; lpm_divide_tim ; Untyped                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                   ;
++------------------------+----------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cal_v2:c1|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------+
+; Parameter Name         ; Value          ; Type                             ;
++------------------------+----------------+----------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                          ;
+; CBXI_PARAMETER         ; lpm_divide_tim ; Untyped                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                   ;
++------------------------+----------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                   ;
++---------------------------------------+--------------------------+
+; Name                                  ; Value                    ;
++---------------------------------------+--------------------------+
+; Number of entity instances            ; 1                        ;
+; Entity Instance                       ; cal_v2:c1|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 20                       ;
+;     -- LPM_WIDTHB                     ; 20                       ;
+;     -- LPM_WIDTHP                     ; 40                       ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                 ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                       ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                       ;
+;     -- USE_EAB                        ; OFF                      ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                     ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                       ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                       ;
++---------------------------------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_bcd:comb_3|move:M[19].m1"                                                                  ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; move_out[19..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_bcd:comb_3|move:M[0].m1|adjust:a[0].a1"                                                  ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; adjust_out[3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "bin_bcd:comb_3|move:M[0].m1" ;
++-----------------+-------+----------+--------------------+
+; Port            ; Type  ; Severity ; Details            ;
++-----------------+-------+----------+--------------------+
+; move_in[43..20] ; Input ; Info     ; Stuck at GND       ;
++-----------------+-------+----------+--------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Thu Mar 12 10:31:39 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cal -c cal
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file /users/dell/desktop/zx/3.12/cal/src/move.v
+    Info (12023): Found entity 1: move
+Info (12021): Found 1 design units, including 1 entities, in source file /users/dell/desktop/zx/3.12/cal/src/bin_bcd.v
+    Info (12023): Found entity 1: bin_bcd
+Info (12021): Found 1 design units, including 1 entities, in source file /users/dell/desktop/zx/3.12/cal/src/adjust.v
+    Info (12023): Found entity 1: adjust
+Info (12021): Found 1 design units, including 1 entities, in source file /users/dell/desktop/zx/3.12/cal/src/seg_driver.v
+    Info (12023): Found entity 1: seg_driver
+Info (12021): Found 1 design units, including 1 entities, in source file /users/dell/desktop/zx/3.12/cal/src/keyboard.v
+    Info (12023): Found entity 1: keyboard
+Info (12021): Found 1 design units, including 1 entities, in source file /users/dell/desktop/zx/3.12/cal/src/top.v
+    Info (12023): Found entity 1: top
+Info (12021): Found 1 design units, including 1 entities, in source file /users/dell/desktop/zx/3.12/cal/src/cal.v
+    Info (12023): Found entity 1: cal
+Info (12021): Found 1 design units, including 1 entities, in source file /users/dell/desktop/zx/3.12/cal/src/cal_v2.v
+    Info (12023): Found entity 1: cal_v2
+Critical Warning (10846): Verilog HDL Instantiation warning at top.v(50): instance has no name
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:k1"
+Warning (10270): Verilog HDL Case Statement warning at keyboard.v(148): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at keyboard.v(143): inferring latch(es) for variable "key_data", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "key_data[0]" at keyboard.v(148)
+Info (10041): Inferred latch for "key_data[1]" at keyboard.v(148)
+Info (10041): Inferred latch for "key_data[2]" at keyboard.v(148)
+Info (10041): Inferred latch for "key_data[3]" at keyboard.v(148)
+Info (12128): Elaborating entity "cal_v2" for hierarchy "cal_v2:c1"
+Warning (10230): Verilog HDL assignment warning at cal_v2.v(107): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at cal_v2.v(117): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at cal_v2.v(128): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at cal_v2.v(142): truncated value with size 32 to match size of target (20)
+Warning (10240): Verilog HDL Always Construct warning at cal_v2.v(192): inferring latch(es) for variable "dout", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "dout[0]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[1]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[2]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[3]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[4]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[5]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[6]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[7]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[8]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[9]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[10]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[11]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[12]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[13]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[14]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[15]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[16]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[17]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[18]" at cal_v2.v(197)
+Info (10041): Inferred latch for "dout[19]" at cal_v2.v(197)
+Info (12128): Elaborating entity "bin_bcd" for hierarchy "bin_bcd:comb_3"
+Info (12128): Elaborating entity "move" for hierarchy "bin_bcd:comb_3|move:M[0].m1"
+Info (12128): Elaborating entity "adjust" for hierarchy "bin_bcd:comb_3|move:M[0].m1|adjust:a[0].a1"
+Warning (10230): Verilog HDL assignment warning at adjust.v(7): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "seg_driver" for hierarchy "seg_driver:s1"
+Info (278001): Inferred 5 megafunctions from design logic
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "cal_v2:c1|Add4"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "cal_v2:c1|Mult0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cal_v2:c1|Div2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cal_v2:c1|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cal_v2:c1|Div1"
+Info (12130): Elaborated megafunction instantiation "cal_v2:c1|lpm_add_sub:Add4"
+Info (12133): Instantiated megafunction "cal_v2:c1|lpm_add_sub:Add4" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "20"
+    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mvi.tdf
+    Info (12023): Found entity 1: add_sub_mvi
+Info (12130): Elaborated megafunction instantiation "cal_v2:c1|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "cal_v2:c1|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "20"
+    Info (12134): Parameter "LPM_WIDTHB" = "20"
+    Info (12134): Parameter "LPM_WIDTHP" = "40"
+    Info (12134): Parameter "LPM_WIDTHR" = "40"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_rct.tdf
+    Info (12023): Found entity 1: mult_rct
+Info (12130): Elaborated megafunction instantiation "cal_v2:c1|lpm_divide:Div2"
+Info (12133): Instantiated megafunction "cal_v2:c1|lpm_divide:Div2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "20"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bkm.tdf
+    Info (12023): Found entity 1: lpm_divide_bkm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_3nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_3nh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_q9f.tdf
+    Info (12023): Found entity 1: alt_u_div_q9f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc
+Info (12130): Elaborated megafunction instantiation "cal_v2:c1|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "cal_v2:c1|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_tim.tdf
+    Info (12023): Found entity 1: lpm_divide_tim
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_llh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_llh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_u6f.tdf
+    Info (12023): Found entity 1: alt_u_div_u6f
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following DSP element node(s):
+        Warning (14320): Synthesized away node "cal_v2:c1|lpm_mult:Mult0|mult_rct:auto_generated|mac_mult7"
+        Warning (14320): Synthesized away node "cal_v2:c1|lpm_mult:Mult0|mult_rct:auto_generated|mac_out8"
+Info (13014): Ignored 12 buffer(s)
+    Info (13019): Ignored 12 SOFT buffer(s)
+Warning (13012): Latch cal_v2:c1|dout[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[19] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[18] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch cal_v2:c1|dout[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cal_v2:c1|c_state.TWO_NUM
+Warning (13012): Latch keyboard:k1|key_data[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keyboard:k1|coordinate[5]
+Warning (13012): Latch keyboard:k1|key_data[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keyboard:k1|coordinate[6]
+Warning (13012): Latch keyboard:k1|key_data[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keyboard:k1|coordinate[1]
+Warning (13012): Latch keyboard:k1|key_data[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keyboard:k1|coordinate[2]
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/dell/Desktop/ZX/3.12/cal/prj/output_files/cal.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1573 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 1546 logic cells
+    Info (21062): Implemented 6 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 61 warnings
+    Info: Peak virtual memory: 4679 megabytes
+    Info: Processing ended: Thu Mar 12 10:31:46 2026
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/dell/Desktop/ZX/3.12/cal/prj/output_files/cal.map.smsg.
+
+

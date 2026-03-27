@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="dds">
+		<CBX_INST_ENTRY INSTANCE_NAME="|dds_top|dds_ctrl:d1|dds_rom:d1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kg91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|dds_top|dds_ctrl:d1|f_word_cal:f1|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_pkm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|dds_top|dds_ctrl:d1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_nbh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|dds_top|dds_ctrl:d1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_vch.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

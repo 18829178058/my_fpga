@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -3.646
+TNS   : -88.458
+
+Type  : Slow 1200mV 85C Model Setup 'keyboard_state3:k1|clk_1ms'
+Slack : -3.193
+TNS   : -35.505
+
+Type  : Slow 1200mV 85C Model Setup 'keyboard_state3:k1|coordinate[0]'
+Slack : -0.253
+TNS   : -0.431
+
+Type  : Slow 1200mV 85C Model Hold 'keyboard_state3:k1|coordinate[0]'
+Slack : -3.281
+TNS   : -9.236
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.146
+TNS   : -0.146
+
+Type  : Slow 1200mV 85C Model Hold 'keyboard_state3:k1|clk_1ms'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -71.402
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyboard_state3:k1|clk_1ms'
+Slack : -1.487
+TNS   : -25.279
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyboard_state3:k1|coordinate[0]'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.254
+TNS   : -77.217
+
+Type  : Slow 1200mV 0C Model Setup 'keyboard_state3:k1|clk_1ms'
+Slack : -2.907
+TNS   : -31.882
+
+Type  : Slow 1200mV 0C Model Setup 'keyboard_state3:k1|coordinate[0]'
+Slack : -0.425
+TNS   : -1.002
+
+Type  : Slow 1200mV 0C Model Hold 'keyboard_state3:k1|coordinate[0]'
+Slack : -2.948
+TNS   : -8.265
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.106
+TNS   : -0.106
+
+Type  : Slow 1200mV 0C Model Hold 'keyboard_state3:k1|clk_1ms'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -71.402
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyboard_state3:k1|clk_1ms'
+Slack : -1.487
+TNS   : -25.279
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyboard_state3:k1|coordinate[0]'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.441
+TNS   : -15.726
+
+Type  : Fast 1200mV 0C Model Setup 'keyboard_state3:k1|clk_1ms'
+Slack : -0.834
+TNS   : -7.514
+
+Type  : Fast 1200mV 0C Model Setup 'keyboard_state3:k1|coordinate[0]'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keyboard_state3:k1|coordinate[0]'
+Slack : -1.576
+TNS   : -4.308
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.215
+TNS   : -0.215
+
+Type  : Fast 1200mV 0C Model Hold 'keyboard_state3:k1|clk_1ms'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -52.109
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyboard_state3:k1|clk_1ms'
+Slack : -1.000
+TNS   : -17.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyboard_state3:k1|coordinate[0]'
+Slack : 0.279
+TNS   : 0.000
+
+------------------------------------------------------------

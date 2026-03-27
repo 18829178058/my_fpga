@@ -1,0 +1,15 @@
+D:/FPGALearn/20260301_systemverilog/src/counter.sv {1 {vlog -work work -vopt -sv -stats=none D:/FPGALearn/20260301_systemverilog/src/counter.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} D:/FPGALearn/20260301_systemverilog/src/testbench.sv {1 {vlog -work work -vopt -sv -stats=none D:/FPGALearn/20260301_systemverilog/src/testbench.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}}

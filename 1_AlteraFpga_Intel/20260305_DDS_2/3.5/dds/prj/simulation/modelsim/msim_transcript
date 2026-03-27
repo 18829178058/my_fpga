@@ -1,0 +1,128 @@
+# Reading E:/quartus/modelsim_ase/tcl/vsim/pref.tcl 
+# do dds_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src {C:/Users/dell/Desktop/ZX/3.5/dds/src/key_filter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_filter
+# 
+# Top level modules:
+# 	key_filter
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src {C:/Users/dell/Desktop/ZX/3.5/dds/src/dds_top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dds_top
+# 
+# Top level modules:
+# 	dds_top
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src {C:/Users/dell/Desktop/ZX/3.5/dds/src/adjust_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adjust_ctrl
+# 
+# Top level modules:
+# 	adjust_ctrl
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/ip {C:/Users/dell/Desktop/ZX/3.5/dds/ip/dds_rom.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dds_rom
+# 
+# Top level modules:
+# 	dds_rom
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src {C:/Users/dell/Desktop/ZX/3.5/dds/src/f_word_cal.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module f_word_cal
+# 
+# Top level modules:
+# 	f_word_cal
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src {C:/Users/dell/Desktop/ZX/3.5/dds/src/addr_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module addr_ctrl
+# 
+# Top level modules:
+# 	addr_ctrl
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src {C:/Users/dell/Desktop/ZX/3.5/dds/src/dds_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dds_ctrl
+# 
+# Top level modules:
+# 	dds_ctrl
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/prj/../sim {C:/Users/dell/Desktop/ZX/3.5/dds/prj/../sim/dds_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dds_tb
+# 
+# Top level modules:
+# 	dds_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  dds_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps dds_tb 
+# Loading work.dds_tb
+# Loading work.dds_top
+# Loading work.key_filter
+# Loading work.adjust_ctrl
+# Loading work.dds_ctrl
+# Loading work.f_word_cal
+# Loading work.addr_ctrl
+# Loading work.dds_rom
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../prj/dds.mif" for reading.
+# 
+# No such file or directory. (errno = ENOENT)    : E:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v(187)
+#    Time: 0 ps  Iteration: 0  Instance: /dds_tb/dut/d1/d1/altsyncram_component
+# ERROR: cannot read ../prj/dds.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../prj/dds.ver" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : E:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v(45506)
+#    Time: 0 ps  Iteration: 0  Instance: /dds_tb/dut/d1/d1/altsyncram_component
+add wave -position insertpoint  \
+sim:/dds_tb/dut/wave_a \
+sim:/dds_tb/dut/wave_f \
+sim:/dds_tb/dut/wave_sel
+add wave -position insertpoint  \
+sim:/dds_tb/dut/d1/addr
+restart
+run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../prj/dds.mif" for reading.
+# 
+# No such file or directory. (errno = ENOENT)    : E:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v(187)
+#    Time: 0 ps  Iteration: 0  Instance: /dds_tb/dut/d1/d1/altsyncram_component
+# ERROR: cannot read ../prj/dds.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../prj/dds.ver" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : E:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v(45506)
+#    Time: 0 ps  Iteration: 0  Instance: /dds_tb/dut/d1/d1/altsyncram_component
+run -all
+add wave -position insertpoint  \
+sim:/dds_tb/dut/a1/wave_a1 \
+sim:/dds_tb/dut/a1/wave_a2 \
+sim:/dds_tb/dut/a1/wave_a3 \
+sim:/dds_tb/dut/a1/wave_f1 \
+sim:/dds_tb/dut/a1/wave_f2 \
+sim:/dds_tb/dut/a1/wave_f3
+restart
+run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../prj/dds.mif" for reading.
+# 
+# No such file or directory. (errno = ENOENT)    : E:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v(187)
+#    Time: 0 ps  Iteration: 0  Instance: /dds_tb/dut/d1/d1/altsyncram_component
+# ERROR: cannot read ../prj/dds.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../prj/dds.ver" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : E:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v(45506)
+#    Time: 0 ps  Iteration: 0  Instance: /dds_tb/dut/d1/d1/altsyncram_component
+run -all

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at sale_auto_1.v(94): always construct contains both blocking and non-blocking assignments File: D:/FPGALearn/Learn20260204/sale_auto_1/src/sale_auto_1.v Line: 94

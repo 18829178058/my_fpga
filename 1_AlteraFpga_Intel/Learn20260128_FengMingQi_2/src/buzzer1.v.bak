@@ -1,0 +1,9 @@
+module buzzer1
+(
+    output reg buzzer_out;
+);
+
+always @(*)
+ buzzer_out = 1'b0;
+
+endmodule

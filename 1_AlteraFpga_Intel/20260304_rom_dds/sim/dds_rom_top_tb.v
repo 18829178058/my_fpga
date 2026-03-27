@@ -1,0 +1,35 @@
+`timescale 1ns/1ns
+module dds_rom_top_tb;
+	
+	reg clk, rst_n, key;
+	
+	initial
+	begin
+		clk = 0;
+		rst_n = 0;
+		key = 0;
+		#101 rst_n =1;
+		
+		begin : cycleOpenKey
+			reg [7:0] i;
+			for(i = 0; i < 100; i = i+1)
+				begin
+					#10000 key = 1;
+					#20 key = 0;
+				end
+		end
+	end
+
+	always #10 clk = ~clk;
+	
+	wire [7:0]q;
+
+dds_rom_top dds_rom_top_inst
+(
+	.clk(clk),
+	.rst_n(rst_n),
+	.key(key),
+	.q(q)
+);
+
+endmodule

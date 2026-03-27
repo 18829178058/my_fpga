@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zxope/Desktop/exam01/prj02/prj/simulation/modelsim
+vmemery
+Z1 !s110 1768961485
+!i10b 1
+!s100 BRXMJHnhNo5Ckc7;DMnJM2
+I]IUA:HlcX7?mSigb[mHH:0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1768961457
+8C:/Users/zxope/Desktop/exam01/prj02/src/memery.v
+FC:/Users/zxope/Desktop/exam01/prj02/src/memery.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1768961485.000000
+!s107 C:/Users/zxope/Desktop/exam01/prj02/src/memery.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zxope/Desktop/exam01/prj02/src|C:/Users/zxope/Desktop/exam01/prj02/src/memery.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/zxope/Desktop/exam01/prj02/src
+Z6 tCvgOpt 0
+vmemery_tb
+R1
+!i10b 1
+!s100 Cz1hmi^<?7`dz:c;TJ6O=0
+IEQ180Xd9YkJO::G>gGTY33
+R2
+R0
+w1768958816
+8C:/Users/zxope/Desktop/exam01/prj02/prj/../src/memery_tb.v
+FC:/Users/zxope/Desktop/exam01/prj02/prj/../src/memery_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/zxope/Desktop/exam01/prj02/prj/../src/memery_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zxope/Desktop/exam01/prj02/prj/../src|C:/Users/zxope/Desktop/exam01/prj02/prj/../src/memery_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/zxope/Desktop/exam01/prj02/prj/../src
+R6

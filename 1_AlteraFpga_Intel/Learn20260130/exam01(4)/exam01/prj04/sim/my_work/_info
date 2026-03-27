@@ -1,0 +1,62 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zxope/Desktop/exam01/prj03/sim
+T_opt
+!s110 1769045762
+V40Qk@^J6`U6Dl2MPzS0PL0
+04 6 4 work mux_tb fast 0
+=1-00e070bf6a84-69717f01-39c-38a8
+o-quiet -auto_acc_if_foreign -work my_work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+R0
+vmux
+Z2 !s110 1769047523
+!i10b 1
+!s100 Yh7kZ2Q5A=XMX4R2JSFW`1
+IzJJFlBngSVR]iXzZLS5GU1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 dC:/Users/zxope/Desktop/exam01/prj04/sim
+w1769046619
+8C:/Users/zxope/Desktop/exam01/prj04/src/mux.v
+FC:/Users/zxope/Desktop/exam01/prj04/src/mux.v
+L0 1
+Z5 OL;L;10.5;63
+r1
+!s85 0
+31
+Z6 !s108 1769047523.000000
+!s107 C:/Users/zxope/Desktop/exam01/prj04/src/mux.v|
+!s90 -reportprogress|300|-work|my_work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/zxope/Desktop/exam01/prj04/src/mux.v|
+!i113 0
+Z7 o-work my_work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vmux_tb
+R2
+!i10b 1
+!s100 UP4eGJ=gB:UblOVhHKJQg1
+IWM5TzEmDX;>ilQQR1;m<B0
+R3
+R4
+w1769047241
+8C:/Users/zxope/Desktop/exam01/prj04/src/mux_tb.v
+FC:/Users/zxope/Desktop/exam01/prj04/src/mux_tb.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zxope/Desktop/exam01/prj04/src/mux_tb.v|
+!s90 -reportprogress|300|-work|my_work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/zxope/Desktop/exam01/prj04/src/mux_tb.v|
+!i113 0
+R7
+R1

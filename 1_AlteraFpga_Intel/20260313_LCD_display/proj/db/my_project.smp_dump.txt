@@ -1,0 +1,7 @@
+
+State Machine - |lcd12864_driver|state
+Name state.SEND_DATA state.SEND_CMD state.INIT state.IDLE 
+state.IDLE 0 0 0 0 
+state.INIT 0 0 1 1 
+state.SEND_CMD 0 1 0 1 
+state.SEND_DATA 1 0 0 1 

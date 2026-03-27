@@ -1,0 +1,4 @@
+Warning (10268): Verilog HDL information at cal_v2.v(59): always construct contains both blocking and non-blocking assignments File: D:/FPGALearn/20260312_jianYiJiShuQi_fuza/src/cal_v2.v Line: 59
+Warning (10268): Verilog HDL information at cal_v2.v(193): always construct contains both blocking and non-blocking assignments File: D:/FPGALearn/20260312_jianYiJiShuQi_fuza/src/cal_v2.v Line: 193
+Info (10281): Verilog HDL Declaration information at cal_v2.v(15): object "RESULT" differs only in case from object "result" in the same scope File: D:/FPGALearn/20260312_jianYiJiShuQi_fuza/src/cal_v2.v Line: 15
+Warning (10268): Verilog HDL information at keyboard.v(32): always construct contains both blocking and non-blocking assignments File: D:/FPGALearn/20260312_jianYiJiShuQi_fuza/src/keyboard.v Line: 32

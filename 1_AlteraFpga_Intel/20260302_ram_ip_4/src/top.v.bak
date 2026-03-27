@@ -1,0 +1,36 @@
+module top
+(		
+	input clk,
+	input rst_n,
+	output [7:0] q
+);
+
+
+wire [7:0] data;
+wire wren, rden;
+wire [7:0] wraddr, rdaddr;
+
+dpram_ctrl dpram_ctrl_inst
+(
+	.clk(clk),
+	.rst_n(rst_n),
+	.data(data),
+	.wren(wren),
+	.rden(rden),
+	.wraddr(wraddr)
+	.rdaddr(rdaddr)
+);
+
+
+my_two_port_ram my_two_port_ram_inst(
+	clock(clk),
+	data(data),
+	rdaddress(rdaddr),
+	rden(rden),
+	wraddress(wraddr),
+	wren(wren),
+	q(q)
+);
+
+
+endmodule 

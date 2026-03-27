@@ -1,0 +1,12 @@
+
+State Machine - |top|cal:c1|c_state
+Name c_state.ONE_NUM c_state.RESULT c_state.TWO_NUM 
+c_state.ONE_NUM 0 0 0 
+c_state.TWO_NUM 1 0 1 
+c_state.RESULT 1 1 0 
+
+State Machine - |top|keyboard:k1|state
+Name state.00 state.DOUT state.SCAN 
+state.00 0 0 0 
+state.SCAN 1 0 1 
+state.DOUT 1 1 0 

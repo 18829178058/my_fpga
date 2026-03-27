@@ -1,0 +1,36 @@
+`timescale          1ns/1ns
+module			    memory_init_tb;
+
+    reg [7:0] address;
+    wire [7:0] q;
+	
+	initial begin
+	
+	        #200;
+			address = 1;
+			#200;
+			
+end
+	
+integer fid;
+initial fid = $fopen("my_rdm.dat");
+
+always     @(*)
+           $fdisplay(fid, "q = %h \t", q);
+		   
+
+initial   begin
+          #(200*10);
+		  $fclose(fid);
+		  $stop;
+end
+	
+	
+memory_init  memory_init_ins
+(
+    .address(address),
+    .q(q)
+);	
+	
+
+endmodule 

@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led_sale",
+					"strict" : false
+				},
+				{
+					"name" : "led_z0p5",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "s0_i",
+					"strict" : false
+				},
+				{
+					"name" : "s1_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

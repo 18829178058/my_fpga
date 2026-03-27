@@ -1,0 +1,57 @@
+module   key_delate_tb;
+
+
+			reg clk;               //系统时钟，默认50MHz
+			reg rst_n;             //系统复位，低电平有效
+			reg s_i;               //按键输入
+			
+initial begin
+            clk = 1'b0;
+			rst_n = 1'b0;
+            #53 ;
+            rst_n = 1'b1;
+end
+			
+always #10 	 clk = ~clk;
+
+//独立按键检测电平输入
+reg         s_i;
+initial  begin
+
+		//模拟按键被按下一次，或者抬起有抖动
+		s_i=1;
+		#500           ;//上电等待500ns
+		s_i=0          ;//按键按下
+		#1000 s_i=1    ;//抖动
+        #1000 s_i=0    ;//抖动
+         
+		
+		#15_000_000    ;//延迟15ms
+		s_i=0;
+		
+        #50_000_000    ;//延迟50ms
+		s_i=1          ;//按键抬起
+		#1000 s_i=0    ;//抖动
+        #200 s_i=1     ;//抖动
+
+
+		#15_000_000;//延迟15ms
+		s_i=      1;//稳定抬起
+		#200       ;
+
+end		
+			
+
+		
+wire s_o;      //按键消抖后输出
+
+
+key_delate   key_delate_inst
+(
+		.clk(clk),               //系统时钟，默认50MHz
+		.rst_n(rst_n),           //系统复位，低电平有效
+		.s_i(s_i),               //按键输入
+		.s_o(s_o)                //按键消抖后输出
+);
+
+endmodule

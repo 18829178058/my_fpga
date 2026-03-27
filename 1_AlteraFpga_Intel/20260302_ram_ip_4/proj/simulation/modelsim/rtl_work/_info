@@ -1,0 +1,151 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGALearn/20260302_ram_ip_4/proj/simulation/modelsim
+T_opt
+!s110 1772526396
+VO=nCZ<_QZ;6aV067Nh>260
+04 6 4 work top_tb fast 0
+=1-74d4ddca7851-69a69b3c-17-295c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+vdpram_ctrl
+Z2 !s110 1772526395
+!i10b 1
+!s100 7WU:4aAbgXf3N;d244EOi0
+IF4kJoY:2OoG3>1z;nKV601
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1772442982
+8D:/FPGALearn/20260302_ram_ip_4/src/dpram_ctrl.v
+FD:/FPGALearn/20260302_ram_ip_4/src/dpram_ctrl.v
+L0 1
+Z4 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z5 !s108 1772526395.000000
+!s107 D:/FPGALearn/20260302_ram_ip_4/src/dpram_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260302_ram_ip_4/src|D:/FPGALearn/20260302_ram_ip_4/src/dpram_ctrl.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 !s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260302_ram_ip_4/src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vmy_pll
+R2
+!i10b 1
+!s100 W7Fg@fO9RdR35bX8EI5jz0
+IeOh1c8HjXAmWahd0lbmKD2
+R3
+R0
+w1772519155
+8D:/FPGALearn/20260302_ram_ip_4/ip/my_pll.v
+FD:/FPGALearn/20260302_ram_ip_4/ip/my_pll.v
+Z8 L0 39
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/FPGALearn/20260302_ram_ip_4/ip/my_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260302_ram_ip_4/ip|D:/FPGALearn/20260302_ram_ip_4/ip/my_pll.v|
+!i113 0
+R6
+Z9 !s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260302_ram_ip_4/ip -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vmy_pll_altpll
+R2
+!i10b 1
+!s100 ;OdV8FLc?dH70JP3YlGNf3
+IMB7Y7WICSWDLMdCJknM;;0
+R3
+R0
+w1772446453
+8D:/FPGALearn/20260302_ram_ip_4/proj/db/my_pll_altpll.v
+FD:/FPGALearn/20260302_ram_ip_4/proj/db/my_pll_altpll.v
+L0 30
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/FPGALearn/20260302_ram_ip_4/proj/db/my_pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260302_ram_ip_4/proj/db|D:/FPGALearn/20260302_ram_ip_4/proj/db/my_pll_altpll.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260302_ram_ip_4/proj/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vmy_two_port_ram
+R2
+!i10b 1
+!s100 XC1@f4I=1NPaF7;dBfj4J0
+IQY^NHgQMX<eAgo`T<e[UH2
+R3
+R0
+w1772518456
+8D:/FPGALearn/20260302_ram_ip_4/ip/my_two_port_ram.v
+FD:/FPGALearn/20260302_ram_ip_4/ip/my_two_port_ram.v
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/FPGALearn/20260302_ram_ip_4/ip/my_two_port_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260302_ram_ip_4/ip|D:/FPGALearn/20260302_ram_ip_4/ip/my_two_port_ram.v|
+!i113 0
+R6
+R9
+R1
+vtop
+R2
+!i10b 1
+!s100 :Pg47V5P1KP9hBE`2D0A00
+Iz^=Boe?>EgGcD;RF>0LXH2
+R3
+R0
+w1772526374
+8D:/FPGALearn/20260302_ram_ip_4/src/top.v
+FD:/FPGALearn/20260302_ram_ip_4/src/top.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/FPGALearn/20260302_ram_ip_4/src/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260302_ram_ip_4/src|D:/FPGALearn/20260302_ram_ip_4/src/top.v|
+!i113 0
+R6
+R7
+R1
+vtop_tb
+R2
+!i10b 1
+!s100 :D2WoEBRPEJT:@VM4dk<i0
+IJHDDLKi:hFhnI;Pc:FTbY0
+R3
+R0
+w1772435445
+8D:/FPGALearn/20260302_ram_ip_4/proj/../sim/top_tb.v
+FD:/FPGALearn/20260302_ram_ip_4/proj/../sim/top_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/FPGALearn/20260302_ram_ip_4/proj/../sim/top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260302_ram_ip_4/proj/../sim|D:/FPGALearn/20260302_ram_ip_4/proj/../sim/top_tb.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260302_ram_ip_4/proj/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

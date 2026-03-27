@@ -1,0 +1,9 @@
+D:/FPGALearn/20260316_1/src/tryfunctTop.v {1 {vlog -work work -vopt -stats=none {D:\FPGALearn\20260316_1\src\tryfunctTop.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module tryfunct
+-- Compiling module tryfunctTop
+
+Top level modules:
+	tryfunctTop
+
+} {} {}}

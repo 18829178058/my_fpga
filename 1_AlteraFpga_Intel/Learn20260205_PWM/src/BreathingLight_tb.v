@@ -1,0 +1,26 @@
+`timescale 1ns/1ns
+module BreathingLight_tb;
+
+reg     clk;         //系统时钟，50MHz
+reg     rst_n;       //系统复位，低电平有效
+		  
+initial  begin
+          clk = 1'b0;
+          rst_n = 1'b0;
+		  #53          ;
+		  rst_n = 1'b1;
+end		  
+		  
+always  #10   clk = ~clk;
+		  
+wire          led_out;      //pwm输出，控制led，呈现呼吸效果
+
+
+BreathingLight  BreathingLight_inst //呼吸灯模块周期2s
+(
+     .clk(clk),             //系统时钟，50MHz
+     .rst_n(rst_n),         //系统复位，低电平有效
+     .led_out(led_out)      //pwm输出，控制led，呈现呼吸效果
+);
+
+endmodule

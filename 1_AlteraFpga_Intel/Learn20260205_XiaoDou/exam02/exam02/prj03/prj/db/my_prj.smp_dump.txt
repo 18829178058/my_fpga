@@ -1,0 +1,20 @@
+
+State Machine - |sale_top|sale_auto:sale_auto_ins|state
+Name state.ML_INPUT state.ML_1 state.ML_0P5 
+state.ML_INPUT 0 0 0 
+state.ML_0P5 1 0 1 
+state.ML_1 1 1 0 
+
+State Machine - |sale_top|key_delet:key_delet1_ins|state
+Name state.UP_KEY state.PRESS state.PRESS_KEY_DJ state.PRESS_KEY 
+state.PRESS_KEY 0 0 0 0 
+state.PRESS_KEY_DJ 0 0 1 1 
+state.PRESS 0 1 0 1 
+state.UP_KEY 1 0 0 1 
+
+State Machine - |sale_top|key_delet:key_delet0_ins|state
+Name state.UP_KEY state.PRESS state.PRESS_KEY_DJ state.PRESS_KEY 
+state.PRESS_KEY 0 0 0 0 
+state.PRESS_KEY_DJ 0 0 1 1 
+state.PRESS 0 1 0 1 
+state.UP_KEY 1 0 0 1 

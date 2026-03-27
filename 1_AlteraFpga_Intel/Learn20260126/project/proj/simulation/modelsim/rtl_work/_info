@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGALearn/Learn20260126/project/proj/simulation/modelsim
+vd_ff
+Z1 !s110 1769442055
+!i10b 1
+!s100 ehFm=[j;4;emi[o]2@Wzj3
+I]@9_Nb_US0Ah^n9gPkm0o3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1769441701
+8D:/FPGALearn/Learn20260126/project/src/d_ff.v
+FD:/FPGALearn/Learn20260126/project/src/d_ff.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1769442055.000000
+!s107 D:/FPGALearn/Learn20260126/project/src/d_ff.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/Learn20260126/project/src|D:/FPGALearn/Learn20260126/project/src/d_ff.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260126/project/src
+Z6 tCvgOpt 0
+vd_ff_tb
+R1
+!i10b 1
+!s100 ;1<z>?S1Wj@S=QWc:zO5S3
+Im?R16FWN1e@Bc:7ibmRCz1
+R2
+R0
+w1769442019
+8D:/FPGALearn/Learn20260126/project/proj/../src/d_ff_tb.v
+FD:/FPGALearn/Learn20260126/project/proj/../src/d_ff_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/Learn20260126/project/proj/../src/d_ff_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/Learn20260126/project/proj/../src|D:/FPGALearn/Learn20260126/project/proj/../src/d_ff_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260126/project/proj/../src
+R6

@@ -1,0 +1,22 @@
+C:/Users/zxope/Desktop/exam01/prj13/src/sum.v {1 {vlog -work work -stats=none C:/Users/zxope/Desktop/exam01/prj13/src/sum.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module sum
+
+Top level modules:
+	sum
+
+} {} {}} C:/Users/zxope/Desktop/exam01/prj13/src/half_sum.v {1 {vlog -work work -stats=none C:/Users/zxope/Desktop/exam01/prj13/src/half_sum.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module half_sum
+
+Top level modules:
+	half_sum
+
+} {} {}} C:/Users/zxope/Desktop/exam01/prj13/src/full_sum.v {1 {vlog -work work -stats=none C:/Users/zxope/Desktop/exam01/prj13/src/full_sum.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module full_sum
+
+Top level modules:
+	full_sum
+
+} {} {}}

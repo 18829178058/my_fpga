@@ -1,0 +1,14 @@
+module dds_top(clk, rst_n, key_sel, key_a, key_f_add, key_f_sub, wave_data);
+
+	input clk, rst_n;
+	
+	input key_sel, key_a, key_f_add, key_f_sub;
+	
+	output [10:0] wave_data;
+	
+
+	
+	
+
+
+endmodule 

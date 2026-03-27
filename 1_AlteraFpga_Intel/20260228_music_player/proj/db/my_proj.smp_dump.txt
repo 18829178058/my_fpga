@@ -1,0 +1,14 @@
+
+State Machine - |music_player|key_delate:key_delate_inst2|state
+Name state.UP_KEY state.PRESS state.PRESS_KEY_DJ state.PRESS_KEY 
+state.PRESS_KEY 0 0 0 0 
+state.PRESS_KEY_DJ 0 0 1 1 
+state.PRESS 0 1 0 1 
+state.UP_KEY 1 0 0 1 
+
+State Machine - |music_player|key_delate:key_delate_inst1|state
+Name state.UP_KEY state.PRESS state.PRESS_KEY_DJ state.PRESS_KEY 
+state.PRESS_KEY 0 0 0 0 
+state.PRESS_KEY_DJ 0 0 1 1 
+state.PRESS 0 1 0 1 
+state.UP_KEY 1 0 0 1 

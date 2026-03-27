@@ -1,0 +1,15 @@
+C:/Users/zxope/Desktop/exam01/prj00/src/sub.v {1 {vlog -work my_work -stats=none C:/Users/zxope/Desktop/exam01/prj00/src/sub.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module sub
+
+Top level modules:
+	sub
+
+} {} {}} C:/Users/zxope/Desktop/exam01/prj00/src/sub_tb.v {1 {vlog -work my_work -stats=none C:/Users/zxope/Desktop/exam01/prj00/src/sub_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module sub_tb
+
+Top level modules:
+	sub_tb
+
+} {} {}}

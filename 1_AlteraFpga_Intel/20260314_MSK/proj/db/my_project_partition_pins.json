@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "data_out",
+					"strict" : false
+				},
+				{
+					"name" : "data_out_valid",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "data_valid",
+					"strict" : false
+				},
+				{
+					"name" : "cos_in",
+					"strict" : false
+				},
+				{
+					"name" : "sin_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

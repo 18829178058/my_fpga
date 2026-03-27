@@ -1,0 +1,21 @@
+/**********************************************************
+Engineer	:	S
+Create Data	:	2026-3-24-10:00
+Description	:	UART串口回环，FPGA与上位机进行通信，波特率可调
+Revision		:	
+Additional comments	:	
+******************************************************/
+/**************************模块及端口声明***************************/
+module uart_top(clk, rst_n, uart_rxd, uart_txd);
+	
+	input clk, rst_n;
+	
+	input uart_rxd;
+	
+	output uart_txd;
+
+/**************************参数定义***************************/
+
+	
+
+endmodule 

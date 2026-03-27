@@ -1,0 +1,43 @@
+# //  ModelSim SE-64 10.5 Feb 13 2016 
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do my_sim.do
+# reading modelsim.ini
+# ** Warning: (vlib-34) Library already exists at "my_work".
+# Model Technology ModelSim SE-64 vmap 10.5 Lib Mapping Utility 2016.02 Feb 13 2016
+# vmap my_work my_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+# Start time: 09:34:04 on Jan 22,2026
+# vlog -reportprogress 300 -work my_work ../src/sub.v ../src/sub_tb.v 
+# -- Compiling module sub
+# -- Compiling module sub_tb
+# 
+# Top level modules:
+# 	sub_tb
+# End time: 09:34:04 on Jan 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" my_work.sub_tb 
+# Start time: 09:34:04 on Jan 22,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading work.sub_tb(fast)
+# Loading work.sub(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zxope  Hostname: ZXOPEN1234  ProcessID: 22636
+#           Attempting to use alternate WLF file "./wlftihzd4s".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftihzd4s
+run -all
+# End time: 09:34:31 on Jan 22,2026, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 2

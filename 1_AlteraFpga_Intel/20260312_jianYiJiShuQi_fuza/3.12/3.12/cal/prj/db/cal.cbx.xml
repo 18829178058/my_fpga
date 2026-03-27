@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="cal">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|cal_v2:c1|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_tim.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|cal_v2:c1|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_bkm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|cal_v2:c1|lpm_mult:Mult0" CBX_FILE_NAME="mult_rct.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|cal_v2:c1|lpm_add_sub:Add4" CBX_FILE_NAME="add_sub_mvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|cal_v2:c1|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_tim.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

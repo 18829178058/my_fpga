@@ -1,0 +1,475 @@
+|top
+clk => clk.IN2
+rst_n => rst_n.IN2
+row[0] => row[0].IN1
+row[1] => row[1].IN1
+row[2] => row[2].IN1
+row[3] => row[3].IN1
+col[0] << keyboard_state3:k1.col
+col[1] << keyboard_state3:k1.col
+col[2] << keyboard_state3:k1.col
+col[3] << keyboard_state3:k1.col
+sel[0] << seg_driver:s1.sel
+sel[1] << seg_driver:s1.sel
+sel[2] << seg_driver:s1.sel
+seg[0] << seg_driver:s1.seg
+seg[1] << seg_driver:s1.seg
+seg[2] << seg_driver:s1.seg
+seg[3] << seg_driver:s1.seg
+seg[4] << seg_driver:s1.seg
+seg[5] << seg_driver:s1.seg
+seg[6] << seg_driver:s1.seg
+seg[7] << seg_driver:s1.seg
+
+
+|top|keyboard_state3:k1
+clk => clk_1ms.CLK
+clk => cnt_1ms[0].CLK
+clk => cnt_1ms[1].CLK
+clk => cnt_1ms[2].CLK
+clk => cnt_1ms[3].CLK
+clk => cnt_1ms[4].CLK
+clk => cnt_1ms[5].CLK
+clk => cnt_1ms[6].CLK
+clk => cnt_1ms[7].CLK
+clk => cnt_1ms[8].CLK
+clk => cnt_1ms[9].CLK
+clk => cnt_1ms[10].CLK
+clk => cnt_1ms[11].CLK
+clk => cnt_1ms[12].CLK
+clk => cnt_1ms[13].CLK
+clk => cnt_1ms[14].CLK
+rst_n => clk_1ms.ACLR
+rst_n => cnt_1ms[0].ACLR
+rst_n => cnt_1ms[1].ACLR
+rst_n => cnt_1ms[2].ACLR
+rst_n => cnt_1ms[3].ACLR
+rst_n => cnt_1ms[4].ACLR
+rst_n => cnt_1ms[5].ACLR
+rst_n => cnt_1ms[6].ACLR
+rst_n => cnt_1ms[7].ACLR
+rst_n => cnt_1ms[8].ACLR
+rst_n => cnt_1ms[9].ACLR
+rst_n => cnt_1ms[10].ACLR
+rst_n => cnt_1ms[11].ACLR
+rst_n => cnt_1ms[12].ACLR
+rst_n => cnt_1ms[13].ACLR
+rst_n => cnt_1ms[14].ACLR
+rst_n => col[0]~reg0.ACLR
+rst_n => col[1]~reg0.ACLR
+rst_n => col[2]~reg0.ACLR
+rst_n => col[3]~reg0.ACLR
+rst_n => key_data[3]$latch.ACLR
+rst_n => key_data[2]$latch.ACLR
+rst_n => key_data[1]$latch.ACLR
+rst_n => key_data[0]$latch.ACLR
+rst_n => flag~reg0.ACLR
+rst_n => c_state.ACLR
+rst_n => cnt_filter[0].ACLR
+rst_n => cnt_filter[1].ACLR
+rst_n => cnt_filter[2].ACLR
+rst_n => cnt_filter[3].ACLR
+rst_n => coordinate[0].ACLR
+rst_n => coordinate[1].ACLR
+rst_n => coordinate[2].ACLR
+rst_n => coordinate[3].ACLR
+rst_n => coordinate[4].ACLR
+rst_n => coordinate[5].ACLR
+rst_n => coordinate[6].ACLR
+rst_n => coordinate[7].ACLR
+row[0] => Equal2.IN3
+row[0] => coordinate[4].DATAIN
+row[1] => Equal2.IN2
+row[1] => coordinate[5].DATAIN
+row[2] => Equal2.IN1
+row[2] => coordinate[6].DATAIN
+row[3] => Equal2.IN0
+row[3] => coordinate[7].DATAIN
+col[0] <= col[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[1] <= col[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[2] <= col[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[3] <= col[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_data[0] <= key_data[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+key_data[1] <= key_data[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+key_data[2] <= key_data[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+key_data[3] <= key_data[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+flag <= flag~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|seg_driver:s1
+clk => seg[0]~reg0.CLK
+clk => seg[1]~reg0.CLK
+clk => seg[2]~reg0.CLK
+clk => seg[3]~reg0.CLK
+clk => seg[4]~reg0.CLK
+clk => seg[5]~reg0.CLK
+clk => seg[6]~reg0.CLK
+clk => seg[7]~reg0.CLK
+clk => dot.CLK
+clk => temp_data[0].CLK
+clk => temp_data[1].CLK
+clk => temp_data[2].CLK
+clk => temp_data[3].CLK
+clk => sel[0]~reg0.CLK
+clk => sel[1]~reg0.CLK
+clk => sel[2]~reg0.CLK
+clk => cnt_time[0].CLK
+clk => cnt_time[1].CLK
+clk => cnt_time[2].CLK
+clk => cnt_time[3].CLK
+clk => cnt_time[4].CLK
+clk => cnt_time[5].CLK
+clk => cnt_time[6].CLK
+clk => cnt_time[7].CLK
+clk => cnt_time[8].CLK
+clk => cnt_time[9].CLK
+clk => cnt_time[10].CLK
+clk => cnt_time[11].CLK
+clk => cnt_time[12].CLK
+clk => cnt_time[13].CLK
+clk => cnt_time[14].CLK
+clk => cnt_time[15].CLK
+rst_n => cnt_time[0].ACLR
+rst_n => cnt_time[1].ACLR
+rst_n => cnt_time[2].ACLR
+rst_n => cnt_time[3].ACLR
+rst_n => cnt_time[4].ACLR
+rst_n => cnt_time[5].ACLR
+rst_n => cnt_time[6].ACLR
+rst_n => cnt_time[7].ACLR
+rst_n => cnt_time[8].ACLR
+rst_n => cnt_time[9].ACLR
+rst_n => cnt_time[10].ACLR
+rst_n => cnt_time[11].ACLR
+rst_n => cnt_time[12].ACLR
+rst_n => cnt_time[13].ACLR
+rst_n => cnt_time[14].ACLR
+rst_n => cnt_time[15].ACLR
+rst_n => seg[0]~reg0.ACLR
+rst_n => seg[1]~reg0.ACLR
+rst_n => seg[2]~reg0.ACLR
+rst_n => seg[3]~reg0.ACLR
+rst_n => seg[4]~reg0.ACLR
+rst_n => seg[5]~reg0.ACLR
+rst_n => seg[6]~reg0.ACLR
+rst_n => seg[7]~reg0.ACLR
+rst_n => sel[0]~reg0.ACLR
+rst_n => sel[1]~reg0.ACLR
+rst_n => sel[2]~reg0.ACLR
+rst_n => dot.PRESET
+rst_n => temp_data[0].ACLR
+rst_n => temp_data[1].ACLR
+rst_n => temp_data[2].ACLR
+rst_n => temp_data[3].ACLR
+data[0] => Mux3.IN5
+data[1] => Mux2.IN5
+data[2] => Mux1.IN5
+data[3] => Mux0.IN5
+data[4] => Mux3.IN4
+data[5] => Mux2.IN4
+data[6] => Mux1.IN4
+data[7] => Mux0.IN4
+data[8] => Mux3.IN3
+data[9] => Mux2.IN3
+data[10] => Mux1.IN3
+data[11] => Mux0.IN3
+data[12] => Mux3.IN2
+data[13] => Mux2.IN2
+data[14] => Mux1.IN2
+data[15] => Mux0.IN2
+data[16] => Mux3.IN1
+data[17] => Mux2.IN1
+data[18] => Mux1.IN1
+data[19] => Mux0.IN1
+data[20] => Mux3.IN0
+data[21] => Mux2.IN0
+data[22] => Mux1.IN0
+data[23] => Mux0.IN0
+sel[0] <= sel[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sel[1] <= sel[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sel[2] <= sel[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg[0] <= seg[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg[7] <= seg[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bin_bcd:b1
+bin[0] => temp[0][0].IN1
+bin[1] => temp[0][1].IN1
+bin[2] => temp[0][2].IN1
+bin[3] => temp[0][3].IN1
+bcd[0] <= move:M[3].m1.move_out
+bcd[1] <= move:M[3].m1.move_out
+bcd[2] <= move:M[3].m1.move_out
+bcd[3] <= move:M[3].m1.move_out
+bcd[4] <= move:M[3].m1.move_out
+bcd[5] <= move:M[3].m1.move_out
+bcd[6] <= move:M[3].m1.move_out
+bcd[7] <= move:M[3].m1.move_out
+
+
+|top|bin_bcd:b1|move:M[0].m1
+move_in[0] => move_out[1].DATAIN
+move_in[1] => move_out[2].DATAIN
+move_in[2] => move_out[3].DATAIN
+move_in[3] => move_out[4].DATAIN
+move_in[4] => move_in[4].IN1
+move_in[5] => move_in[5].IN1
+move_in[6] => move_in[6].IN1
+move_in[7] => move_in[7].IN1
+move_in[8] => move_in[8].IN1
+move_in[9] => move_in[9].IN1
+move_in[10] => move_in[10].IN1
+move_in[11] => move_in[11].IN1
+move_out[0] <= <GND>
+move_out[1] <= move_in[0].DB_MAX_OUTPUT_PORT_TYPE
+move_out[2] <= move_in[1].DB_MAX_OUTPUT_PORT_TYPE
+move_out[3] <= move_in[2].DB_MAX_OUTPUT_PORT_TYPE
+move_out[4] <= move_in[3].DB_MAX_OUTPUT_PORT_TYPE
+move_out[5] <= adjust:a[1].a1.adjust_out
+move_out[6] <= adjust:a[1].a1.adjust_out
+move_out[7] <= adjust:a[1].a1.adjust_out
+move_out[8] <= adjust:a[1].a1.adjust_out
+move_out[9] <= adjust:a[0].a1.adjust_out
+move_out[10] <= adjust:a[0].a1.adjust_out
+move_out[11] <= adjust:a[0].a1.adjust_out
+
+
+|top|bin_bcd:b1|move:M[0].m1|adjust:a[0].a1
+adjust_in[0] => LessThan0.IN8
+adjust_in[0] => Add0.IN8
+adjust_in[0] => adjust_out.DATAA
+adjust_in[1] => LessThan0.IN7
+adjust_in[1] => Add0.IN7
+adjust_in[1] => adjust_out.DATAA
+adjust_in[2] => LessThan0.IN6
+adjust_in[2] => Add0.IN6
+adjust_in[2] => adjust_out.DATAA
+adjust_in[3] => LessThan0.IN5
+adjust_in[3] => Add0.IN5
+adjust_in[3] => adjust_out.DATAA
+adjust_out[0] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[1] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[2] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[3] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bin_bcd:b1|move:M[0].m1|adjust:a[1].a1
+adjust_in[0] => LessThan0.IN8
+adjust_in[0] => Add0.IN8
+adjust_in[0] => adjust_out.DATAA
+adjust_in[1] => LessThan0.IN7
+adjust_in[1] => Add0.IN7
+adjust_in[1] => adjust_out.DATAA
+adjust_in[2] => LessThan0.IN6
+adjust_in[2] => Add0.IN6
+adjust_in[2] => adjust_out.DATAA
+adjust_in[3] => LessThan0.IN5
+adjust_in[3] => Add0.IN5
+adjust_in[3] => adjust_out.DATAA
+adjust_out[0] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[1] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[2] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[3] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bin_bcd:b1|move:M[1].m1
+move_in[0] => move_out[1].DATAIN
+move_in[1] => move_out[2].DATAIN
+move_in[2] => move_out[3].DATAIN
+move_in[3] => move_out[4].DATAIN
+move_in[4] => move_in[4].IN1
+move_in[5] => move_in[5].IN1
+move_in[6] => move_in[6].IN1
+move_in[7] => move_in[7].IN1
+move_in[8] => move_in[8].IN1
+move_in[9] => move_in[9].IN1
+move_in[10] => move_in[10].IN1
+move_in[11] => move_in[11].IN1
+move_out[0] <= <GND>
+move_out[1] <= move_in[0].DB_MAX_OUTPUT_PORT_TYPE
+move_out[2] <= move_in[1].DB_MAX_OUTPUT_PORT_TYPE
+move_out[3] <= move_in[2].DB_MAX_OUTPUT_PORT_TYPE
+move_out[4] <= move_in[3].DB_MAX_OUTPUT_PORT_TYPE
+move_out[5] <= adjust:a[1].a1.adjust_out
+move_out[6] <= adjust:a[1].a1.adjust_out
+move_out[7] <= adjust:a[1].a1.adjust_out
+move_out[8] <= adjust:a[1].a1.adjust_out
+move_out[9] <= adjust:a[0].a1.adjust_out
+move_out[10] <= adjust:a[0].a1.adjust_out
+move_out[11] <= adjust:a[0].a1.adjust_out
+
+
+|top|bin_bcd:b1|move:M[1].m1|adjust:a[0].a1
+adjust_in[0] => LessThan0.IN8
+adjust_in[0] => Add0.IN8
+adjust_in[0] => adjust_out.DATAA
+adjust_in[1] => LessThan0.IN7
+adjust_in[1] => Add0.IN7
+adjust_in[1] => adjust_out.DATAA
+adjust_in[2] => LessThan0.IN6
+adjust_in[2] => Add0.IN6
+adjust_in[2] => adjust_out.DATAA
+adjust_in[3] => LessThan0.IN5
+adjust_in[3] => Add0.IN5
+adjust_in[3] => adjust_out.DATAA
+adjust_out[0] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[1] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[2] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[3] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bin_bcd:b1|move:M[1].m1|adjust:a[1].a1
+adjust_in[0] => LessThan0.IN8
+adjust_in[0] => Add0.IN8
+adjust_in[0] => adjust_out.DATAA
+adjust_in[1] => LessThan0.IN7
+adjust_in[1] => Add0.IN7
+adjust_in[1] => adjust_out.DATAA
+adjust_in[2] => LessThan0.IN6
+adjust_in[2] => Add0.IN6
+adjust_in[2] => adjust_out.DATAA
+adjust_in[3] => LessThan0.IN5
+adjust_in[3] => Add0.IN5
+adjust_in[3] => adjust_out.DATAA
+adjust_out[0] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[1] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[2] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[3] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bin_bcd:b1|move:M[2].m1
+move_in[0] => move_out[1].DATAIN
+move_in[1] => move_out[2].DATAIN
+move_in[2] => move_out[3].DATAIN
+move_in[3] => move_out[4].DATAIN
+move_in[4] => move_in[4].IN1
+move_in[5] => move_in[5].IN1
+move_in[6] => move_in[6].IN1
+move_in[7] => move_in[7].IN1
+move_in[8] => move_in[8].IN1
+move_in[9] => move_in[9].IN1
+move_in[10] => move_in[10].IN1
+move_in[11] => move_in[11].IN1
+move_out[0] <= <GND>
+move_out[1] <= move_in[0].DB_MAX_OUTPUT_PORT_TYPE
+move_out[2] <= move_in[1].DB_MAX_OUTPUT_PORT_TYPE
+move_out[3] <= move_in[2].DB_MAX_OUTPUT_PORT_TYPE
+move_out[4] <= move_in[3].DB_MAX_OUTPUT_PORT_TYPE
+move_out[5] <= adjust:a[1].a1.adjust_out
+move_out[6] <= adjust:a[1].a1.adjust_out
+move_out[7] <= adjust:a[1].a1.adjust_out
+move_out[8] <= adjust:a[1].a1.adjust_out
+move_out[9] <= adjust:a[0].a1.adjust_out
+move_out[10] <= adjust:a[0].a1.adjust_out
+move_out[11] <= adjust:a[0].a1.adjust_out
+
+
+|top|bin_bcd:b1|move:M[2].m1|adjust:a[0].a1
+adjust_in[0] => LessThan0.IN8
+adjust_in[0] => Add0.IN8
+adjust_in[0] => adjust_out.DATAA
+adjust_in[1] => LessThan0.IN7
+adjust_in[1] => Add0.IN7
+adjust_in[1] => adjust_out.DATAA
+adjust_in[2] => LessThan0.IN6
+adjust_in[2] => Add0.IN6
+adjust_in[2] => adjust_out.DATAA
+adjust_in[3] => LessThan0.IN5
+adjust_in[3] => Add0.IN5
+adjust_in[3] => adjust_out.DATAA
+adjust_out[0] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[1] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[2] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[3] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bin_bcd:b1|move:M[2].m1|adjust:a[1].a1
+adjust_in[0] => LessThan0.IN8
+adjust_in[0] => Add0.IN8
+adjust_in[0] => adjust_out.DATAA
+adjust_in[1] => LessThan0.IN7
+adjust_in[1] => Add0.IN7
+adjust_in[1] => adjust_out.DATAA
+adjust_in[2] => LessThan0.IN6
+adjust_in[2] => Add0.IN6
+adjust_in[2] => adjust_out.DATAA
+adjust_in[3] => LessThan0.IN5
+adjust_in[3] => Add0.IN5
+adjust_in[3] => adjust_out.DATAA
+adjust_out[0] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[1] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[2] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[3] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bin_bcd:b1|move:M[3].m1
+move_in[0] => move_out[1].DATAIN
+move_in[1] => move_out[2].DATAIN
+move_in[2] => move_out[3].DATAIN
+move_in[3] => move_out[4].DATAIN
+move_in[4] => move_in[4].IN1
+move_in[5] => move_in[5].IN1
+move_in[6] => move_in[6].IN1
+move_in[7] => move_in[7].IN1
+move_in[8] => move_in[8].IN1
+move_in[9] => move_in[9].IN1
+move_in[10] => move_in[10].IN1
+move_in[11] => move_in[11].IN1
+move_out[0] <= <GND>
+move_out[1] <= move_in[0].DB_MAX_OUTPUT_PORT_TYPE
+move_out[2] <= move_in[1].DB_MAX_OUTPUT_PORT_TYPE
+move_out[3] <= move_in[2].DB_MAX_OUTPUT_PORT_TYPE
+move_out[4] <= move_in[3].DB_MAX_OUTPUT_PORT_TYPE
+move_out[5] <= adjust:a[1].a1.adjust_out
+move_out[6] <= adjust:a[1].a1.adjust_out
+move_out[7] <= adjust:a[1].a1.adjust_out
+move_out[8] <= adjust:a[1].a1.adjust_out
+move_out[9] <= adjust:a[0].a1.adjust_out
+move_out[10] <= adjust:a[0].a1.adjust_out
+move_out[11] <= adjust:a[0].a1.adjust_out
+
+
+|top|bin_bcd:b1|move:M[3].m1|adjust:a[0].a1
+adjust_in[0] => LessThan0.IN8
+adjust_in[0] => Add0.IN8
+adjust_in[0] => adjust_out.DATAA
+adjust_in[1] => LessThan0.IN7
+adjust_in[1] => Add0.IN7
+adjust_in[1] => adjust_out.DATAA
+adjust_in[2] => LessThan0.IN6
+adjust_in[2] => Add0.IN6
+adjust_in[2] => adjust_out.DATAA
+adjust_in[3] => LessThan0.IN5
+adjust_in[3] => Add0.IN5
+adjust_in[3] => adjust_out.DATAA
+adjust_out[0] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[1] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[2] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[3] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bin_bcd:b1|move:M[3].m1|adjust:a[1].a1
+adjust_in[0] => LessThan0.IN8
+adjust_in[0] => Add0.IN8
+adjust_in[0] => adjust_out.DATAA
+adjust_in[1] => LessThan0.IN7
+adjust_in[1] => Add0.IN7
+adjust_in[1] => adjust_out.DATAA
+adjust_in[2] => LessThan0.IN6
+adjust_in[2] => Add0.IN6
+adjust_in[2] => adjust_out.DATAA
+adjust_in[3] => LessThan0.IN5
+adjust_in[3] => Add0.IN5
+adjust_in[3] => adjust_out.DATAA
+adjust_out[0] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[1] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[2] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+adjust_out[3] <= adjust_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

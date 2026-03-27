@@ -1,0 +1,39 @@
+|lut_xor
+a => a.IN2
+b => b.IN2
+c <= lut_not:lut_not_ins2.c
+
+
+|lut_xor|lut_not:lut_not_ins0
+a => Decoder0.IN0
+c <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lut_xor|lut_not:lut_not_ins1
+a => Decoder0.IN0
+c <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lut_xor|lut_not:lut_not_ins2
+a => Decoder0.IN0
+c <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lut_xor|lut_and:lut_and_ins0
+a => Mux0.IN5
+b => Mux0.IN4
+c <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lut_xor|lut_and:lut_and_ins1
+a => Mux0.IN5
+b => Mux0.IN4
+c <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lut_xor|lut_or:lut_or_ins
+a => Mux0.IN5
+b => Mux0.IN4
+c <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

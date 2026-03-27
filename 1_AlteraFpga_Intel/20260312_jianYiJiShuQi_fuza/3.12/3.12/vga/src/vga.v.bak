@@ -1,0 +1,86 @@
+//端口定义
+module vga(clk, rst_n, hsync,vsync, rgb);
+	
+	input clk, rst_n;
+	
+	output reg [7:0] rgb;
+
+	output hsync;
+	
+	output vsync;
+	
+//参数声明
+	parameter 	ha	=	128,
+					hb =	88,
+					hc =	800,
+					hd	=	40,
+					he	=	1056;
+	
+	parameter	va	=	4,
+					vb	=	23,
+					vc	=	600,
+					vd	=	1,
+					ve	=	628;
+					
+//定义内部变量
+	reg	[10:0]	h_cnt;
+	
+	reg	[9:0]		v_cnt;
+	
+//h_cnt
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				h_cnt <= 0;
+			else
+				if(h_cnt < he - 1)
+					h_cnt <= h_cnt + 1;
+				else
+					h_cnt <= 0;
+		end
+		
+//v_cnt
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				v_cnt <= 0;
+			else
+				if(v_cnt == ve - 1 && h_cnt == he - 1)
+					v_cnt <= 0;
+				else
+					if(h_cnt == he - 1)
+						v_cnt <= v_cnt + 1;
+					else
+						v_cnt <= v_cnt;
+		end	
+	
+	assign	hsync = (h_cnt < ha)	?	1'b0	:	1'b1;
+	assign	vsync = (v_cnt < va)	?	1'b0	:	1'b1;
+	
+
+//屏幕平均分为8份，显示不同颜色	
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					rgb <= 0;
+				end
+			else
+				if(h_cnt>216 && h_cnt<1016)
+					case(h_cnt[9:7])
+						3'd0	:	rgb <= 8'b111_000_00;//红色
+						3'd1	:	rgb <= 8'b000_111_00;//绿色
+						3'd2	:	rgb <= 8'b000_000_11;//蓝色
+						3'd3	:	rgb <= 8'b111_111_00;//黄色
+						3'd4	:	rgb <= 8'b111_000_11;//红+蓝色
+						3'd5	:	rgb <= 8'b000_111_11;//绿+蓝色
+						3'd6	:	rgb <= 8'b111_111_11;//白色
+						3'd7	:	rgb <= 8'b000_000_00;//红色
+					
+					
+					endcase
+		end
+	
+	
+
+endmodule 

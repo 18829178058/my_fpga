@@ -1,0 +1,5 @@
+
+State Machine - |fifo_top|fifo_wr:fifo_wr_inst|state
+Name state.FULL 
+state.00 0 
+state.FULL 1 

@@ -1,0 +1,12 @@
+module top(clk, rst_n, rgb, hsync, vsync);
+	
+	input clk, rst_n;
+	
+	output [7:0] rgb;
+	
+	output hsync;
+	
+	output vsync;
+
+
+endmodule 

@@ -1,0 +1,10 @@
+
+State Machine - |lcd12864_driver|curr_state
+Name curr_state.S_IDLE curr_state.S_DISP_DATA curr_state.S_INIT_CMD4 curr_state.S_INIT_CMD3 curr_state.S_INIT_CMD2 curr_state.S_INIT_CMD1 curr_state.S_RST 
+curr_state.S_RST 0 0 0 0 0 0 0 
+curr_state.S_INIT_CMD1 0 0 0 0 0 1 1 
+curr_state.S_INIT_CMD2 0 0 0 0 1 0 1 
+curr_state.S_INIT_CMD3 0 0 0 1 0 0 1 
+curr_state.S_INIT_CMD4 0 0 1 0 0 0 1 
+curr_state.S_DISP_DATA 0 1 0 0 0 0 1 
+curr_state.S_IDLE 1 0 0 0 0 0 1 

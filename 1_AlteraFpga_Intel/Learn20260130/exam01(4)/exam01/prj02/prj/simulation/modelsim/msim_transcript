@@ -1,0 +1,58 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do my_prj_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zxope/Desktop/exam01/prj02/src {C:/Users/zxope/Desktop/exam01/prj02/src/memery.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:25 on Jan 21,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zxope/Desktop/exam01/prj02/src" C:/Users/zxope/Desktop/exam01/prj02/src/memery.v 
+# -- Compiling module memery
+# 
+# Top level modules:
+# 	memery
+# End time: 10:11:25 on Jan 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zxope/Desktop/exam01/prj02/prj/../src {C:/Users/zxope/Desktop/exam01/prj02/prj/../src/memery_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:25 on Jan 21,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zxope/Desktop/exam01/prj02/prj/../src" C:/Users/zxope/Desktop/exam01/prj02/prj/../src/memery_tb.v 
+# -- Compiling module memery_tb
+# 
+# Top level modules:
+# 	memery_tb
+# End time: 10:11:25 on Jan 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  memery_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" memery_tb 
+# Start time: 10:11:25 on Jan 21,2026
+# Loading work.memery_tb
+# Loading work.memery
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# memery=24
+# memery=81
+# memery=09
+# memery=63
+# memery=0d
+# memery=8d
+# ** Note: $stop    : C:/Users/zxope/Desktop/exam01/prj02/prj/../src/memery_tb.v(27)
+#    Time: 1400 ns  Iteration: 0  Instance: /memery_tb
+# Break in Module memery_tb at C:/Users/zxope/Desktop/exam01/prj02/prj/../src/memery_tb.v line 27
+# End time: 10:15:45 on Jan 21,2026, Elapsed time: 0:04:20
+# Errors: 0, Warnings: 0

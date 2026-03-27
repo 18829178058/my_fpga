@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGALearn/20260211_ShuMaGuan/proj/simulation/modelsim
+vdig_driver
+Z1 !s110 1770817368
+!i10b 1
+!s100 b6bgV]J<1ABTD3zhhDkY^3
+IFG1UQmJ;]?R53EaB0]8^I0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1770816883
+8D:/FPGALearn/20260211_ShuMaGuan/src/dig_driver.v
+FD:/FPGALearn/20260211_ShuMaGuan/src/dig_driver.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1770817368.000000
+!s107 D:/FPGALearn/20260211_ShuMaGuan/src/dig_driver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260211_ShuMaGuan/src|D:/FPGALearn/20260211_ShuMaGuan/src/dig_driver.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260211_ShuMaGuan/src
+Z7 tCvgOpt 0
+vtest_dig_driver
+R1
+!i10b 1
+!s100 nM<Teff;i]S6E>7FQh2262
+IG5^IUKb4<ATQ>VHNh4^V^2
+R2
+R0
+w1770817338
+8D:/FPGALearn/20260211_ShuMaGuan/src/test_dig_driver.v
+FD:/FPGALearn/20260211_ShuMaGuan/src/test_dig_driver.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/20260211_ShuMaGuan/src/test_dig_driver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260211_ShuMaGuan/src|D:/FPGALearn/20260211_ShuMaGuan/src/test_dig_driver.v|
+!i113 1
+R5
+R6
+R7
+vtest_dig_driver_tb
+R1
+!i10b 1
+!s100 aR[SQNSN?e34FC@OHFN[g1
+I8B1g@QCX^mOTmBZ`6A]a42
+R2
+R0
+w1770816822
+8D:/FPGALearn/20260211_ShuMaGuan/proj/../src/test_dig_driver_tb.v
+FD:/FPGALearn/20260211_ShuMaGuan/proj/../src/test_dig_driver_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGALearn/20260211_ShuMaGuan/proj/../src/test_dig_driver_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260211_ShuMaGuan/proj/../src|D:/FPGALearn/20260211_ShuMaGuan/proj/../src/test_dig_driver_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260211_ShuMaGuan/proj/../src
+R7

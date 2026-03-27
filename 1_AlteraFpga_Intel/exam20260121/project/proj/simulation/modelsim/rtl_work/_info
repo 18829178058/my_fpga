@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGALearn/exam20260121/project/proj/simulation/modelsim
+vmux_3to1
+Z1 !s110 1769011020
+!i10b 1
+!s100 k<7?YF^3>A[LAgfRLU=h20
+IincFlXLN[fX9AQ1C[;hQ90
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1769010938
+8D:/FPGALearn/exam20260121/project/src/mux_3to1.v
+FD:/FPGALearn/exam20260121/project/src/mux_3to1.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1769011019.000000
+!s107 D:/FPGALearn/exam20260121/project/src/mux_3to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/exam20260121/project/src|D:/FPGALearn/exam20260121/project/src/mux_3to1.v|
+!i113 1
+Z4 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/exam20260121/project/src
+Z5 tCvgOpt 0
+vmux_3to1_tb
+R1
+!i10b 1
+!s100 6b2F;Qz=omPSUQ3A]i4G70
+IRJe2mRI<5?@Fa=bzUZnnT3
+R2
+R0
+w1769010474
+8D:/FPGALearn/exam20260121/project/proj/../src/mux_3to1_tb.v
+FD:/FPGALearn/exam20260121/project/proj/../src/mux_3to1_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1769011020.000000
+!s107 D:/FPGALearn/exam20260121/project/proj/../src/mux_3to1_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/exam20260121/project/proj/../src|D:/FPGALearn/exam20260121/project/proj/../src/mux_3to1_tb.v|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/exam20260121/project/proj/../src
+R5

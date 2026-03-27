@@ -1,0 +1,6 @@
+
+State Machine - |msk_demodulator|state
+Name state.SAMPLE state.DECIDE state.CALCULATE 
+state.SAMPLE 0 0 0 
+state.CALCULATE 1 0 1 
+state.DECIDE 1 1 0 

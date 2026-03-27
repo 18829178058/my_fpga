@@ -1,0 +1,49 @@
+module	top
+(
+	input clk,
+	input rst_n,
+	input [3:0]		row,
+	output [3:0]	col,
+	output [2:0]	sel,
+	output [7:0]	seg
+);
+
+	wire [3:0] key_data;
+	
+	wire flag
+
+keyboard	keyboard_inst
+(
+	.clk(clk),
+	.rst_n(rst_n),
+	.row(row),				//行
+	.col(col),			//列
+	.key_data(key_data),		//输出
+	.flag(flag)
+);
+
+
+	wire [23:0] dout
+
+cal	cal_inst
+(
+	.clk(clk),
+	.rst_n(rst_n),
+	.key_data(key_data),
+	.flag(flag),			//按键使能信号，1代表按键按下
+	.dout(dout)
+);
+
+	
+seg_driver	seg_driver_inst
+(
+	.clk(clk),					//系统时钟
+	.rst_n(rst_n),				//系统复位
+	.data(data),			//需要译码的数据
+
+	.sel(sel),		//片选信号
+	.sel(sel)		//段选信号
+);
+
+
+endmodule

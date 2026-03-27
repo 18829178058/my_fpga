@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zxope/Desktop/exam01/prj05/prj/simulation/modelsim
+vlut_and
+Z1 !s110 1769136230
+!i10b 1
+!s100 A>0@:W:]e2geAYRPFBOP]1
+Iebg_9YXm`U9CUTJV;k2@60
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1769134370
+8C:/Users/zxope/Desktop/exam01/prj05/src/lut_and.v
+FC:/Users/zxope/Desktop/exam01/prj05/src/lut_and.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1769136229.000000
+!s107 C:/Users/zxope/Desktop/exam01/prj05/src/lut_and.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zxope/Desktop/exam01/prj05/src|C:/Users/zxope/Desktop/exam01/prj05/src/lut_and.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/zxope/Desktop/exam01/prj05/src
+Z7 tCvgOpt 0
+vlut_not
+Z8 !s110 1769136229
+!i10b 1
+!s100 26Cf0_XMW;TDfaZ<gFH^F1
+I@8ANZ@B@XWC6<bHmQ>XCF1
+R2
+R0
+w1769134478
+8C:/Users/zxope/Desktop/exam01/prj05/src/lut_not.v
+FC:/Users/zxope/Desktop/exam01/prj05/src/lut_not.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/zxope/Desktop/exam01/prj05/src/lut_not.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zxope/Desktop/exam01/prj05/src|C:/Users/zxope/Desktop/exam01/prj05/src/lut_not.v|
+!i113 1
+R5
+R6
+R7
+vlut_or
+R8
+!i10b 1
+!s100 U]KLlURQb1F9dRS4deRR23
+IlW?[@aoJi1X[2BgzaU7;c3
+R2
+R0
+w1769134499
+8C:/Users/zxope/Desktop/exam01/prj05/src/lut_or.v
+FC:/Users/zxope/Desktop/exam01/prj05/src/lut_or.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/zxope/Desktop/exam01/prj05/src/lut_or.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zxope/Desktop/exam01/prj05/src|C:/Users/zxope/Desktop/exam01/prj05/src/lut_or.v|
+!i113 1
+R5
+R6
+R7
+vlut_xor
+R8
+!i10b 1
+!s100 ^JP84G44X3:Zk]:CUWZ]@0
+I?]El:mT666Fn>h?1k1Ygm0
+R2
+R0
+w1769136176
+8C:/Users/zxope/Desktop/exam01/prj05/src/lut_xor.v
+FC:/Users/zxope/Desktop/exam01/prj05/src/lut_xor.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/zxope/Desktop/exam01/prj05/src/lut_xor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zxope/Desktop/exam01/prj05/src|C:/Users/zxope/Desktop/exam01/prj05/src/lut_xor.v|
+!i113 1
+R5
+R6
+R7
+vlut_xor_tb
+R1
+!i10b 1
+!s100 >=nfh<C@4_YH[N`EfPoeZ1
+Ib0cSNToz;P:3f<@^H2]a`2
+R2
+R0
+w1769133824
+8C:/Users/zxope/Desktop/exam01/prj05/prj/../src/lut_xor_tb.v
+FC:/Users/zxope/Desktop/exam01/prj05/prj/../src/lut_xor_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1769136230.000000
+!s107 C:/Users/zxope/Desktop/exam01/prj05/prj/../src/lut_xor_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zxope/Desktop/exam01/prj05/prj/../src|C:/Users/zxope/Desktop/exam01/prj05/prj/../src/lut_xor_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/zxope/Desktop/exam01/prj05/prj/../src
+R7

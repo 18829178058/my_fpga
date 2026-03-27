@@ -1,0 +1,190 @@
+//控制蛇身长度（得分），移动机制，数组存储蛇左边，上色（颜色区分）
+/*-------------------------端口定义-----------------------------*/
+module data(clk, rst_n, vaild_range, x, y, apple_x, apple_y, up, down, left, right, apple_en, rgb);
+	
+	input clk, rst_n;
+	
+	//VGA时序信号
+	input vaild_range;	//图像有效信号
+	input [9:0] x;			//当前像素点的x坐标
+	input [9:0] y;			//当前像素点的y坐标
+	
+	output [7:0] rgb;
+	
+	//苹果位置
+	input apple_x;			//苹果左上角的水平坐标
+	input apple_y;			//苹果左上角的垂直坐标
+	
+	output reg apple_en;	//当蛇头位置与苹果位置重叠时，生成新苹果（使能有效）
+	
+	//按键位置（当前移动方向）
+	input up;				//上
+	input down;				//下
+	input left;				//左
+	input right;			//右
+	
+
+/*-------------------------参数声明-----------------------------*/	
+	parameter	he	=	640;//水平分辨率（h_cnt最大值）
+	parameter	ve	=	480;//垂直分辨率（v_cnt最大值）
+	
+	parameter	SIZE	=	40;//一个网格的尺寸（边长）
+	
+	parameter	CNT_MAX	=	25_000_000;//半秒时间
+	
+/*-------------------------定义内部变量-----------------------------*/
+	reg	[24:0]	cnt;		//移动计数，速度计数器
+	wire				add_cnt;
+	wire				end_cnt;
+	
+	reg	[9:0]		size_x[8:0];//蛇身X坐标数组（最多9节）
+	reg	[9:0]		size_y[8:0];//蛇身y坐标数组（最多9节）
+	
+	reg	[3:0]		num;	//吃苹果数量（蛇目前长度）
+	
+	reg	[7:0]		data_reg;	//寄存颜色数据
+	assign	rgb	=	data_reg;//将寄存器连接到输出
+	
+/*-------------------------速度控制计数器-----------------------------*/	
+	
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					cnt <= 0;
+				end
+			else
+				if(add_cnt)
+					if(end_cnt)
+						cnt <= 0;
+					else
+						cnt <= cnt + 1;
+				else
+					cnt <= cnt;
+		end
+	
+	assign	add_cnt	=	1;
+	assign	end_cnt	=	add_cnt && cnt == CNT_MAX - 1;
+
+/*-------------------------蛇的移动-----------------------------*/	
+	
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					//蛇头初始位置
+					size_x[0]	<=	SIZE * 2;
+					size_y[0]	<=	SIZE * 2;
+					//蛇身初始化，所有节为0
+					size_x[1]	<=	0;
+					size_x[2]	<=	0;
+					size_x[3]	<=	0;
+					size_x[4]	<=	0;
+					size_x[5]	<=	0;
+					size_x[6]	<=	0;
+					size_x[7]	<=	0;
+					size_x[8]	<=	0;
+				
+					size_y[1]	<=	0;
+					size_y[2]	<=	0;
+					size_y[3]	<=	0;
+					size_y[4]	<=	0;
+					size_y[5]	<=	0;
+					size_y[6]	<=	0;
+					size_y[7]	<=	0;
+					size_y[8]	<=	0;
+				end
+			else		//移动条件：吃到苹果或计数满
+				if((size_x[0] == apple_x)&&(size_y[0] == apple_y) || end_cnt)
+					begin
+						if(up)
+									begin
+										if(size_y[0] <= SIZE)	//到达上边界
+											size_y[0] <= ve - SIZE * 2;//从下方出现
+										else
+											size_y[0] <= size_y[0] - SIZE;	//正常向上移动
+									end
+						else	if(down)
+									begin
+										if(size_y[0] >= ve - SIZE * 2)	//到达下边界
+											size_y[0] <= SIZE;		//从上方出现
+										else
+											size_y[0] <= size_y[0] + SIZE;//正常向下移动
+									end
+						else	if(left)
+									begin
+										if(size_x[0] <= SIZE)			//到达左边界
+											size_x[0] <= he - SIZE * 2;	//从右方出现
+										else
+											size_x[0] <= size[0] - SIZE;	//正常向左移动
+									end
+						else	if(right)
+									begin
+										if(size_x[0] >= he - SIZE * 2)//到达右边界
+											size_x[0] <= SIZE;				//从左方出现
+										else
+											size_x[0] <= size_x[0] + SIZE;//正常向右移动
+									end
+								else
+									begin
+										size_x[0] <= 0;
+										size_y[0] <= 0;
+									end
+					//蛇身移动，后一节的位置移动到前一节的位置	
+						size_x[1]	<=	size_x[0];	
+						size_x[2]	<=	size_x[1];
+						size_x[3]	<=	size_x[2];
+						size_x[4]	<=	size_x[3];
+						size_x[5]	<=	size_x[4];
+						size_x[6]	<=	size_x[5];
+						size_x[7]	<=	size_x[6];
+						size_x[8]	<=	size_x[7];
+						
+						size_y[1]	<=	size_y[0];
+						size_y[2]	<=	size_y[1];
+						size_y[3]	<=	size_y[2];
+						size_y[4]	<=	size_y[3];
+						size_y[5]	<=	size_y[4];
+						size_y[6]	<=	size_y[5];
+						size_y[7]	<=	size_y[6];
+						size_y[8]	<=	size_y[7];
+					end
+				else	//未吃到苹果且计数未满
+					begin	//如果当前不是移动时刻
+						size_x[num] <= 0;	//当前长度之后的蛇身隐藏
+						size_y[num] <= 0;
+					end
+		end
+	
+/*-----------------------苹果检测与身体增长-----------------------------*/	
+//苹果检测
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					apple_en <= 0;
+				end
+			else
+				if(size_x[0] == apple_x && size_y[0] ==apple_y)	//蛇头位置与苹果位置重合（吃到）
+					apple_en <= 1;			//产生吃苹果有效信号，生成新苹果
+				else
+					apple_en <= 0;
+		end
+	
+//身体增长
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					num <= 1;			//初始长度为1（只有蛇头）
+				end
+			else
+				if(apple_en)
+					if(num == 9)
+						num <= num;
+					else
+						num <= num + 1;
+		end
+	
+	
+endmodule 

@@ -1,0 +1,23 @@
+module memory_init (
+    input wire [7:0] address,
+    output reg [7:0] q
+);
+    
+    reg [7:0] rom [0:255];
+    
+    initial begin
+        // 方法1: 直接读取.mif文件（需要确保格式正确）
+        $readmemh("hex_data.mem", rom);
+    end
+    
+    always @(*) begin
+        q = rom[address];
+    end
+    
+    // Quartus综合指令
+    // synthesis translate_off
+    initial begin
+        $display("ROM模块初始化完成");
+    end
+    // synthesis translate_on
+endmodule

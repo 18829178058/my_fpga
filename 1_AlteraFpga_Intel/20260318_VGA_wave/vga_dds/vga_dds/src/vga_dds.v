@@ -1,0 +1,190 @@
+module vga_dds(clk, rst_n, q, hsync, vsync, rgb, addr);
+	
+	input clk, rst_n;
+	
+	input [7:0] q;
+	
+	output hsync, vsync;
+	
+	output reg [7:0] rgb;
+	
+	output reg [7:0] addr;
+	
+//参数声明
+	parameter	ha	=	128,
+					hb	=	88,
+					hc	=	800,
+					hd	=	40,
+					he	=	1056;
+	
+	parameter	va	=	4,
+					vb	=	23,
+					vc	=	600,
+					vd	=	1,
+					ve	=	628;
+
+//定义内部变量
+	reg	[10:0]	h_cnt;			//行计数
+	wire				add_h_cnt;
+	wire				end_h_cnt;
+	
+	reg	[9:0]		v_cnt;			//场计数
+	wire				add_v_cnt;
+	wire				end_v_cnt;
+	
+	reg				vaild_range;	//判断是否在显示范围内
+	reg				wave_range;
+	
+	reg	[7:0]		move_data;
+	
+	reg	[16:0]		cnt;
+	
+//计数器
+//h_cnt
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					h_cnt <= 0;
+				end
+			else
+				if(add_h_cnt)
+					if(end_h_cnt)
+						h_cnt <= 0;
+					else
+						h_cnt <= h_cnt + 1;
+				else
+					h_cnt <= h_cnt;
+		end
+	
+	assign	add_h_cnt	= 1;
+	assign	end_h_cnt	=	add_h_cnt && h_cnt == he - 1;
+
+//v_cnt
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					v_cnt <= 0;
+				end
+			else
+				if(add_v_cnt)
+					if(end_v_cnt)
+						v_cnt <= 0;
+					else
+						v_cnt <= v_cnt + 1;
+				else
+					v_cnt <= v_cnt;
+		end
+	
+	assign	add_v_cnt	=	end_h_cnt;
+	assign	end_v_cnt	=	add_v_cnt && v_cnt == ve - 1;
+	
+	assign	hsync = (h_cnt < ha)	?	1'b0	:	1'b1;
+	assign	vsync = (v_cnt < va)	?	1'b0	:	1'b1;
+	
+//vaild_range
+	always @ (*)
+		begin
+			if(!rst_n)
+				begin
+					vaild_range <= 0;
+				end
+			else
+				if((h_cnt>=ha + hb)&&(h_cnt<he-hd)&&(v_cnt>=va+vb)&&(v_cnt<ve-vd))
+					begin
+						vaild_range <= 1;
+					end
+				else
+					vaild_range <= 0;
+		end
+		
+//wave_range
+	always @ (*)
+		begin
+			if(!rst_n)
+				wave_range <= 0;
+			else
+				if((h_cnt>=ha + hb)&&(h_cnt<he-hd)&&(v_cnt>=va+vb)&&(v_cnt<va+vb+256))
+					wave_range <= 1;
+				else
+					wave_range <= 0;
+		end
+
+//addr	
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					addr <= 0;
+				end
+			else
+				if(vaild_range)
+					if(wave_range)
+						addr <= addr + 1;
+					else
+						addr <= move_data;
+				else
+					addr <= move_data;
+		end
+	
+//move_data
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					cnt <= 0;
+					move_data <= 0;
+				end
+			else
+				if(cnt < 99999)
+					begin
+						cnt <= cnt + 1;
+						move_data <= move_data;
+					end
+				else
+					begin
+						cnt <= 0;
+						move_data <= move_data + 1;
+					end
+		end
+
+//	always @ (*)//方波
+//		if(!rst_n)
+//			rgb <= 0;
+//		else
+//			if(vaild_range)
+//				if(wave_range)
+//					if(255 - q == v_cnt - va - vb)
+//						rgb = 8'b111_111_11;
+//					else
+//						if(h_cnt == ha + hb + 128)
+//							if((v_cnt == va + vb + 255)&&(h_cnt>=ha+hb) && (h_cnt<ha+hb+128))
+//								rgb <= 8'b111_111_11;
+//							else
+//								rgb <= 0;
+//						else
+//							rgb <= 0;
+//				else
+//					rgb <= 8'b000_111_00;
+//			else
+//				rgb <= 0;
+						
+	always @ (*)//三角波，正弦波
+		begin
+			if(!rst_n)
+				rgb = 0;
+			else
+				if(vaild_range)
+					if(wave_range)
+						if(q == v_cnt-va-vb)
+							rgb = 8'b111_111_11;
+						else
+							rgb = 8'b0;
+					else
+						rgb = 8'b000_111_00;
+				else
+					rgb = 8'b0;
+		end
+	
+endmodule 

@@ -1,0 +1,5 @@
+|question_13
+clk_in => ~NO_FANOUT~
+clk_out <= <GND>
+
+

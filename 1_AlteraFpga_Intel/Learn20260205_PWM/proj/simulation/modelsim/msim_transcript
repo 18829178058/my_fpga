@@ -1,0 +1,50 @@
+# Reading D:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do my_proj_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260205_PWM/src {D:/FPGALearn/Learn20260205_PWM/src/BreathingLight.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:32 on Feb 06,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGALearn/Learn20260205_PWM/src" D:/FPGALearn/Learn20260205_PWM/src/BreathingLight.v 
+# -- Compiling module BreathingLight
+# 
+# Top level modules:
+# 	BreathingLight
+# End time: 15:36:32 on Feb 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGALearn/Learn20260205_PWM/proj/../src {D:/FPGALearn/Learn20260205_PWM/proj/../src/BreathingLight_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:32 on Feb 06,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGALearn/Learn20260205_PWM/proj/../src" D:/FPGALearn/Learn20260205_PWM/proj/../src/BreathingLight_tb.v 
+# -- Compiling module BreathingLight_tb
+# 
+# Top level modules:
+# 	BreathingLight_tb
+# End time: 15:36:32 on Feb 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  BreathingLight_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" BreathingLight_tb 
+# Start time: 15:36:32 on Feb 06,2026
+# Loading work.BreathingLight_tb
+# Loading work.BreathingLight
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Break in Module BreathingLight_tb at D:/FPGALearn/Learn20260205_PWM/proj/../src/BreathingLight_tb.v line 14
+# End time: 15:38:05 on Feb 06,2026, Elapsed time: 0:01:33
+# Errors: 0, Warnings: 0

@@ -1,0 +1,8 @@
+module question_22_tb
+
+question_22		question_22_inst
+(
+
+);
+
+endmodule

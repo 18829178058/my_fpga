@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/zxope/Desktop/exam01/prj10/prj
+vclk_gen_5
+Z0 !s110 1769478423
+!i10b 1
+!s100 e4X[SO?oGkSdG3PGl=k>l1
+IYlfn2ii2jVST9bKiMlfFX0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/zxope/Desktop/exam01/prj11/prj
+w1769478009
+8C:/Users/zxope/Desktop/exam01/prj11/src/clk_gen_5.v
+FC:/Users/zxope/Desktop/exam01/prj11/src/clk_gen_5.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1769478423.000000
+!s107 C:/Users/zxope/Desktop/exam01/prj11/src/clk_gen_5.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zxope/Desktop/exam01/prj11/src/clk_gen_5.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vclk_gen_5_tb
+R0
+!i10b 1
+!s100 lFeCjYz1?8O9ad:YTgn;@0
+IK9BfjfGd_R<bSH:_;JjXZ1
+R1
+R2
+w1769478359
+8C:/Users/zxope/Desktop/exam01/prj11/src/clk_gen_5_tb.v
+FC:/Users/zxope/Desktop/exam01/prj11/src/clk_gen_5_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/zxope/Desktop/exam01/prj11/src/clk_gen_5_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zxope/Desktop/exam01/prj11/src/clk_gen_5_tb.v|
+!i113 1
+R5
+R6

@@ -1,0 +1,7 @@
+module top(clk, rst_n, clk_out);
+
+	inout clk,rst_n;
+	output clk_out;
+
+
+endmodule

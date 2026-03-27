@@ -1,0 +1,11 @@
+module ram_ctrl
+(
+	input clk,
+	input rst_n,
+	output wren,
+	output rden,
+	output addr
+)
+
+
+endmodule

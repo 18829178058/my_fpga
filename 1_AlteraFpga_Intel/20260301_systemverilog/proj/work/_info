@@ -1,0 +1,67 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/questasim64_10.7c/examples
+T_opt
+!s110 1772413202
+V0:fKnBF^ikBf=i5g`Gkaa2
+04 9 4 work testbench fast 0
+=4-74d4ddca7851-69a4e112-1c4-2b08
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+vcounter
+Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z2 !s110 1772413182
+!i10b 1
+!s100 aUf_a`:A3lWQCFMHPj?U=0
+IJg_@kDF`3QLm>C6Wzd=`53
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 counter_sv_unit
+S1
+Z4 dD:/FPGALearn/20260301_systemverilog/proj
+w1772376911
+8D:/FPGALearn/20260301_systemverilog/src/counter.sv
+FD:/FPGALearn/20260301_systemverilog/src/counter.sv
+L0 1
+Z5 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z6 !s108 1772413182.000000
+!s107 D:/FPGALearn/20260301_systemverilog/src/counter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/FPGALearn/20260301_systemverilog/src/counter.sv|
+!i113 0
+Z7 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vtestbench
+R1
+R2
+!i10b 1
+!s100 Tzfm^^MKeL0R_oc72UWlA1
+I[ohd2W<KHaQfb8W9h:JR_1
+R3
+!s105 testbench_sv_unit
+S1
+R4
+w1772413140
+8D:/FPGALearn/20260301_systemverilog/src/testbench.sv
+FD:/FPGALearn/20260301_systemverilog/src/testbench.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/FPGALearn/20260301_systemverilog/src/testbench.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/FPGALearn/20260301_systemverilog/src/testbench.sv|
+!i113 0
+R7
+R0

@@ -1,0 +1,173 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGALearn/20260303_rom_zonghe/proj/simulation/modelsim
+T_opt
+!s110 1772594290
+VFa>FH@;9KW]J;SIBa;jEQ2
+04 10 4 work rom_top_tb fast 0
+=1-f83dc666a6d8-69a7a472-60-600c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+vfangbo
+Z2 !s110 1772594289
+!i10b 1
+!s100 XFLF9NE670nPQSbmlDa:83
+IjJ5C?W7hjH9g?LFTCemTS2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1772532649
+8D:/FPGALearn/20260303_rom_zonghe/ip/fangbo.v
+FD:/FPGALearn/20260303_rom_zonghe/ip/fangbo.v
+Z4 L0 39
+Z5 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z6 !s108 1772594289.000000
+!s107 D:/FPGALearn/20260303_rom_zonghe/ip/fangbo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260303_rom_zonghe/ip|D:/FPGALearn/20260303_rom_zonghe/ip/fangbo.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260303_rom_zonghe/ip -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vjuchibo
+R2
+!i10b 1
+!s100 5k`1YIhD]S>l`7:5ndQHW3
+IDTPf02<n=h9AaBKXfW^dG1
+R3
+R0
+w1772532611
+8D:/FPGALearn/20260303_rom_zonghe/ip/juchibo.v
+FD:/FPGALearn/20260303_rom_zonghe/ip/juchibo.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/FPGALearn/20260303_rom_zonghe/ip/juchibo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260303_rom_zonghe/ip|D:/FPGALearn/20260303_rom_zonghe/ip/juchibo.v|
+!i113 0
+R7
+R8
+R1
+vrom_ctrl
+R2
+!i10b 1
+!s100 1OJTcVl>`]bNYZCPOAk9_0
+IjWWok0f<o=7E9;oHholX[0
+R3
+R0
+w1772529643
+8D:/FPGALearn/20260303_rom_zonghe/src/rom_ctrl.v
+FD:/FPGALearn/20260303_rom_zonghe/src/rom_ctrl.v
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/FPGALearn/20260303_rom_zonghe/src/rom_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260303_rom_zonghe/src|D:/FPGALearn/20260303_rom_zonghe/src/rom_ctrl.v|
+!i113 0
+R7
+Z9 !s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260303_rom_zonghe/src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vrom_top
+R2
+!i10b 1
+!s100 QF=S8]67C^fj99M;lNEQ61
+I[NQDjdhRlcgOhkSa6MBT`3
+R3
+R0
+w1772592601
+8D:/FPGALearn/20260303_rom_zonghe/src/rom_top.v
+FD:/FPGALearn/20260303_rom_zonghe/src/rom_top.v
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/FPGALearn/20260303_rom_zonghe/src/rom_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260303_rom_zonghe/src|D:/FPGALearn/20260303_rom_zonghe/src/rom_top.v|
+!i113 0
+R7
+R9
+R1
+vrom_top_tb
+R2
+!i10b 1
+!s100 >a8`j@Pdo`1@Y4l>KTU7:3
+I7lVGc=dln5C6eKbEdK^QV2
+R3
+R0
+w1772532926
+8D:/FPGALearn/20260303_rom_zonghe/proj/../sim/rom_top_tb.v
+FD:/FPGALearn/20260303_rom_zonghe/proj/../sim/rom_top_tb.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/FPGALearn/20260303_rom_zonghe/proj/../sim/rom_top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260303_rom_zonghe/proj/../sim|D:/FPGALearn/20260303_rom_zonghe/proj/../sim/rom_top_tb.v|
+!i113 0
+R7
+!s92 -vlog01compat -work work +incdir+D:/FPGALearn/20260303_rom_zonghe/proj/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vsanjiao_rom
+R2
+!i10b 1
+!s100 EVbgBbnVQ68S`nQAWSQd<2
+IOP9>0kU2QQMaAWG4jDPgY3
+R3
+R0
+w1772532438
+8D:/FPGALearn/20260303_rom_zonghe/ip/sanjiao_rom.v
+FD:/FPGALearn/20260303_rom_zonghe/ip/sanjiao_rom.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/FPGALearn/20260303_rom_zonghe/ip/sanjiao_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260303_rom_zonghe/ip|D:/FPGALearn/20260303_rom_zonghe/ip/sanjiao_rom.v|
+!i113 0
+R7
+R8
+R1
+vzhengxuan_rom
+R2
+!i10b 1
+!s100 `giV:B4X8@05>VFoVz45D3
+Ib9Qg]DRTe;zhJS<PSMb<40
+R3
+R0
+w1772532571
+8D:/FPGALearn/20260303_rom_zonghe/ip/zhengxuan_rom.v
+FD:/FPGALearn/20260303_rom_zonghe/ip/zhengxuan_rom.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/FPGALearn/20260303_rom_zonghe/ip/zhengxuan_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGALearn/20260303_rom_zonghe/ip|D:/FPGALearn/20260303_rom_zonghe/ip/zhengxuan_rom.v|
+!i113 0
+R7
+R8
+R1

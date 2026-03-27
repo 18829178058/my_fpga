@@ -1,0 +1,99 @@
+module move_ctrl (clk, rst_n, q, x, y, addr, rgb);
+	
+	input clk, rst_n;
+	
+	input [7:0] q;
+	
+	input [9:0] x, y;
+	
+	output	reg	[14:0]	addr;
+	output	reg	[7:0]		rgb;
+	
+//参数定义
+	parameter	block	=	100;	//图像边长
+	parameter	border	=	40;		//边框长度
+	parameter	CNT_MAX	=	663138;		//1056*628
+	
+	
+//定义内部变量
+	reg	[19:0]	move_cnt;	//每一帧计数
+	wire	add_move_cnt;	
+	wire	end_move_cnt;			//帧结束信号
+	
+	reg	[9:0] block_x, block_y;	//x,y坐标
+	
+	reg	x_direction, y_direction; // x,y方向
+	
+//计数器
+//move_cnt
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				move_cnt <= 0;
+			else
+				if(add_move_cnt)
+					if(end_move_cnt)
+						move_cnt <= 0;
+					else
+						move_cnt <= move_cnt + 1;
+				else
+					move_cnt <= move_cnt;
+		end
+	
+	assign	add_move_cnt	=	1;
+	assign	end_move_cnt	=	add_move_cnt && move_cnt == CNT_MAX - 1;	//一帧跑完
+	
+//x_direction,y_direction
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					x_direction <= 1;
+					y_direction <= 1;
+				end
+			else
+				if(block_x == border)	//左边框
+					x_direction <= 1;
+				else
+					if(block_x == 800 - border - block)//右边框
+						x_direction <= 0;
+					else
+						x_direction <= x_direction;
+						if(block_y == border)	//上边框
+						y_direction <= 1;
+					else
+						if(block_y == 600 - border - block)	//下边框
+							y_direction <= 0;
+						else
+							y_direction <= 1;
+		end
+	
+//block_x,block_y
+	always @ (posedge clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					block_x <= 40;
+					block_y <= 40;
+				end
+			else
+				if(end_move_cnt)	//一帧跑完
+					begin
+						if(x_direction == 0)	//碰到右边框
+							block_x = block_x - 1;	//向左移动
+						else					//碰到左边框
+							block_x = block_x + 1;	//向右移动
+						
+						if(y_direction	== 0)	//碰到下边框
+							block_y <= block_y - 1;	//向上移动
+						else					//碰到上边框
+							block_y <= block_y + 1;	//向下移动 
+					end
+				else
+					begin
+						block_x <= block_x;
+						block_y <= block_y;
+					end
+		end
+	
+endmodule 

@@ -1,0 +1,14 @@
+D:/FPGALearn/20260325/sim/top_module_tb.v {0 {vlog -work work -vopt -stats=none {D:\FPGALearn\20260325\sim\top_module_tb.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module top_module_tb
+** Error: (vlog-13069) D:\FPGALearn\20260325\sim\top_module_tb.v(31): near "end": syntax error, unexpected end.
+** Error: D:\FPGALearn\20260325\sim\top_module_tb.v(42): (vlog-2730) Undefined variable: 'out'.
+** Error: D:\FPGALearn\20260325\sim\top_module_tb.v(43): Checker 'top_module' not found.  Instantiation 'top_module_inst' must be of a visible checker.
+** Error: (vlog-13069) D:\FPGALearn\20260325\sim\top_module_tb.v(46): near "endmodule": syntax error, unexpected endmodule.
+
+} {4.0 8.0} {}} D:/FPGALearn/20260325/sim/top_module.v {0 {vlog -work work -vopt -stats=none {D:\FPGALearn\20260325\sim\top_module.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module top_module
+** Error: D:\FPGALearn\20260325\sim\top_module.v(10): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+
+} {4.0 5.0} {}}

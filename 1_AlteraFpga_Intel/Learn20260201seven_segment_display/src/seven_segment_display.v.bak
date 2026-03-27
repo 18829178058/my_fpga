@@ -1,0 +1,8 @@
+module  seven_segment_display
+(
+   output [7:0]  sevenSegmentOut;
+)
+
+assign sevenSegmentOut = 8'b11111111;
+
+endmodule

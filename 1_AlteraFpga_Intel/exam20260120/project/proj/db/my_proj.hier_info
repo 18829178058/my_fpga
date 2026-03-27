@@ -1,0 +1,19 @@
+|memory_init
+address[0] => rom.RADDR
+address[1] => rom.RADDR1
+address[2] => rom.RADDR2
+address[3] => rom.RADDR3
+address[4] => rom.RADDR4
+address[5] => rom.RADDR5
+address[6] => rom.RADDR6
+address[7] => rom.RADDR7
+q[0] <= rom.DATAOUT
+q[1] <= rom.DATAOUT1
+q[2] <= rom.DATAOUT2
+q[3] <= rom.DATAOUT3
+q[4] <= rom.DATAOUT4
+q[5] <= rom.DATAOUT5
+q[6] <= rom.DATAOUT6
+q[7] <= rom.DATAOUT7
+
+

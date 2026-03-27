@@ -1,0 +1,9 @@
+module	rom_top
+(
+	input clk,
+	input rst_n,
+	output q
+);
+
+
+endmodule

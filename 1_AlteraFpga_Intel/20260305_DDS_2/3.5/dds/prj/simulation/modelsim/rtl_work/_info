@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\dell\Desktop\ZX\3.5\dds\prj\simulation\modelsim
+vaddr_ctrl
+I:nG1QoP=XjXSCU:Sh05FE0
+VoZZnJljZU`OCT<2CYD45<1
+Z1 dC:\Users\dell\Desktop\ZX\3.5\dds\prj\simulation\modelsim
+w1772681431
+8C:/Users/dell/Desktop/ZX/3.5/dds/src/addr_ctrl.v
+FC:/Users/dell/Desktop/ZX/3.5/dds/src/addr_ctrl.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src -O0
+!i10b 1
+!s100 <on]?hb3Eh[J1g?2mED1M3
+!s85 0
+!s108 1772683341.000000
+!s107 C:/Users/dell/Desktop/ZX/3.5/dds/src/addr_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src|C:/Users/dell/Desktop/ZX/3.5/dds/src/addr_ctrl.v|
+!s101 -O0
+vadjust_ctrl
+IQlZ;W=>U1UJeVX7=MZ<NS3
+VKD<XaB:[D:2SOX]Xn]Io]1
+R1
+w1772679928
+8C:/Users/dell/Desktop/ZX/3.5/dds/src/adjust_ctrl.v
+FC:/Users/dell/Desktop/ZX/3.5/dds/src/adjust_ctrl.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 caYDG63i?69``ViFdf;@D3
+!s85 0
+!s108 1772683340.372000
+!s107 C:/Users/dell/Desktop/ZX/3.5/dds/src/adjust_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src|C:/Users/dell/Desktop/ZX/3.5/dds/src/adjust_ctrl.v|
+!s101 -O0
+vdds_ctrl
+I_>oj?8SM?3S^bS5WB=>0G3
+VE<c^_5S>YiDIMWYRc<EN43
+R1
+w1772681967
+8C:/Users/dell/Desktop/ZX/3.5/dds/src/dds_ctrl.v
+FC:/Users/dell/Desktop/ZX/3.5/dds/src/dds_ctrl.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 2Q`C6ccbeUHXLc:BeH;iT1
+!s85 0
+!s108 1772683341.234000
+!s107 C:/Users/dell/Desktop/ZX/3.5/dds/src/dds_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src|C:/Users/dell/Desktop/ZX/3.5/dds/src/dds_ctrl.v|
+!s101 -O0
+vdds_rom
+I`38gGXDESKNik`W>5^LKN0
+VT8LeE:iTI8gf[:Pl5X;8B1
+R1
+w1772680191
+8C:/Users/dell/Desktop/ZX/3.5/dds/ip/dds_rom.v
+FC:/Users/dell/Desktop/ZX/3.5/dds/ip/dds_rom.v
+L0 39
+R2
+r1
+31
+R3
+!i10b 1
+!s100 S:@G=LE@_K?9Cj6Tkjida3
+!s85 0
+!s108 1772683340.610000
+!s107 C:/Users/dell/Desktop/ZX/3.5/dds/ip/dds_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.5/dds/ip|C:/Users/dell/Desktop/ZX/3.5/dds/ip/dds_rom.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/ip -O0
+vdds_tb
+!i10b 1
+!s100 :HEOU4da=`lN0oZlROfX:0
+I5`:_L]zOeh^[[za^LP_1n2
+V4EiVYVFe0MTbQd_NoP1<L1
+R1
+w1772683306
+8C:/Users/dell/Desktop/ZX/3.5/dds/prj/../sim/dds_tb.v
+FC:/Users/dell/Desktop/ZX/3.5/dds/prj/../sim/dds_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1772683341.555000
+!s107 C:/Users/dell/Desktop/ZX/3.5/dds/prj/../sim/dds_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.5/dds/prj/../sim|C:/Users/dell/Desktop/ZX/3.5/dds/prj/../sim/dds_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.5/dds/prj/../sim -O0
+vdds_top
+I3^ASIK]a=c]E1ToQ`^bOn2
+VH0NmLU:BcTK5znoij]dd?3
+R1
+w1772682603
+8C:/Users/dell/Desktop/ZX/3.5/dds/src/dds_top.v
+FC:/Users/dell/Desktop/ZX/3.5/dds/src/dds_top.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 >E4G[hCQY8GBKAcg;zOSF2
+!s85 0
+!s108 1772683340.112000
+!s107 C:/Users/dell/Desktop/ZX/3.5/dds/src/dds_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src|C:/Users/dell/Desktop/ZX/3.5/dds/src/dds_top.v|
+!s101 -O0
+vf_word_cal
+IdzEF2Mn[UBGnXm3i3KE>@3
+VZcLFh1Znac8I6@bajn3:82
+R1
+w1772681745
+8C:/Users/dell/Desktop/ZX/3.5/dds/src/f_word_cal.v
+FC:/Users/dell/Desktop/ZX/3.5/dds/src/f_word_cal.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Tkl`QeANl^NiOE9fmldb=0
+!s85 0
+!s108 1772683340.803000
+!s107 C:/Users/dell/Desktop/ZX/3.5/dds/src/f_word_cal.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src|C:/Users/dell/Desktop/ZX/3.5/dds/src/f_word_cal.v|
+!s101 -O0
+vkey_filter
+IYU5>Lce_mMT^j@can`DYa3
+VI1<L:ED^liAPO6dfUQ3<62
+R1
+w1772682991
+8C:/Users/dell/Desktop/ZX/3.5/dds/src/key_filter.v
+FC:/Users/dell/Desktop/ZX/3.5/dds/src/key_filter.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 AUmZGGXBC_33M0Bg];U?n2
+!s85 0
+!s108 1772683339.890000
+!s107 C:/Users/dell/Desktop/ZX/3.5/dds/src/key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.5/dds/src|C:/Users/dell/Desktop/ZX/3.5/dds/src/key_filter.v|
+!s101 -O0

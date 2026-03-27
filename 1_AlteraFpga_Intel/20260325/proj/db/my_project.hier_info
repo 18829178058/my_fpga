@@ -1,0 +1,36 @@
+|top_module
+a => out.IN0
+b => out.IN0
+c => out.IN0
+d => out.IN0
+e => out.IN1
+e => out.IN1
+e => out.IN1
+e => out.IN1
+out[0] <= <VCC>
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= <GND>
+out[6] <= <GND>
+out[7] <= <GND>
+out[8] <= <GND>
+out[9] <= <GND>
+out[10] <= <GND>
+out[11] <= <GND>
+out[12] <= <GND>
+out[13] <= <GND>
+out[14] <= <GND>
+out[15] <= <GND>
+out[16] <= <GND>
+out[17] <= <GND>
+out[18] <= <GND>
+out[19] <= <GND>
+out[20] <= <GND>
+out[21] <= <GND>
+out[22] <= <GND>
+out[23] <= <GND>
+out[24] <= <GND>
+
+

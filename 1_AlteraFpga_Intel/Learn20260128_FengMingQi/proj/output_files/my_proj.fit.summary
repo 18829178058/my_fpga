@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Jan 29 23:26:28 2026
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : my_proj
+Top-level Entity Name : buzzer
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 3,268 / 10,320 ( 32 % )
+    Total combinational functions : 3,262 / 10,320 ( 32 % )
+    Dedicated logic registers : 202 / 10,320 ( 2 % )
+Total registers : 202
+Total pins : 3 / 180 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

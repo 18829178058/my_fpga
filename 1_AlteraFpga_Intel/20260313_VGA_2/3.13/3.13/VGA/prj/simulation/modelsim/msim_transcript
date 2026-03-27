@@ -1,0 +1,86 @@
+# Reading E:/quartus/modelsim_ase/tcl/vsim/pref.tcl 
+# do vga_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/src {C:/Users/dell/Desktop/ZX/3.13/VGA/src/key_filter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_filter
+# 
+# Top level modules:
+# 	key_filter
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/ip {C:/Users/dell/Desktop/ZX/3.13/VGA/ip/vga_pll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module vga_pll
+# 
+# Top level modules:
+# 	vga_pll
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/src {C:/Users/dell/Desktop/ZX/3.13/VGA/src/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/src {C:/Users/dell/Desktop/ZX/3.13/VGA/src/vga.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module vga
+# 
+# Top level modules:
+# 	vga
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/prj/db {C:/Users/dell/Desktop/ZX/3.13/VGA/prj/db/vga_pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module vga_pll_altpll
+# 
+# Top level modules:
+# 	vga_pll_altpll
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.13/VGA/prj/../sim {C:/Users/dell/Desktop/ZX/3.13/VGA/prj/../sim/vga_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module vga_tb
+# 
+# Top level modules:
+# 	vga_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  vga_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps vga_tb 
+# Loading work.vga_tb
+# Loading work.top
+# Loading work.vga_pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.key_filter
+# Loading work.vga
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: vga_tb.dut.p1.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint  \
+sim:/vga_tb/dut/v1/frame_cnt \
+sim:/vga_tb/dut/v1/h_cnt \
+sim:/vga_tb/dut/v1/radius \
+sim:/vga_tb/dut/v1/range \
+sim:/vga_tb/dut/v1/switch \
+sim:/vga_tb/dut/v1/v_cnt
+restart
+run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: vga_tb.dut.p1.altpll_component.cycloneiii_pll.pll3
+restart
+run -all

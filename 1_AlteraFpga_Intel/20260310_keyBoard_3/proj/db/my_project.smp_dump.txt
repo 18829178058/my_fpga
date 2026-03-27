@@ -1,0 +1,6 @@
+
+State Machine - |keyboard|state
+Name state.00 state.DOUT state.SCAN 
+state.00 0 0 0 
+state.SCAN 1 0 1 
+state.DOUT 1 1 0 

@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at top_module.v(2): object "a" differs only in case from object "A" in the same scope File: D:/FPGALearn/20260325/src/top_module.v Line: 2

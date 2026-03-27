@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.0/modelsim_ase/win32aloem
+vcnt_design
+Z0 !s110 1769394034
+!i10b 1
+!s100 5U_l^ZJ;o1;HN[glooUTX1
+I[R`PG>1S>CU4GH2DgiWHk3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/zxope/Desktop/exam01/prj09/prj
+w1769394022
+8C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design.v
+FC:/Users/zxope/Desktop/exam01/prj09/src/cnt_design.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1769394034.000000
+!s107 C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vcnt_design_tb
+R0
+!i10b 1
+!s100 A0:zMA;b2]Q3b1d6^^<TJ1
+I9Mabd9@klJDbAAK1@^E1F2
+R1
+R2
+w1769393888
+8C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design_tb.v
+FC:/Users/zxope/Desktop/exam01/prj09/src/cnt_design_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zxope/Desktop/exam01/prj09/src/cnt_design_tb.v|
+!i113 1
+R5
+R6

@@ -1,0 +1,28 @@
+
+State Machine - |dds_top|key_delate:key_4|state
+Name state.UP_KEY state.PRESS state.PRESS_KEY_DJ state.PRESS_KEY 
+state.PRESS_KEY 0 0 0 0 
+state.PRESS_KEY_DJ 0 0 1 1 
+state.PRESS 0 1 0 1 
+state.UP_KEY 1 0 0 1 
+
+State Machine - |dds_top|key_delate:key_3|state
+Name state.UP_KEY state.PRESS state.PRESS_KEY_DJ state.PRESS_KEY 
+state.PRESS_KEY 0 0 0 0 
+state.PRESS_KEY_DJ 0 0 1 1 
+state.PRESS 0 1 0 1 
+state.UP_KEY 1 0 0 1 
+
+State Machine - |dds_top|key_delate:key_2|state
+Name state.UP_KEY state.PRESS state.PRESS_KEY_DJ state.PRESS_KEY 
+state.PRESS_KEY 0 0 0 0 
+state.PRESS_KEY_DJ 0 0 1 1 
+state.PRESS 0 1 0 1 
+state.UP_KEY 1 0 0 1 
+
+State Machine - |dds_top|key_delate:key_1|state
+Name state.UP_KEY state.PRESS state.PRESS_KEY_DJ state.PRESS_KEY 
+state.PRESS_KEY 0 0 0 0 
+state.PRESS_KEY_DJ 0 0 1 1 
+state.PRESS 0 1 0 1 
+state.UP_KEY 1 0 0 1 

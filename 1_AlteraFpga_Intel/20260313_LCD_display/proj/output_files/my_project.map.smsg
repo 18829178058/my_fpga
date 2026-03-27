@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at lcd12864_driver.v(15): object "SEND_DATA" differs only in case from object "send_data" in the same scope File: D:/FPGALearn/20260313_LCD_display/src/lcd12864_driver.v Line: 15

@@ -1,0 +1,8 @@
+|index
+a[0] => y_tmp.IN0
+a[1] => y_tmp.IN1
+a[2] => y_tmp.IN1
+a[3] => y_tmp.IN1
+y << y_tmp.DB_MAX_OUTPUT_PORT_TYPE
+
+
