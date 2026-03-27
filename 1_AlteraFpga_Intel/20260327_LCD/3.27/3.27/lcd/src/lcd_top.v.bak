@@ -1,0 +1,14 @@
+//lcd屏幕显示，显示黑白条
+module lcd_top(clk, rst_n, lcd_rs, lcd_cs, lcd_res, lcd_sda, lcd_scl);
+	
+	input clk, rst_n;
+	
+	output lcd_rs;			//命令控制，0为命令，1为数据
+	output lcd_res;		//lcd复位指令，软复位
+	output lcd_cs;			//片选信号
+	
+	output lcd_sda;		//串行数据线
+	output lcd_scl;		//串行时钟线
+
+
+endmodule 

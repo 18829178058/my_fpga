@@ -41,5 +41,3 @@ rom_256X8_1 rom_256X8_1_inst
 	.addra(rd_addr),                //input wire [7:0] addra
 	.douta(rd_data_1)               //output wire [7:0]	douta
 );
-
-endmodule
