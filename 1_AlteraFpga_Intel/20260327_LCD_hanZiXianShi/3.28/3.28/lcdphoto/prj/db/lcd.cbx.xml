@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lcd">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lcd_top|lcd_command:c1|lcd_rom:r1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_p7a1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lcd_top|lcd_pll:p1|altpll:altpll_component" CBX_FILE_NAME="lcd_pll_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

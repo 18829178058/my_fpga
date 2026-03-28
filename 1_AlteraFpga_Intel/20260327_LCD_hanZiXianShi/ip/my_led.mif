@@ -1,0 +1,156 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=8;
+DEPTH=1024;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+	0     :   08;
+	1     :   F8;
+	[2..3]  :   88;
+	4     :   E8;
+	5     :   08;
+	6     :   10;
+	7     :   00;
+	8     :   20;
+	9     :   3F;
+	10    :   20;
+	11    :   00;
+	12    :   03;
+	[13..15]  :   00;
+	16    :   08;
+	17    :   F8;
+	[18..21]  :   08;
+	22    :   F0;
+	23    :   00;
+	24    :   20;
+	25    :   3F;
+	26    :   21;
+	[27..29]  :   01;
+	[30..31]  :   00;
+	32    :   C0;
+	33    :   30;
+	[34..36]  :   08;
+	37    :   38;
+	[38..39]  :   00;
+	40    :   07;
+	41    :   18;
+	[42..43]  :   20;
+	44    :   22;
+	45    :   1E;
+	46    :   02;
+	[47..49]  :   00;
+	50    :   C0;
+	51    :   38;
+	52    :   E0;
+	[53..55]  :   00;
+	56    :   20;
+	57    :   3C;
+	58    :   23;
+	[59..60]  :   02;
+	61    :   27;
+	62    :   38;
+	63    :   20;
+	64    :   00;
+	65    :   02;
+	66    :   42;
+	67    :   62;
+	68    :   52;
+	69    :   4A;
+	70    :   46;
+	[71..73]  :   42;
+	74    :   52;
+	75    :   62;
+	76    :   C2;
+	77    :   02;
+	[78..79]  :   00;
+	[80..81]  :   40;
+	[82..86]  :   44;
+	87    :   7F;
+	[88..92]  :   44;
+	[93..94]  :   40;
+	95    :   00;
+	[96..99]  :   04;
+	100   :   1F;
+	101   :   04;
+	102   :   24;
+	103   :   44;
+	104   :   84;
+	105   :   04;
+	106   :   1F;
+	[107..110]  :   04;
+	111   :   00;
+	112   :   10;
+	113   :   08;
+	114   :   06;
+	[115..116]  :   00;
+	117   :   3F;
+	[118..122]  :   40;
+	123   :   70;
+	124   :   01;
+	125   :   02;
+	126   :   0C;
+	127   :   00;
+	[128..129]  :   24;
+	130   :   A4;
+	131   :   FE;
+	132   :   A3;
+	133   :   22;
+	134   :   00;
+	135   :   22;
+	136   :   CC;
+	[137..138]  :   00;
+	139   :   FF;
+	[140..143]  :   00;
+	144   :   08;
+	145   :   06;
+	146   :   01;
+	147   :   FF;
+	148   :   00;
+	149   :   01;
+	[150..154]  :   04;
+	155   :   FF;
+	[156..158]  :   02;
+	159   :   00;
+	[160..162]  :   10;
+	163   :   FF;
+	164   :   10;
+	165   :   90;
+	166   :   08;
+	[167..169]  :   88;
+	170   :   FF;
+	[171..173]  :   88;
+	174   :   08;
+	175   :   00;
+	176   :   04;
+	177   :   44;
+	178   :   82;
+	179   :   7F;
+	180   :   01;
+	[181..182]  :   80;
+	183   :   40;
+	184   :   43;
+	185   :   2C;
+	186   :   10;
+	187   :   28;
+	188   :   46;
+	189   :   81;
+	190   :   80;
+	[191..1023]  :   00;
+END;

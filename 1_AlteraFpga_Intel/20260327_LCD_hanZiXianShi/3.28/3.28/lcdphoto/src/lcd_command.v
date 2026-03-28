@@ -1,0 +1,271 @@
+//lcd命令与初始化
+//端口定义
+module lcd_command(lcd_clk, rst_n, shift_cnt, data, lcd_rs, lcd_res, shift_en);
+	
+	input lcd_clk;
+	input	rst_n;
+	input	[3:0] shift_cnt;	//移位计数器，用于控制数据传输时序
+	
+	output	reg	lcd_rs;		//命令/数据选择（0为命令，1为数据）
+	output	reg	lcd_res;		//lcd软复位
+	output	reg	shift_en;	//移位使能信号，控制数据发送
+	
+	output	reg	[7:0]	data;	//要发送到LCD的8位数据
+	
+//内部变量定义
+	reg	[4:0]	state;
+	
+	reg	[3:0]	cnt;		//计数复位延时1us，计数最大值为9
+	
+	reg	[3:0]	m;			//页地址计数器
+	
+	reg	[7:0]	n;			//列地址计数器
+	
+	reg	[9:0] addr;
+	
+	wire	[7:0]	q;
+	
+//状态机
+	always @ (posedge lcd_clk, negedge rst_n)
+		begin
+			if(!rst_n)
+				begin
+					state <= 0;
+					data	<=	0;
+					lcd_res <= 0;
+					lcd_rs  <= 0;
+					shift_en <= 0;
+					cnt   <= 0;
+					m		<= 0;
+					n		<= 0;
+				end
+			else
+				case(state)
+				0	:	begin		//复位等待状态
+							if(cnt < 9)		//未计满1us
+								begin
+									cnt <= cnt + 1;
+									lcd_res <= 0;		
+								end
+							else
+								begin
+									cnt <= 0;	
+									lcd_res <= 1;		//释放复位
+									data <= 8'he2;		//发送第一个命令（系统复位）
+									state <= 1;			//跳转到状态1（软复位）
+								end
+						end
+				
+				1	:	begin	//等待指令e2发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'h2c;	//发送第二个命令（升压步骤1）
+									state <= 2;		//跳转到状态2（升压步骤1）
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+				
+				2	:	begin //等待指令2c发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'h2e; //发送第三个命令（升压步骤2）
+									state <= 3;		//跳转到状态3（升压步骤2）
+									shift_en <= 0;
+								end
+							else
+								shift_en <= 1;
+						end
+				
+				3	:	begin	//等待指令2e发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'h2f;	//发送第4个命令（升压步骤3）
+									state <= 4;		//跳转到状态4（升压步骤3）
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+				
+				4	:	begin	//等待指令2f发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'h23;	//发送第5个命令（粗调对比度）
+									state <= 5;
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+				
+				5	:	begin	//等待指令23发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'h81;	//发送第6个命令（微调对比度）
+									state <= 6;
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+				
+				6	:	begin	//等待指令81发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'h23;	//发送第7个命令（微调对比度的值）,对比度1
+									state <= 7;
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+				
+				7	:	begin	//等待指令发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'ha2;	//发送第8个命令（偏压比）
+									state <= 8;
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+						
+				8	:	begin	//等待指令发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'hc0;	//发送第9个命令（行扫描顺序），显示方向设置
+									state <= 9;
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+				
+				9	:	begin	//等待指令发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'ha1;	//发送第10个命令（列扫描顺序），行输出的方向
+									state <= 10;
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+				
+				10	:	begin	//等待指令发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'haf;	//发送11个命令（开关）
+									state <= 11;
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+				
+				11	:	begin	//等待指令发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'hb0;	//发送第12个命令（设置页地址）
+									state <= 12;
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+						
+				//设置显示RAM地址并写入数据
+				12	:	begin
+							if(m < 8)	//检查所有页（8页）是否都处理完
+								if(shift_cnt == 8)
+									begin
+										data <= 8'h10;	//设置列地址高4位（列地址高四位为1）
+										state <= 13;
+										shift_en <= 0;
+									end
+								else
+									shift_en <= 1;
+							else
+								state <= 16;	//初始化已完成，跳到空闲状态
+						end
+				
+				13	:	begin	//等待指令发送完毕
+							if(shift_cnt == 8)
+								begin
+									data <= 8'h00;//设置列地址低4位
+									state <= 14;
+									shift_en <= 0;	//停止移位使能
+								end
+							else
+								shift_en <= 1;		//发送当前数据
+						end
+				
+				14	:	begin							//写一页数据
+							if(shift_cnt == 8)
+								begin
+//									data <= q;		
+									state <= 15;
+									shift_en <= 0;
+								end
+							else
+								shift_en <= 1;
+						end
+				
+				15	:	begin			//写入显示数据（填充一整行）
+							data <= q;
+							if(n < 128)				//一行有128个像素点
+								begin
+									lcd_rs <= 1;	//设置为数据模式
+									if(shift_cnt < 8)//判断数据FF是否发送完成
+										shift_en <= 1;		
+									else
+										begin
+											shift_en <= 0;	
+											n <= n + 1;	//列地址递增
+											addr <= m * 128 + n;
+											if(n == 127)	//写完一页（128个字节）
+												m <= m + 1;	//页地址递增，准备写下一页
+											else
+												m <= m;
+										end
+								end
+							else
+								begin		
+									n <= 0;	//列地址清零
+									data <= 8'hb0 + m;	//发送下一页地址命令
+									state <= 12;			//返回状态12，设置下一页
+									lcd_rs <= 0;			//切换回命令模式
+								end
+						end
+						
+				16	:	begin
+							state <= 16;//保持空闲状态，因为LCD显示内容不变
+						end
+				default	:	state <= 0;
+			endcase
+		end
+
+	lcd_rom r1(
+						.address(addr),
+						.clock(lcd_clk),
+						.q(q));
+						
+//	always @ (posedge lcd_clk, negedge rst_n)
+//		begin
+//			if(!rst_n)
+//				begin
+//					addr <= 0;
+//				end
+//			else
+//				begin
+//					if(lcd_rs == 1 && shift_cnt == 8)
+//						addr <= addr + 1;
+//					else
+//						addr <= addr;
+//				end
+//		end
+
+endmodule 

@@ -1,0 +1,54 @@
+//lcd屏幕显示，显示黑白条
+module lcd_top
+(
+    input clk,
+	input rst_n,
+	output lcd_rs,            //命令控制，0为命令，1为控制
+	output lcd_cs,            //片选信号
+	output lcd_res,           //lcd复位指令，软复位
+	output lcd_sda,           //串行数据线
+	output lcd_scl            //串行时钟线
+);
+
+
+wire lcd_clk;
+wire [7:0] data;
+wire [3:0] shift_cnt;
+wire shift_en;
+
+lcd_pll lcd_pll_inst
+(
+	.inclk0(clk),         //50MHz
+	.c0(lcd_clk)          //10MHz
+);
+
+
+lcd_command lcd_command_inst
+(
+    .lcd_clk(lcd_clk),
+	.rst_n(rst_n),
+	.shift_cnt(shift_cnt),          //移位计数器，用于控制数据传输时序
+
+	.lcd_rs(lcd_rs),             //命令和数据选择 0为命令，1为数据
+	.lcd_res(lcd_res),            //lcd软复位
+	.shift_en(shift_en),           //移位使能信号，控制数据发送
+	.data(data)                //要发送到LCD的8位数据
+);
+
+
+send_data send_data_inst
+(
+	.lcd_clk(lcd_clk),
+	.rst_n(rst_n),
+	
+	.shift_en(shift_en),              //移位使能信号，高电平开始发送数据
+	.lcd_rs(lcd_rs),
+	.data(data),
+	.shift_cnt(shift_cnt),
+	.lcd_sda(lcd_sda),
+	.lcd_scl(lcd_scl),
+	.lcd_cs(lcd_cs)
+);
+
+
+endmodule

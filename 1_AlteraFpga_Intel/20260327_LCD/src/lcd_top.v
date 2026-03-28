@@ -4,8 +4,8 @@ module lcd_top
     input clk,
 	input rst_n,
 	output lcd_rs,            //命令控制，0为命令，1为控制
-	output lcd_cs,            //lcd复位指令，软复位
-	output lcd_res,           //片选信号
+	output lcd_cs,            //片选信号
+	output lcd_res,           //lcd复位指令，软复位
 	output lcd_sda,           //串行数据线
 	output lcd_scl            //串行时钟线
 );
@@ -18,8 +18,8 @@ wire shift_en;
 
 lcd_pll lcd_pll_inst
 (
-	.inclk0(clk),
-	.c0(lcd_clk)
+	.inclk0(clk),         //50MHz
+	.c0(lcd_clk)          //10MHz
 );
 
 

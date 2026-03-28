@@ -1,0 +1,145 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\dell\Desktop\ZX\3.28\lcdphoto\prj\simulation\modelsim
+vlcd_command
+IQ=kNA[XeRN@l2RF]J<Z:A1
+V1o5EN=>PfA_fE2U?M0JF21
+Z1 dC:\Users\dell\Desktop\ZX\3.28\lcdphoto\prj\simulation\modelsim
+w1774664908
+8C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/lcd_command.v
+FC:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/lcd_command.v
+L0 3
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src -O0
+!i10b 1
+!s100 HZM>Y?D_0Y]J4^hPCB@V13
+!s85 0
+!s108 1774666914.483000
+!s107 C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/lcd_command.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src|C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/lcd_command.v|
+!s101 -O0
+vlcd_pll
+IKG4z;@KX:1dSNgcjoN4ma2
+VUlRlic<3Yzl5L7YZoM[P^3
+R1
+w1774577589
+8C:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip/lcd_pll.v
+FC:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip/lcd_pll.v
+L0 39
+R2
+r1
+31
+R3
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip -O0
+!i10b 1
+!s100 D^?R0hfe`<ZBBiFOW0TB@3
+!s85 0
+!s108 1774666914.205000
+!s107 C:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip/lcd_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip|C:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip/lcd_pll.v|
+!s101 -O0
+vlcd_pll_altpll
+IF;8b_HIUPdclVN=GSlJLJ3
+V1R:iGl8V0_kEHkA?8X0H53
+R1
+w1774584122
+8C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/db/lcd_pll_altpll.v
+FC:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/db/lcd_pll_altpll.v
+L0 29
+R2
+r1
+31
+R3
+!i10b 1
+!s100 J:NeDo<O?L=;]PlPe8k1o3
+!s85 0
+!s108 1774666915.201000
+!s107 C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/db/lcd_pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/db|C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/db/lcd_pll_altpll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/db -O0
+vlcd_rom
+IC4HER;I9_Zbn[6NJ]iV@20
+V1:R:NF=c4W4Cl`K]EN@;W2
+R1
+w1774664195
+8C:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip/lcd_rom.v
+FC:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip/lcd_rom.v
+L0 39
+R2
+r1
+31
+R3
+R5
+!i10b 1
+!s100 C>8XJW1TRReZRF0n<>G>I0
+!s85 0
+!s108 1774666914.998000
+!s107 C:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip/lcd_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip|C:/Users/dell/Desktop/ZX/3.28/lcdphoto/ip/lcd_rom.v|
+!s101 -O0
+vlcd_top
+IKD0OW;37]UR302kd6;Ljz3
+VdHgh^V:enoe`FMX8[]:4:2
+R1
+w1774584111
+8C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/lcd_top.v
+FC:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/lcd_top.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 HXTH9W_CWTD;nl0OK4T603
+!s85 0
+!s108 1774666914.007000
+!s107 C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/lcd_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src|C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/lcd_top.v|
+!s101 -O0
+vlcd_top_tb
+!i10b 1
+!s100 E<1=jj]7Wj[V7lEb2nEGe1
+I<>XSgEPlMO^V21Lg8o`P^3
+VF:LWh:zdkIOKLa=mIG[CT0
+R1
+w1774662223
+8C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/../sim/lcd_top_tb.v
+FC:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/../sim/lcd_top_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1774666915.414000
+!s107 C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/../sim/lcd_top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/../sim|C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/../sim/lcd_top_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/prj/../sim -O0
+vsend_data
+If@a?h95nGKhJ?X^?Q7oBQ3
+V;^X@?X<01NXaZY8df9>P=0
+R1
+w1774662230
+8C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/send_data.v
+FC:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/send_data.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 YM=ZXRI;OS:9i;`6;z?V11
+!s85 0
+!s108 1774666914.772000
+!s107 C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/send_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src|C:/Users/dell/Desktop/ZX/3.28/lcdphoto/src/send_data.v|
+!s101 -O0

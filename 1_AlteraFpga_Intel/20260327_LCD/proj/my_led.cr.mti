@@ -1,0 +1,22 @@
+D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260327_LCD/src/lcd_command.v {1 {vlog -work work -vopt -stats=none D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260327_LCD/src/lcd_command.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module lcd_command
+
+Top level modules:
+	lcd_command
+
+} {} {}} D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260327_LCD/src/lcd_top_tb.v {1 {vlog -work work -vopt -stats=none D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260327_LCD/src/lcd_top_tb.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module lcd_top_tb
+
+Top level modules:
+	lcd_top_tb
+
+} {} {}} D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260327_LCD/src/send_data.v {1 {vlog -work work -vopt -stats=none D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260327_LCD/src/send_data.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module send_data
+
+Top level modules:
+	send_data
+
+} {} {}}
