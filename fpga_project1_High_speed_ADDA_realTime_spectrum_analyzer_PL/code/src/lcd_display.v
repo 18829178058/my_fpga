@@ -401,20 +401,125 @@ always @ (posedge lcd_pclk or negedge rst_n)
 
 
 //行方向的ROM地址
-always @ ()
+always @ (posedge lcd_pclk or negedge rst_n)
+    begin
+		if(!rst_n)
+			row_axle_addr <= 11'd0;
+		else
+			begin
+				if(pixel_ypos == v_disp)
+					row_axle_addr <= 11'd0;
+				else
+					if(row_axle_en && cnt_row_en 3'd5)
+						row_axle_addr <= row_axle_addr + 11'd1;
+					else
+						row_axle_addr <= row_axle_addr;
+			end
+	end
+	
+//行方向的移位寄存数据
+always @ (posedge lcd_pclk or negedge rst_n)
+	begin
+		if(!rst_n)
+			rom_row_shift_data <= 8'd0;
+		else
+			begin
+				if(cnt_row_en == 3'd7)
+					rom_row_shift_data <= rom_row_data;
+				else if(row_axle_en)
+					rom_row_shift_data <= {rom_row_shift_data[6:0],1'b0};
+				else
+					rom_row_shift_data <= rom_row_shift_data;
+			end
+	end
+	
+//对列方向的使能进行计数
+always @ (posedge lcd_pclk or negedge rst_n)
+	begin
+		if(!rst_n)
+			cnt_col_en <= 3'd0;
+		else
+			if(col_axle_en)
+				cnt_col_en <= cnt_col_en + 3'd1;
+			else
+				cnt_col_en <= 3'd0;
+	end
+	
 
-1233页
+//列方向的ROM地址
+always @ (posedge lcd_pclk or negedge rst_n)
+	begin
+		if(!rst_n)
+			col_axle_addr <= 11'd0;
+		else
+			begin
+				if(pixel_ypos == v_disp)
+					col_axle_addr <= 11'd0;
+				else
+					if(col_axle_en && cnt_col_en == 3'd5)
+						col_axle_addr <= col_axle_addr + 11'd1;
+					else
+						col_axle_addr <= col_axle_addr;
+			end
+	end
 
 
+//列方向的移位寄存器数据
+always @ (posedge lcd_pclk or negedge rst_n)
+	begin
+		if(!rst_n)
+			rom_col_shift_data <= 8'd0;
+		else
+			begin
+				if(cnt_col_en == 3'd7)
+					rom_col_shift_data <= rom_col_data;
+				else if(col_axle_en)
+					rom_col_shift_data <= {rom_col_shift_data[6:0], 1'b0};
+				else
+					rom_col_shift_data <= rom_col_shift_data;
+			end
+	end
 
 
+//产生像素数据信号
+always @ (posedge lcd_pclk or negedge rst_n)
+	begin
+		if(!rst_n)
+			pixel_data <= WHITE;
+		else
+			begin
+				if(!x_frame_data[0])
+					pixel_data <= x_frame_data;
+				else if(!y_frame_data[0])
+					pixel_data <= y_frame_data;
+				else if((row_axle_data && row_axle_en) || (col_axle_data && col_axle_en))
+					pixel_data <= BLUE;
+				else if(pixel_xpos >= (fft_point_cnt_d0 * fft_step + H_OFFSET))
+					 &&(pixel_xpos < (fft_point_cnt_d0 + 1) * fft_step + H_OFFSET))
+						if(lcd_fft_data == 0)
+							pixel_data <=WHITE;
+						else if(pixel_ypos >= v_disp - lcd_fft_data -V_OFFSET)
+						     &&(pixel_ypos <= v_disp - V_OFFSET)
+							 pixel_data <= BLUE;
+						else
+							pixel_data <= WHITE;
+				else
+					pixel_data <= WHITE;
+			end
+	end
 
+//例化行方向坐标的 ROM
+rom_row_axle u_rom_row_axle (
+	.clka (lcd_pclk ), // input wire clka
+	.addra (row_axle_addr), // input wire [9 : 0] addra
+	.douta (rom_row_data ) // output wire [7 : 0] douta
+);
 
-
-
-
-
-
-
+//例化列方向坐标的 ROM
+rom_col_axle u_rom_col_axle (
+	.clka (lcd_pclk ), // input wire clka
+	.addra (col_axle_addr), // input wire [9 : 0] addra
+	.douta (rom_col_data ) // output wire [7 : 0] douta
+);
 
 endmodule
