@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar 31 13:13:44 2026
+# Process ID: 22252
+# Current directory: D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.runs/rom_col_axle_synth_1
+# Command line: vivado.exe -log rom_col_axle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rom_col_axle.tcl
+# Log file: D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.runs/rom_col_axle_synth_1/rom_col_axle.vds
+# Journal file: D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.runs/rom_col_axle_synth_1\vivado.jou
+#-----------------------------------------------------------
+source rom_col_axle.tcl -notrace

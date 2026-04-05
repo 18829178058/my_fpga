@@ -4,8 +4,8 @@ module rw_ram_ctrl
 	 input          lcd_clk,
 	 input          rst_n,
 	 input  [7:0]   fft_data,				//FFT频谱数据
-	 input          fft_eop,                //EOP包结束信号
-	 input          fft_vaild,              //FFT频谱数据有效信号
+	 input          fft_eop,                //EOP包结束信叿
+	 input          fft_valid,              //FFT频谱数据有效信号
 	 
 	 input          data_req,               //数据请求信号
 	 input          fft_point_done,         //FFT当前频谱绘制完成
@@ -17,25 +17,25 @@ module rw_ram_ctrl
 );
 
 //parameter define 
-parameter TRANSFORM_LEN = 256;              //FFT采样点数：256
+parameter TRANSFORM_LEN = 256;              //FFT采样点数＿256
 
 //reg define
-reg [7:0]    ram_raddr;                     //RAM读地址
+reg [7:0]    ram_raddr;                     //RAM读地坿
 reg          data_invalid;                  //数据无效标志，高有效
-reg [7:0]    ram_waddr;                     //RAM写地址
+reg [7:0]    ram_waddr;                     //RAM写地坿
 
 //wire define
-wire         ram_wr_en;                     //RAM写使能
-wire [7:0]   ram_wr_data;                   //RAM写数据
-wire [7:0]   ram_rd_data;                   //RAM读数据
+wire         ram_wr_en;                     //RAM写使胿
+wire [7:0]   ram_wr_data;                   //RAM写数捿
+wire [7:0]   ram_rd_data;                   //RAM读数捿
 
 
 //=============================code=================================
-//产生RAM写使能
-assign ram_wr_en = fft_vaild;
-//产生RAM写数据
+//产生RAM写使胿
+assign ram_wr_en = fft_valid;
+//产生RAM写数捿
 assign ram_wr_data = fft_data;
-//在数据无效标志为低的时候将RAM读数据赋值给RAM输出有效数据信号
+//在数据无效标志为低的时忙将RAM读数据赋值给RAM输出有效数据信号
 assign ram_data_out = data_invalid ? 8'd0 : ram_rd_data;
 
 
@@ -68,7 +68,7 @@ always @ (posedge clk or negedge rst_n)
 			end
 	end
 
-//产生RAM读地址
+//产生RAM读地坿
 always @ (posedge lcd_clk or negedge rst_n)
 begin
     if(!rst_n)
@@ -80,11 +80,11 @@ begin
 			else if(data_req)
 			    ram_raddr <= ram_raddr + 8'd1;
 			else
-			    ram_raddr <= ram_addr;
+			    ram_raddr <= ram_raddr;
 		end
 end
 
-//产生数据无效标志，因为FFT的数据是对称的，所以只要取前一半数据就可以了
+//产生数据无效标志，因为FFT的数据是对称的，承以只要取前一半数据就可以亿
 always @ (posedge lcd_clk or negedge rst_n)
     begin
 	    if(!rst_n)

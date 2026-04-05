@@ -31,7 +31,7 @@ always @ (posedge clk or negedge rst_n)
 	begin
 		if(rst_n == 1'b0)
 			freq_cnt <= 8'd0;
-		else if(freq == FREQ_ADJ)
+		else if(freq_cnt == FREQ_ADJ)
 			freq_cnt <= 8'd0;
 		else
 			freq_cnt <= freq_cnt + 8'd1;
@@ -105,8 +105,8 @@ always @(posedge clk or negedge rst_n)
 		.sys_rst_n(rst_n),
 		
 		.key(key),							//外部输入的按键值
-		.key_value(key_value),				//消抖后的按键值
+		.key_filter(key_value),				//消抖后的按键值
 		.key_flag(key_flag)					//消抖后的按键有效标志
 	);
-	
+
 endmodule

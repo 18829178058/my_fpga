@@ -1,0 +1,5 @@
+Warning (10268): Verilog HDL information at uart_tx.v(162): always construct contains both blocking and non-blocking assignments File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260403_IIC_4/4.3/4.3/eeprom/src/uart_tx.v Line: 162
+Warning (10268): Verilog HDL information at uart_tx.v(181): always construct contains both blocking and non-blocking assignments File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260403_IIC_4/4.3/4.3/eeprom/src/uart_tx.v Line: 181
+Warning (10268): Verilog HDL information at uart_rx.v(132): always construct contains both blocking and non-blocking assignments File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260403_IIC_4/4.3/4.3/eeprom/src/uart_rx.v Line: 132
+Info (10281): Verilog HDL Declaration information at iic.v(6): object "start" differs only in case from object "START" in the same scope File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260403_IIC_4/4.3/4.3/eeprom/src/iic.v Line: 6
+Info (10281): Verilog HDL Declaration information at fifo_wr.v(26): object "DATA" differs only in case from object "data" in the same scope File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260403_IIC_4/4.3/4.3/eeprom/src/fifo_wr.v Line: 26

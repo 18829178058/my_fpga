@@ -1,0 +1,46 @@
+
+State Machine - |top|uart_tx:tx_inst|state_c
+Name state_c.STOP state_c.CHECK state_c.DATA state_c.START state_c.IDLE 
+state_c.IDLE 0 0 0 0 0 
+state_c.START 0 0 0 1 1 
+state_c.DATA 0 0 1 0 1 
+state_c.CHECK 0 1 0 0 1 
+state_c.STOP 1 0 0 0 1 
+
+State Machine - |top|iic:iic_inst|c_state
+Name c_state.ID1 c_state.START1 c_state.ACK5 c_state.RECV_DATA c_state.STOP c_state.ACK4 c_state.SEND_DATA c_state.ACK3 c_state.SEND_ADDR_L c_state.ACK2 c_state.SEND_ADDR_H c_state.ACK1 c_state.ID c_state.START c_state.IDLE c_state.ACK6 
+c_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+c_state.START 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 
+c_state.ID 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 
+c_state.ACK1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 
+c_state.SEND_ADDR_H 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 
+c_state.ACK2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 
+c_state.SEND_ADDR_L 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 
+c_state.ACK3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 
+c_state.SEND_DATA 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 
+c_state.ACK4 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 
+c_state.STOP 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 
+c_state.RECV_DATA 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 
+c_state.ACK5 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 
+c_state.START1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+c_state.ID1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+c_state.ACK6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+
+State Machine - |top|fifo_wr:fifo_wr_inst|c_state
+Name c_state.DATA c_state.ADDR_L c_state.ADDR_H c_state.WORR c_state.RECV c_state.SEND c_state.IDLE c_state.STOP 
+c_state.IDLE 0 0 0 0 0 0 0 0 
+c_state.SEND 0 0 0 0 0 1 1 0 
+c_state.RECV 0 0 0 0 1 0 1 0 
+c_state.WORR 0 0 0 1 0 0 1 0 
+c_state.ADDR_H 0 0 1 0 0 0 1 0 
+c_state.ADDR_L 0 1 0 0 0 0 1 0 
+c_state.DATA 1 0 0 0 0 0 1 0 
+c_state.STOP 0 0 0 0 0 0 1 1 
+
+State Machine - |top|uart_rx:rx_inst|state_c
+Name state_c.STOP state_c.CHECK state_c.DATA state_c.START state_c.IDLE 
+state_c.IDLE 0 0 0 0 0 
+state_c.START 0 0 0 1 1 
+state_c.DATA 0 0 1 0 1 
+state_c.CHECK 0 1 0 0 1 
+state_c.STOP 1 0 0 0 1 

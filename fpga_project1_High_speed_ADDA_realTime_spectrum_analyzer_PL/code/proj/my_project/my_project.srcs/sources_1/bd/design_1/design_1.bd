@@ -8,7 +8,8 @@
       "tool_version": "2018.3"
     },
     "design_tree": {
-      "clk_wiz_0": ""
+      "clk_wiz_0": "",
+      "blk_mem_gen_0": ""
     },
     "components": {
       "clk_wiz_0": {
@@ -94,6 +95,10 @@
             "value": "50.000"
           }
         }
+      },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_1_blk_mem_gen_0_1"
       }
     }
   }

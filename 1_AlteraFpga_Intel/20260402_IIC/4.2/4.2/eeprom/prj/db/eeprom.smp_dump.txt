@@ -1,0 +1,27 @@
+
+State Machine - |top|uart_tx:tx_inst|state_c
+Name state_c.STOP state_c.CHECK state_c.DATA state_c.START state_c.IDLE 
+state_c.IDLE 0 0 0 0 0 
+state_c.START 0 0 0 1 1 
+state_c.DATA 0 0 1 0 1 
+state_c.CHECK 0 1 0 0 1 
+state_c.STOP 1 0 0 0 1 
+
+State Machine - |top|fifo_wr:fifo_wr_inst|c_state
+Name c_state.DATA c_state.ADDR_L c_state.ADDR_H c_state.WORR c_state.RECV c_state.SEND c_state.IDLE c_state.STOP 
+c_state.IDLE 0 0 0 0 0 0 0 0 
+c_state.SEND 0 0 0 0 0 1 1 0 
+c_state.RECV 0 0 0 0 1 0 1 0 
+c_state.WORR 0 0 0 1 0 0 1 0 
+c_state.ADDR_H 0 0 1 0 0 0 1 0 
+c_state.ADDR_L 0 1 0 0 0 0 1 0 
+c_state.DATA 1 0 0 0 0 0 1 0 
+c_state.STOP 0 0 0 0 0 0 1 1 
+
+State Machine - |top|uart_rx:rx_inst|state_c
+Name state_c.STOP state_c.CHECK state_c.DATA state_c.START state_c.IDLE 
+state_c.IDLE 0 0 0 0 0 
+state_c.START 0 0 0 1 1 
+state_c.DATA 0 0 1 0 1 
+state_c.CHECK 0 1 0 0 1 
+state_c.STOP 1 0 0 0 1 

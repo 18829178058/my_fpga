@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="eeprom">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|fifo_rd:fifo_rd_inst|rfifo:rfifo_inst|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_b441.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|fifo_wr:fifo_wr_inst|wfifo:wfifo_inst|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_b441.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

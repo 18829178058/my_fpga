@@ -24,7 +24,7 @@ da_wave_send da_wave_send_inst
 	.rd_addr(rd_addr),
 	.da_clk(da_clk),
 	.da_data(da_data)
-)
+);
 
 //ROM0´æ´¢²¨ĞÎ
 rom_256X8_0 rom_256X8_0_inst
@@ -41,3 +41,5 @@ rom_256X8_1 rom_256X8_1_inst
 	.addra(rd_addr),                //input wire [7:0] addra
 	.douta(rd_data_1)               //output wire [7:0]	douta
 );
+
+endmodule

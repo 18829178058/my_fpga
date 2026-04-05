@@ -1,0 +1,185 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\dell\Desktop\ZX\xian\4.2\eeprom\prj\simulation\modelsim
+vfifo_rd
+Imc]?[LI[SjiJ91<eONCa?1
+VCWLV<EaPM8=8m1M2X0@7k0
+Z1 dC:\Users\dell\Desktop\ZX\xian\4.2\eeprom\prj\simulation\modelsim
+w1775100954
+8C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/fifo_rd.v
+FC:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/fifo_rd.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src -O0
+!i10b 1
+!s100 5B3dI2^m[;?[WA27a1;eY2
+!s85 0
+!s108 1775102765.913000
+!s107 C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/fifo_rd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src|C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/fifo_rd.v|
+!s101 -O0
+vfifo_wr
+IjKTU]XM<8;1_WAU`cfjnO0
+V@mUFSWlnazP6lSCoGRe=W2
+R1
+w1775100943
+8C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/fifo_wr.v
+FC:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/fifo_wr.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 2dmO@AWDnW9KhUG1X@dLL3
+!s85 0
+!s108 1775102765.485000
+!s107 C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/fifo_wr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src|C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/fifo_wr.v|
+!s101 -O0
+viic
+ILk[:5fE@U79XNG]OogJhZ3
+VN_BF;40bEzUkiLZfl_bf82
+R1
+w1775099704
+8C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/iic.v
+FC:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/iic.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 W@k5f194mVkczb0bo7goI1
+!s85 0
+!s108 1775102764.840000
+!s107 C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/iic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src|C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/iic.v|
+!s101 -O0
+vrfifo
+I]38g=zc87Cj<1<AO4S<<:3
+Vz>RJ;FQV>]><jBQ5BJCd90
+R1
+w1775100465
+8C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip/rfifo.v
+FC:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip/rfifo.v
+L0 39
+R2
+r1
+31
+R3
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip -O0
+!i10b 1
+!s100 `M4ZXl;IEHZ;`P:@c[WGA3
+!s85 0
+!s108 1775102765.701000
+!s107 C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip/rfifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip|C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip/rfifo.v|
+!s101 -O0
+vtop
+IVMEASn876L85RVZi0Fom]0
+VG5kdEoXK2CNdEEZ=V6]8c1
+R1
+w1775102038
+8C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/top.v
+FC:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/top.v
+L0 4
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 <kW=W:<XjMI]zn_KK>]R:0
+!s85 0
+!s108 1775102765.269000
+!s107 C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src|C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/top.v|
+!s101 -O0
+vtop_tb
+!i10b 1
+!s100 6<IKl`V0ZnU9kgbK0P`=W0
+IC3[[7iF8e=2WiT0EfS]kC2
+VN7^ihbmI9enFg9D=Qco243
+R1
+w1775102745
+8C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/prj/../sim/top_tb.v
+FC:/Users/dell/Desktop/ZX/xian/4.2/eeprom/prj/../sim/top_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1775102766.474000
+!s107 C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/prj/../sim/top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/prj/../sim|C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/prj/../sim/top_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/prj/../sim -O0
+vuart_rx
+IlKB0EhOV]5EfgcG`;IjN<0
+V01e32S5NhCl]2;Xf47cKL0
+R1
+w1774410878
+8C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/uart_rx.v
+FC:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/uart_rx.v
+L0 9
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 1g=1EJ[XPBmTO:EUPf:0T2
+!s85 0
+!s108 1775102764.587000
+!s107 C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/uart_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src|C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/uart_rx.v|
+!s101 -O0
+vuart_tx
+I6cGk;>2[CSjd]m6zYQaR>2
+VUmW_Ha76>`OjD;foe9m[G2
+R1
+w1774405241
+8C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/uart_tx.v
+FC:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/uart_tx.v
+L0 9
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 _[ZaI0PdkbG:eo:B8ETDe0
+!s85 0
+!s108 1775102764.263000
+!s107 C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src|C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/src/uart_tx.v|
+!s101 -O0
+vwfifo
+IPWNTWE3OH]d]W_Xan7mYC0
+VkhdF3@c_KSWAodK5z=FW=3
+R1
+w1775096939
+8C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip/wfifo.v
+FC:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip/wfifo.v
+L0 39
+R2
+r1
+31
+R3
+R5
+!i10b 1
+!s100 JULYFKgg>oLggLDnl:W[Y1
+!s85 0
+!s108 1775102765.066000
+!s107 C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip/wfifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip|C:/Users/dell/Desktop/ZX/xian/4.2/eeprom/ip/wfifo.v|
+!s101 -O0

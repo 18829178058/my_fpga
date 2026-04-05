@@ -1,0 +1,135 @@
+# Reading E:/quartus/modelsim_ase/tcl/vsim/pref.tcl 
+# do eeprom_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/4.2/eeprom/src {C:/Users/dell/Desktop/4.2/eeprom/src/uart_tx.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uart_tx
+# 
+# Top level modules:
+# 	uart_tx
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/4.2/eeprom/src {C:/Users/dell/Desktop/4.2/eeprom/src/uart_rx.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uart_rx
+# 
+# Top level modules:
+# 	uart_rx
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/4.2/eeprom/src {C:/Users/dell/Desktop/4.2/eeprom/src/iic.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module iic
+# 
+# Top level modules:
+# 	iic
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/4.2/eeprom/src {C:/Users/dell/Desktop/4.2/eeprom/src/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/4.2/eeprom/src {C:/Users/dell/Desktop/4.2/eeprom/src/fifo_wr.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fifo_wr
+# 
+# Top level modules:
+# 	fifo_wr
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/4.2/eeprom/ip {C:/Users/dell/Desktop/4.2/eeprom/ip/rfifo.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rfifo
+# 
+# Top level modules:
+# 	rfifo
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/4.2/eeprom/src {C:/Users/dell/Desktop/4.2/eeprom/src/fifo_rd.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fifo_rd
+# 
+# Top level modules:
+# 	fifo_rd
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/4.2/eeprom/prj/../sim {C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# vlog -vlog01compat -work work +incdir+C:/Users/dell/Desktop/4.2/eeprom/prj/../sim {C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module M24LC64
+# 
+# Top level modules:
+# 	M24LC64
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  top_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps top_tb 
+# Loading work.top_tb
+# Loading work.top
+# Loading work.uart_rx
+# Loading work.fifo_wr
+# Loading work.iic
+# Loading work.fifo_rd
+# Loading work.rfifo
+# Loading altera_mf_ver.scfifo
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading work.uart_tx
+# Loading work.M24LC64
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'A0'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'A1'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'A2'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'WP'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(531): $hold( negedge SDA &&& TimingCheckEnable:1072370 ns, negedge SCL:1072370 ns, 600 ns );
+#    Time: 1072370 ns  Iteration: 2  Instance: /top_tb/dut1
+restart
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'A0'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'A1'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'A2'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'WP'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+add wave -position insertpoint  \
+sim:/top_tb/dut/iic_inst/c_state \
+sim:/top_tb/dut/iic_inst/data_out \
+sim:/top_tb/dut/iic_inst/sda_en
+restart
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'A0'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'A1'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'A2'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+# ** Warning: (vsim-3015) C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/top_tb.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'WP'. The port definition is at: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(87).
+# 
+#         Region: /top_tb/dut1
+run -all
+# ** Error: C:/Users/dell/Desktop/4.2/eeprom/prj/../sim/M24LC64.v(531): $hold( negedge SDA &&& TimingCheckEnable:1072370 ns, negedge SCL:1072370 ns, 600 ns );
+#    Time: 1072370 ns  Iteration: 2  Instance: /top_tb/dut1

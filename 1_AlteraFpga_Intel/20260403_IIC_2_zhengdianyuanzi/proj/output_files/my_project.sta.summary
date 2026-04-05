@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'i2c_dri:u_i2c_dri|dri_clk'
+Slack : -4.176
+TNS   : -327.747
+
+Type  : Slow 1200mV 85C Model Setup 'sys_clk'
+Slack : -2.812
+TNS   : -16.370
+
+Type  : Slow 1200mV 85C Model Hold 'i2c_dri:u_i2c_dri|dri_clk'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sys_clk'
+Slack : 0.744
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sys_clk'
+Slack : -3.000
+TNS   : -19.357
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i2c_dri:u_i2c_dri|dri_clk'
+Slack : -1.487
+TNS   : -185.875
+
+Type  : Slow 1200mV 0C Model Setup 'i2c_dri:u_i2c_dri|dri_clk'
+Slack : -3.805
+TNS   : -299.580
+
+Type  : Slow 1200mV 0C Model Setup 'sys_clk'
+Slack : -2.604
+TNS   : -13.909
+
+Type  : Slow 1200mV 0C Model Hold 'i2c_dri:u_i2c_dri|dri_clk'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sys_clk'
+Slack : 0.692
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sys_clk'
+Slack : -3.000
+TNS   : -19.357
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i2c_dri:u_i2c_dri|dri_clk'
+Slack : -1.487
+TNS   : -185.875
+
+Type  : Fast 1200mV 0C Model Setup 'i2c_dri:u_i2c_dri|dri_clk'
+Slack : -1.204
+TNS   : -70.916
+
+Type  : Fast 1200mV 0C Model Setup 'sys_clk'
+Slack : -0.570
+TNS   : -1.050
+
+Type  : Fast 1200mV 0C Model Hold 'i2c_dri:u_i2c_dri|dri_clk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sys_clk'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sys_clk'
+Slack : -3.000
+TNS   : -14.715
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i2c_dri:u_i2c_dri|dri_clk'
+Slack : -1.000
+TNS   : -125.000
+
+------------------------------------------------------------

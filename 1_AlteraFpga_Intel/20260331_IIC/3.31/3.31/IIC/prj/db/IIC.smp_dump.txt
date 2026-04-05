@@ -1,0 +1,15 @@
+
+State Machine - |iic|c_state
+Name c_state.ACK4 c_state.ID1 c_state.START1 c_state.ACK3 c_state.RECV c_state.STOP c_state.ACK2 c_state.SEND c_state.ACK1 c_state.ID c_state.START c_state.IDLE 
+c_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+c_state.START 0 0 0 0 0 0 0 0 0 0 1 1 
+c_state.ID 0 0 0 0 0 0 0 0 0 1 0 1 
+c_state.ACK1 0 0 0 0 0 0 0 0 1 0 0 1 
+c_state.SEND 0 0 0 0 0 0 0 1 0 0 0 1 
+c_state.ACK2 0 0 0 0 0 0 1 0 0 0 0 1 
+c_state.STOP 0 0 0 0 0 1 0 0 0 0 0 1 
+c_state.RECV 0 0 0 0 1 0 0 0 0 0 0 1 
+c_state.ACK3 0 0 0 1 0 0 0 0 0 0 0 1 
+c_state.START1 0 0 1 0 0 0 0 0 0 0 0 1 
+c_state.ID1 0 1 0 0 0 0 0 0 0 0 0 1 
+c_state.ACK4 1 0 0 0 0 0 0 0 0 0 0 1 

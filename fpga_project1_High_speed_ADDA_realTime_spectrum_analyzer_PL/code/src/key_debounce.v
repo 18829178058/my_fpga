@@ -4,7 +4,8 @@ module	key_debounce
 	input sys_rst_n,
 	
 	input key,					//外部输入的按键值
-	output reg key_filter		//按键消抖后的值
+	output reg key_filter,		//按键消抖后的值
+	output reg key_flag         //消抖后的按键值的有效标志
 );
 
 
@@ -57,12 +58,21 @@ always @ (posedge sys_clk or negedge sys_rst_n)
 always @ (posedge sys_clk or negedge sys_rst_n)
 	begin
 		if(!sys_rst_n)
-			key_filter <= 1'b1;
+		    begin
+			    key_filter <= 1'b1;
+			    key_flag <=  1'b0;
+			end
 		else
-			if(cnt == 10'd1)
-				key_filter <= key_d1;
+			if(cnt == 20'd1)
+			    begin
+				    key_filter <= key_d1;
+				    key_flag <=  1'b1;
+				end
 			else
-				key_filter <= key_filter;
+			    begin
+				    key_filter <= key_filter;
+				    key_flag <=  1'b0;
+				end
 	end
 
 endmodule

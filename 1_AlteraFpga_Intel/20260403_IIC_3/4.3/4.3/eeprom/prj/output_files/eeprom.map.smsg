@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at iic.v(7): object "start" differs only in case from object "START" in the same scope File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260403_IIC_3/4.3/4.3/eeprom/src/iic.v Line: 7
+Info (10281): Verilog HDL Declaration information at fifo_wr.v(29): object "DATA" differs only in case from object "data" in the same scope File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260403_IIC_3/4.3/4.3/eeprom/src/fifo_wr.v Line: 29

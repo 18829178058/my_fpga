@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Apr  5 23:06:24 2026
+# Process ID: 29880
+# Current directory: D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/xsim.dir/top_ad_da_fft_lcd_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/xsim.dir/top_ad_da_fft_lcd_tb_behav/webtalk/xsim_webtalk.tcl -notrace
