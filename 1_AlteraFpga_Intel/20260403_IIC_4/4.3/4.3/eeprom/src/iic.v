@@ -72,7 +72,7 @@ module iic(
 /*************************状态机参数*******************************/	
 	reg	[4:0]	c_state, n_state;
 	
-	localparam		IDLE	=	1,								//空闲，sda，scl都为高
+	localparam		IDLE	=	1,							//空闲，sda，scl都为高
 					START	=	2,							//产生开始信号
 					ID		=	3,							//发送ID（worr）
 					ACK1	=	4,							//从机对ID的应答（分支）

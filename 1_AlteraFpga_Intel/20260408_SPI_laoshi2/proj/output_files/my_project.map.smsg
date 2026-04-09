@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at uart_tx.v(162): always construct contains both blocking and non-blocking assignments File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260408_SPI_laoshi/src/uart_tx.v Line: 162
+Warning (10268): Verilog HDL information at uart_tx.v(181): always construct contains both blocking and non-blocking assignments File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260408_SPI_laoshi/src/uart_tx.v Line: 181

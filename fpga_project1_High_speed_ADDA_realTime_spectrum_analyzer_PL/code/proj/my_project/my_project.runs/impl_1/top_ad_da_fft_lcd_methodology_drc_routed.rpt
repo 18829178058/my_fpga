@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Apr  5 23:23:42 2026
+| Date         : Thu Apr  9 21:33:22 2026
 | Host         : LAPTOP-ECP6913Q running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_ad_da_fft_lcd_methodology_drc_routed.rpt -pb top_ad_da_fft_lcd_methodology_drc_routed.pb -rpx top_ad_da_fft_lcd_methodology_drc_routed.rpx
 | Design       : top_ad_da_fft_lcd
@@ -38,7 +38,7 @@ Table of Contents
 -----------------
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell u_lcd_top/lcd_rgb_top_inst/cnt_key_flag[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_fifo_ctrl/ad_data_in_d0_reg[0]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[1]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[2]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[3]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[4]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[5]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[6]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[7]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[0]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[1]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[2]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[3]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[4]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[5]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[6]/CLR (the first 15 of 130 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell u_lcd_top/lcd_rgb_top_inst/cnt_key_flag[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_fifo_ctrl/ad_data_in_d0_reg[0]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[1]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[2]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[3]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[4]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[5]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[6]/CLR, u_fifo_ctrl/ad_data_in_d0_reg[7]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[0]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[1]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[2]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[3]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[4]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[5]/CLR, u_fifo_ctrl/ad_data_in_d1_reg[6]/CLR (the first 15 of 139 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning

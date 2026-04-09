@@ -1,0 +1,72 @@
+`timescale 1ns/1ns
+module spi_master_m25p16_interface_tb;
+		//系统相关
+		reg			clk;//系统时钟，默认为fclk=2*scl
+		reg			rst_n ;//系统复位，默认低电平有效
+		initial		begin
+					clk  	=  1'b0;
+					rst_n	=  1'b0;
+					#53  rst_n	=  1'b1;
+		end
+		always 		#10  clk=~clk;
+		
+		//spi  master总线相关，默认CPOL=0,CPHA=0
+		wire		scl;//spi同步时钟
+		wire		cs_n;//SPI片选，低电平有效
+		wire		sdo;//SPI主机数据输出
+		reg			sdi;//SPI从机数据输出
+		reg [3:0]	sdi_rdm;
+always 				@(negedge			scl		or		negedge		rst_n)
+					if(~rst_n)begin
+							sdi_rdm<={$random}%16;
+							sdi  <=  1'b0;
+					end else begin
+							sdi_rdm<={$random}%16;
+							sdi  <= sdi_rdm[3];end
+		
+		
+		//用户通信端口
+		wire			req  ;		//当req==1表示spi请求
+		assign 			req         =  1'b1;
+		
+		wire			load;		//当load==1加载当前spi发送的数据
+		reg[7:0]		din;		//当前被加载的发送的数据
+always 				@(posedge			clk		or		negedge		rst_n)
+					if(~rst_n)	
+						din <= 8'd0;
+					else  if(load)
+						din <={$random}%256; 
+		wire		dout_vld;	//当dout_vld==1表示SPI接收的数据有效
+		wire[7:0]	dout;		//当前SPI通信接收的数据
+		reg			stop;		//当stop==1终止当前SPI通信
+		
+		integer 	cnt;//master 数据加载次数计数器
+always 				@(posedge			clk		or		negedge		rst_n)
+					if(~rst_n)	
+							cnt <=0;
+					else if(load )
+							if(cnt==4)
+								cnt <=0;	
+							else 
+								cnt<=cnt+1'b1;
+								
+		wire	tx;
+				
+spi_master_m25p16_interface spi_master_m25p16_interface_ins
+(
+		//系统相关
+		.clk(clk),//系统时钟，默认为fclk=2*scl
+		.rst_n(rst_n),//系统复位，默认低电平有效
+		
+		//spi  master总线相关，默认CPOL=0,CPHA=0
+		.scl(scl),//spi同步时钟
+		.cs_n(cs_n),//SPI片选，低电平有效
+		.sdo(sdo),//SPI主机数据输出
+		.sdi(sdi),//SPI从机数据输出
+		
+		
+		
+		//用户通信端口
+		.tx(tx)	//当req==1表示spi请求	
+);
+endmodule 

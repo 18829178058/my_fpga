@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zxope/Desktop/spi_exam/rtl/spi_master_m25p16_interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master_m25p16_interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zxope/Desktop/spi_exam/rtl/spi_master_m25p16_interface_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master_m25p16_interface_tb

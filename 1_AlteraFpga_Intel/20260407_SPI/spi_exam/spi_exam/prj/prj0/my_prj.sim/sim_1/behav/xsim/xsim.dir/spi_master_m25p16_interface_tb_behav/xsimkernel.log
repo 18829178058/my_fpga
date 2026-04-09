@@ -1,0 +1,7 @@
+Running: xsim.dir/spi_master_m25p16_interface_tb_behav/xsimk.exe -simmode gui -wdb spi_master_m25p16_interface_tb_behav.wdb -simrunnum 0 -socket 61200
+Design successfully loaded
+Design Loading Memory Usage: 6020 KB (Peak: 6020 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 14700 KB (Peak: 14700 KB)
+Simulation CPU Usage: 499 ms

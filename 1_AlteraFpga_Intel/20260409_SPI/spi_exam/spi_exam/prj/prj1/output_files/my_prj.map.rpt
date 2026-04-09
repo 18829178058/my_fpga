@@ -1,0 +1,695 @@
+Analysis & Synthesis report for my_prj
+Thu Apr 09 15:16:39 2026
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Protected by Synthesis
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component
+ 16. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated
+ 17. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_4p6:rdptr_g1p
+ 18. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_07c:wrptr_g1p
+ 19. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|altsyncram_mb41:fifo_ram
+ 20. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp
+ 21. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12
+ 22. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|dffpipe_a09:ws_brp
+ 23. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|dffpipe_a09:ws_bwp
+ 24. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp
+ 25. Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16
+ 26. Parameter Settings for User Entity Instance: fifo:fifo_inst|dcfifo:dcfifo_component
+ 27. dcfifo Parameter Settings by Entity Instance
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Apr 09 15:16:39 2026       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; my_prj                                      ;
+; Top-level Entity Name              ; m25p16_read_id                              ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 265                                         ;
+;     Total combinational functions  ; 182                                         ;
+;     Dedicated logic registers      ; 183                                         ;
+; Total registers                    ; 183                                         ;
+; Total pins                         ; 7                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; m25p16_read_id     ; my_prj             ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-10        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++-----------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path        ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                           ; Library ;
++-----------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; ../../rtl/uart_snt.v                    ; yes             ; User Verilog HDL File        ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/uart_snt.v                     ;         ;
+; ../../rtl/m25p16_read_id.v              ; yes             ; User Verilog HDL File        ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/m25p16_read_id.v               ;         ;
+; ../../rtl/spi_master_m25p16_interface.v ; yes             ; User Verilog HDL File        ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/spi_master_m25p16_interface.v  ;         ;
+; ../../rtl/id_m25p16_read.v              ; yes             ; User Verilog HDL File        ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/id_m25p16_read.v               ;         ;
+; fifo.v                                  ; yes             ; User Wizard-Generated File   ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/fifo.v                    ;         ;
+; dcfifo.tdf                              ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/dcfifo.tdf                                      ;         ;
+; lpm_counter.inc                         ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_counter.inc                                 ;         ;
+; lpm_add_sub.inc                         ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                 ;         ;
+; altdpram.inc                            ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc                                    ;         ;
+; a_graycounter.inc                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_graycounter.inc                               ;         ;
+; a_fefifo.inc                            ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_fefifo.inc                                    ;         ;
+; a_gray2bin.inc                          ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_gray2bin.inc                                  ;         ;
+; dffpipe.inc                             ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/dffpipe.inc                                     ;         ;
+; alt_sync_fifo.inc                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/alt_sync_fifo.inc                               ;         ;
+; lpm_compare.inc                         ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_compare.inc                                 ;         ;
+; altsyncram_fifo.inc                     ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram_fifo.inc                             ;         ;
+; aglobal180.inc                          ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc                                  ;         ;
+; db/dcfifo_3qf1.tdf                      ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf        ;         ;
+; db/a_gray2bin_7ib.tdf                   ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/a_gray2bin_7ib.tdf     ;         ;
+; db/a_graycounter_4p6.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/a_graycounter_4p6.tdf  ;         ;
+; db/a_graycounter_07c.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/a_graycounter_07c.tdf  ;         ;
+; db/altsyncram_mb41.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/altsyncram_mb41.tdf    ;         ;
+; db/alt_synch_pipe_qal.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/alt_synch_pipe_qal.tdf ;         ;
+; db/dffpipe_b09.tdf                      ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dffpipe_b09.tdf        ;         ;
+; db/dffpipe_a09.tdf                      ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dffpipe_a09.tdf        ;         ;
+; db/alt_synch_pipe_ral.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/alt_synch_pipe_ral.tdf ;         ;
+; db/dffpipe_c09.tdf                      ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dffpipe_c09.tdf        ;         ;
+; db/cmpr_o76.tdf                         ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/cmpr_o76.tdf           ;         ;
++-----------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 265       ;
+;                                             ;           ;
+; Total combinational functions               ; 182       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 85        ;
+;     -- 3 input functions                    ; 53        ;
+;     -- <=2 input functions                  ; 44        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 158       ;
+;     -- arithmetic mode                      ; 24        ;
+;                                             ;           ;
+; Total registers                             ; 183       ;
+;     -- Dedicated logic registers            ; 183       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 7         ;
+; Total memory bits                           ; 8192      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 137       ;
+; Total fan-out                               ; 1258      ;
+; Average fan-out                             ; 3.25      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                           ;
++------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                                       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name                 ; Library Name ;
++------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; |m25p16_read_id                                                  ; 182 (0)             ; 183 (0)                   ; 8192        ; 0            ; 0       ; 0         ; 7    ; 0            ; |m25p16_read_id                                                                                                                    ; m25p16_read_id              ; work         ;
+;    |fifo:fifo_inst|                                              ; 92 (0)              ; 127 (0)                   ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst                                                                                                     ; fifo                        ; work         ;
+;       |dcfifo:dcfifo_component|                                  ; 92 (0)              ; 127 (0)                   ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component                                                                             ; dcfifo                      ; work         ;
+;          |dcfifo_3qf1:auto_generated|                            ; 92 (15)             ; 127 (33)                  ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated                                                  ; dcfifo_3qf1                 ; work         ;
+;             |a_gray2bin_7ib:wrptr_g_gray2bin|                    ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin                  ; a_gray2bin_7ib              ; work         ;
+;             |a_gray2bin_7ib:ws_dgrp_gray2bin|                    ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_gray2bin_7ib:ws_dgrp_gray2bin                  ; a_gray2bin_7ib              ; work         ;
+;             |a_graycounter_07c:wrptr_g1p|                        ; 21 (21)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_07c:wrptr_g1p                      ; a_graycounter_07c           ; work         ;
+;             |a_graycounter_4p6:rdptr_g1p|                        ; 23 (23)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_4p6:rdptr_g1p                      ; a_graycounter_4p6           ; work         ;
+;             |alt_synch_pipe_qal:rs_dgwp|                         ; 0 (0)               ; 22 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp                       ; alt_synch_pipe_qal          ; work         ;
+;                |dffpipe_b09:dffpipe12|                           ; 0 (0)               ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12 ; dffpipe_b09                 ; work         ;
+;             |alt_synch_pipe_ral:ws_dgrp|                         ; 0 (0)               ; 22 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp                       ; alt_synch_pipe_ral          ; work         ;
+;                |dffpipe_c09:dffpipe16|                           ; 0 (0)               ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16 ; dffpipe_c09                 ; work         ;
+;             |altsyncram_mb41:fifo_ram|                           ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|altsyncram_mb41:fifo_ram                         ; altsyncram_mb41             ; work         ;
+;             |cmpr_o76:rdempty_eq_comp|                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; cmpr_o76                    ; work         ;
+;             |cmpr_o76:wrfull_eq_comp|                            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|cmpr_o76:wrfull_eq_comp                          ; cmpr_o76                    ; work         ;
+;             |dffpipe_a09:ws_brp|                                 ; 0 (0)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|dffpipe_a09:ws_brp                               ; dffpipe_a09                 ; work         ;
+;             |dffpipe_a09:ws_bwp|                                 ; 0 (0)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|dffpipe_a09:ws_bwp                               ; dffpipe_a09                 ; work         ;
+;    |id_m25p16_read:id_m25p16_read_ins|                           ; 25 (25)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|id_m25p16_read:id_m25p16_read_ins                                                                                  ; id_m25p16_read              ; work         ;
+;    |spi_master_m25p16_interface:spi_master_m25p16_interface_ins| ; 35 (35)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|spi_master_m25p16_interface:spi_master_m25p16_interface_ins                                                        ; spi_master_m25p16_interface ; work         ;
+;    |uart_snt:u_uart_snt|                                         ; 30 (30)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |m25p16_read_id|uart_snt:u_uart_snt                                                                                                ; uart_snt                    ; work         ;
++------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                          ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|altsyncram_mb41:fifo_ram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1024         ; 8            ; 1024         ; 8            ; 8192 ; None ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                            ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
+; Altera ; FIFO         ; 18.0    ; N/A          ; N/A          ; |m25p16_read_id|fifo:fifo_inst ; fifo.v          ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                                                                                               ;
++--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                                                                                                  ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[10] ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[8]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[9]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[6]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[7]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[4]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[5]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[2]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[3]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[0]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe14a[1]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[10] ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[8]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[9]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[6]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[7]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[4]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[5]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[2]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[3]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[0]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe18a[1]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[10] ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[8]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[9]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[6]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[7]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[4]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[5]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[2]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[3]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[0]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12|dffe13a[1]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[10] ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[8]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[9]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[6]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[7]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[4]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[5]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[2]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[3]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[0]  ; yes                                                              ; yes                                        ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16|dffe17a[1]  ; yes                                                              ; yes                                        ;
+; Total number of protected registers is 44                                                                                      ;                                                                  ;                                            ;
++--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                      ;
++--------------------------------------------------------------------------------------------------+------------------------------------------------------+
+; Register name                                                                                    ; Reason for Removal                                   ;
++--------------------------------------------------------------------------------------------------+------------------------------------------------------+
+; id_m25p16_read:id_m25p16_read_ins|din[5,6]                                                       ; Stuck at GND due to stuck port data_in               ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|dffpipe_a09:ws_bwp|dffe15a[10] ; Lost fanout                                          ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|dffpipe_a09:ws_brp|dffe15a[10] ; Lost fanout                                          ;
+; id_m25p16_read:id_m25p16_read_ins|din[0..4]                                                      ; Merged with id_m25p16_read:id_m25p16_read_ins|din[7] ;
+; Total Number of Removed Registers = 9                                                            ;                                                      ;
++--------------------------------------------------------------------------------------------------+------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 183   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 56    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 44    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                       ;
++----------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                        ; Fan out ;
++----------------------------------------------------------------------------------------------------------+---------+
+; spi_master_m25p16_interface:spi_master_m25p16_interface_ins|cs_n                                         ; 2       ;
+; uart_snt:u_uart_snt|tx                                                                                   ; 1       ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_4p6:rdptr_g1p|counter5a0 ; 7       ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_07c:wrptr_g1p|counter8a0 ; 6       ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_4p6:rdptr_g1p|parity6    ; 4       ;
+; fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_07c:wrptr_g1p|parity9    ; 4       ;
+; Total number of inverted registers = 6                                                                   ;         ;
++----------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
+; 33:1               ; 4 bits    ; 88 LEs        ; 8 LEs                ; 80 LEs                 ; Yes        ; |m25p16_read_id|spi_master_m25p16_interface:spi_master_m25p16_interface_ins|cnt[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component ;
++---------------------------------+-------+------+--------------+
+; Assignment                      ; Value ; From ; To           ;
++---------------------------------+-------+------+--------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -            ;
++---------------------------------+-------+------+--------------+
+
+
++------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated ;
++---------------------------------------+-------+------+-----------------------------------+
+; Assignment                            ; Value ; From ; To                                ;
++---------------------------------------+-------+------+-----------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION       ; OFF   ; -    ; -                                 ;
+; REMOVE_DUPLICATE_REGISTERS            ; OFF   ; -    ; -                                 ;
+; SYNCHRONIZER_IDENTIFICATION           ; OFF   ; -    ; -                                 ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH ; 2     ; -    ; -                                 ;
+; POWER_UP_LEVEL                        ; LOW   ; -    ; wrptr_g                           ;
++---------------------------------------+-------+------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_4p6:rdptr_g1p ;
++----------------+-------+------+--------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                   ;
++----------------+-------+------+--------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter5a0                                                                           ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity6                                                                              ;
++----------------+-------+------+--------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_07c:wrptr_g1p ;
++----------------+-------+------+--------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                   ;
++----------------+-------+------+--------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter8a0                                                                           ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity9                                                                              ;
++----------------+-------+------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|altsyncram_mb41:fifo_ram ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp ;
++-----------------------------+------------------------+------+-------------------------------------------------------+
+; Assignment                  ; Value                  ; From ; To                                                    ;
++-----------------------------+------------------------+------+-------------------------------------------------------+
+; X_ON_VIOLATION_OPTION       ; OFF                    ; -    ; -                                                     ;
+; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; -                                                     ;
+; PRESERVE_REGISTER           ; ON                     ; -    ; -                                                     ;
+; DONT_MERGE_REGISTER         ; ON                     ; -    ; -                                                     ;
+; ADV_NETLIST_OPT_ALLOWED     ; NEVER_ALLOW            ; -    ; -                                                     ;
++-----------------------------+------------------------+------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12 ;
++---------------------------------+-------+------+------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                       ;
++---------------------------------+-------+------+------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                        ;
++---------------------------------+-------+------+------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|dffpipe_a09:ws_brp ;
++---------------------------------+-------+------+------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                         ;
++---------------------------------+-------+------+------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                          ;
++---------------------------------+-------+------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|dffpipe_a09:ws_bwp ;
++---------------------------------+-------+------+------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                         ;
++---------------------------------+-------+------+------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                          ;
++---------------------------------+-------+------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp ;
++-----------------------------+------------------------+------+-------------------------------------------------------+
+; Assignment                  ; Value                  ; From ; To                                                    ;
++-----------------------------+------------------------+------+-------------------------------------------------------+
+; X_ON_VIOLATION_OPTION       ; OFF                    ; -    ; -                                                     ;
+; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; -                                                     ;
+; PRESERVE_REGISTER           ; ON                     ; -    ; -                                                     ;
+; DONT_MERGE_REGISTER         ; ON                     ; -    ; -                                                     ;
+; ADV_NETLIST_OPT_ALLOWED     ; NEVER_ALLOW            ; -    ; -                                                     ;
++-----------------------------+------------------------+------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16 ;
++---------------------------------+-------+------+------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                       ;
++---------------------------------+-------+------+------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                        ;
++---------------------------------+-------+------+------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo:fifo_inst|dcfifo:dcfifo_component ;
++-------------------------+--------------+--------------------------------------------+
+; Parameter Name          ; Value        ; Type                                       ;
++-------------------------+--------------+--------------------------------------------+
+; WIDTH_BYTEENA           ; 1            ; Untyped                                    ;
+; AUTO_CARRY_CHAINS       ; ON           ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS    ; OFF          ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS     ; ON           ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS  ; OFF          ; IGNORE_CASCADE                             ;
+; LPM_WIDTH               ; 8            ; Signed Integer                             ;
+; LPM_NUMWORDS            ; 1024         ; Signed Integer                             ;
+; LPM_WIDTHU              ; 10           ; Signed Integer                             ;
+; LPM_SHOWAHEAD           ; OFF          ; Untyped                                    ;
+; UNDERFLOW_CHECKING      ; ON           ; Untyped                                    ;
+; OVERFLOW_CHECKING       ; ON           ; Untyped                                    ;
+; USE_EAB                 ; ON           ; Untyped                                    ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF          ; Untyped                                    ;
+; ENABLE_ECC              ; FALSE        ; Untyped                                    ;
+; DELAY_RDUSEDW           ; 1            ; Untyped                                    ;
+; DELAY_WRUSEDW           ; 1            ; Untyped                                    ;
+; RDSYNC_DELAYPIPE        ; 4            ; Signed Integer                             ;
+; WRSYNC_DELAYPIPE        ; 4            ; Signed Integer                             ;
+; CLOCKS_ARE_SYNCHRONIZED ; FALSE        ; Untyped                                    ;
+; MAXIMIZE_SPEED          ; 5            ; Untyped                                    ;
+; DEVICE_FAMILY           ; Cyclone IV E ; Untyped                                    ;
+; ADD_USEDW_MSB_BIT       ; OFF          ; Untyped                                    ;
+; WRITE_ACLR_SYNCH        ; OFF          ; Untyped                                    ;
+; READ_ACLR_SYNCH         ; OFF          ; Untyped                                    ;
+; CBXI_PARAMETER          ; dcfifo_3qf1  ; Untyped                                    ;
++-------------------------+--------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; dcfifo Parameter Settings by Entity Instance                        ;
++----------------------------+----------------------------------------+
+; Name                       ; Value                                  ;
++----------------------------+----------------------------------------+
+; Number of entity instances ; 1                                      ;
+; Entity Instance            ; fifo:fifo_inst|dcfifo:dcfifo_component ;
+;     -- FIFO Type           ; Dual Clock                             ;
+;     -- LPM_WIDTH           ; 8                                      ;
+;     -- LPM_NUMWORDS        ; 1024                                   ;
+;     -- LPM_SHOWAHEAD       ; OFF                                    ;
+;     -- USE_EAB             ; ON                                     ;
++----------------------------+----------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 7                           ;
+; cycloneiii_ff         ; 183                         ;
+;     CLR               ; 44                          ;
+;     ENA               ; 32                          ;
+;     ENA CLR           ; 12                          ;
+;     plain             ; 95                          ;
+; cycloneiii_lcell_comb ; 184                         ;
+;     arith             ; 24                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 9                           ;
+;     normal            ; 160                         ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 44                          ;
+;         4 data inputs ; 85                          ;
+; cycloneiii_ram_block  ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.06                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Thu Apr 09 15:16:32 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off my_prj -c my_prj
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /github/my_fpga/1_alterafpga_intel/20260409_spi/spi_exam/spi_exam/rtl/uart_snt.v
+    Info (12023): Found entity 1: uart_snt File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/uart_snt.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /github/my_fpga/1_alterafpga_intel/20260409_spi/spi_exam/spi_exam/rtl/m25p16_read_id.v
+    Info (12023): Found entity 1: m25p16_read_id File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/m25p16_read_id.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /github/my_fpga/1_alterafpga_intel/20260409_spi/spi_exam/spi_exam/rtl/spi_master_m25p16_interface_tb.v
+    Info (12023): Found entity 1: spi_master_m25p16_interface_tb File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/spi_master_m25p16_interface_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /github/my_fpga/1_alterafpga_intel/20260409_spi/spi_exam/spi_exam/rtl/spi_master_m25p16_interface.v
+    Info (12023): Found entity 1: spi_master_m25p16_interface File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/spi_master_m25p16_interface.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /github/my_fpga/1_alterafpga_intel/20260409_spi/spi_exam/spi_exam/rtl/id_m25p16_read.v
+    Info (12023): Found entity 1: id_m25p16_read File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/id_m25p16_read.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fifo.v
+    Info (12023): Found entity 1: fifo File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/fifo.v Line: 39
+Info (12127): Elaborating entity "m25p16_read_id" for the top level hierarchy
+Info (12128): Elaborating entity "fifo" for hierarchy "fifo:fifo_inst" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/m25p16_read_id.v Line: 46
+Info (12128): Elaborating entity "dcfifo" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/fifo.v Line: 79
+Info (12130): Elaborated megafunction instantiation "fifo:fifo_inst|dcfifo:dcfifo_component" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/fifo.v Line: 79
+Info (12133): Instantiated megafunction "fifo:fifo_inst|dcfifo:dcfifo_component" with the following parameter: File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/fifo.v Line: 79
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_numwords" = "1024"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "dcfifo"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "10"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "rdsync_delaypipe" = "4"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+    Info (12134): Parameter "wrsync_delaypipe" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_3qf1.tdf
+    Info (12023): Found entity 1: dcfifo_3qf1 File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf Line: 40
+Info (12128): Elaborating entity "dcfifo_3qf1" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated" File: d:/intelfpga_lite/18.0/quartus/libraries/megafunctions/dcfifo.tdf Line: 190
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_7ib.tdf
+    Info (12023): Found entity 1: a_gray2bin_7ib File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/a_gray2bin_7ib.tdf Line: 22
+Info (12128): Elaborating entity "a_gray2bin_7ib" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf Line: 52
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_4p6.tdf
+    Info (12023): Found entity 1: a_graycounter_4p6 File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/a_graycounter_4p6.tdf Line: 24
+Info (12128): Elaborating entity "a_graycounter_4p6" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_4p6:rdptr_g1p" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf Line: 54
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_07c.tdf
+    Info (12023): Found entity 1: a_graycounter_07c File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/a_graycounter_07c.tdf Line: 24
+Info (12128): Elaborating entity "a_graycounter_07c" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|a_graycounter_07c:wrptr_g1p" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf Line: 55
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mb41.tdf
+    Info (12023): Found entity 1: altsyncram_mb41 File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/altsyncram_mb41.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_mb41" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|altsyncram_mb41:fifo_ram" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf Line: 56
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_qal.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_qal File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/alt_synch_pipe_qal.tdf Line: 26
+Info (12128): Elaborating entity "alt_synch_pipe_qal" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf Line: 63
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_b09.tdf
+    Info (12023): Found entity 1: dffpipe_b09 File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dffpipe_b09.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_b09" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_qal:rs_dgwp|dffpipe_b09:dffpipe12" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/alt_synch_pipe_qal.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_a09.tdf
+    Info (12023): Found entity 1: dffpipe_a09 File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dffpipe_a09.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_a09" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|dffpipe_a09:ws_brp" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf Line: 64
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_ral.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_ral File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/alt_synch_pipe_ral.tdf Line: 26
+Info (12128): Elaborating entity "alt_synch_pipe_ral" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_c09.tdf
+    Info (12023): Found entity 1: dffpipe_c09 File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dffpipe_c09.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_c09" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|alt_synch_pipe_ral:ws_dgrp|dffpipe_c09:dffpipe16" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/alt_synch_pipe_ral.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_o76.tdf
+    Info (12023): Found entity 1: cmpr_o76 File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/cmpr_o76.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_o76" for hierarchy "fifo:fifo_inst|dcfifo:dcfifo_component|dcfifo_3qf1:auto_generated|cmpr_o76:rdempty_eq_comp" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/prj/prj1/db/dcfifo_3qf1.tdf Line: 70
+Info (12128): Elaborating entity "id_m25p16_read" for hierarchy "id_m25p16_read:id_m25p16_read_ins" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/m25p16_read_id.v Line: 68
+Info (12128): Elaborating entity "spi_master_m25p16_interface" for hierarchy "spi_master_m25p16_interface:spi_master_m25p16_interface_ins" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/m25p16_read_id.v Line: 91
+Info (12128): Elaborating entity "uart_snt" for hierarchy "uart_snt:u_uart_snt" File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/m25p16_read_id.v Line: 108
+Info (13000): Registers with preset signals will power-up high File: D:/GitHub/my_fpga/1_AlteraFpga_Intel/20260409_SPI/spi_exam/spi_exam/rtl/spi_master_m25p16_interface.v Line: 9
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 288 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 273 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Thu Apr 09 15:16:39 2026
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:15
+
+

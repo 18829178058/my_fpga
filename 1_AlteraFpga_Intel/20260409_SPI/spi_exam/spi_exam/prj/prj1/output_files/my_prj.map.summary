@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Apr 09 15:16:39 2026
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : my_prj
+Top-level Entity Name : m25p16_read_id
+Family : Cyclone IV E
+Total logic elements : 265
+    Total combinational functions : 182
+    Dedicated logic registers : 183
+Total registers : 183
+Total pins : 7
+Total virtual pins : 0
+Total memory bits : 8,192
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

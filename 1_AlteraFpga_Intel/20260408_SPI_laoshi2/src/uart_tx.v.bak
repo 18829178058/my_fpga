@@ -1,0 +1,59 @@
+module uart_tx
+(
+	//系统相关
+	input 					clk,			//系统时钟，默认50Mhz
+	input 					rst_n,			//系统复位，低电平有效
+	
+	//FIFO读相关
+	output					rd_clk,
+	output	reg 			rd_en,
+	input					empty,
+	input [7:0]				rddata,
+	
+	//uart接口发送相关
+	output	reg				tx
+);
+
+//uart 默认115200bps，无校验ECC，停止位1比特
+reg			clk_115200hz;
+reg	[7:0]	cnt_div;
+always	@(posedge clk or negedge rst_n)
+	if(!rst_n)	begin
+		cnt_div <= 8'd0;
+		clk_115200hz <= 1'b0;
+	end else if(cnt_div == ((50_000_000/115200)/2) -1 ) begin
+		cnt_div <= 8'd0;
+		clk_115200hz <= ~clk_115200hz;
+	end	else
+		cnt_div <= cnt_div + 1'b1;
+
+
+//uart发送序列机计数器设计
+reg	[3:0]	cnt;
+always	@(posedge clk_115200hz or negedge rst_n)
+	if(!rst_n)
+		cnt <= 4'b0;
+	else case(cnt)
+			0	:	if(~empty) cnt <= cnt +1'b1;
+			10	:	cnt <= 4'b0;
+			default :cnt <= cnt + 1'b1;
+	endcase
+
+always @(posedge clk_115200hz or negedge rst_n)	
+	if(~rst_n)
+		tx <= 1'b1;
+	else case(cnt)
+		0 	:	tx <= 1'b1;//uart空闲
+		1 	:	tx <= 1'b0;//uart起始
+		2 	:	tx <= rddata[0];
+		3 	:	tx <= rddata[1];
+		4 	:	tx <= rddata[2];
+		5 	:	tx <= rddata[3];
+		6 	:	tx <= rddata[4];
+		7 	:	tx <= rddata[5];
+		8 	:	tx <= rddata[6];
+		9 	:	tx <= rddata[7];
+		10	:	tx <= 1'b1;//uart停止
+		default	:	tx <= 1'b1;
+	endcase
+endmodule

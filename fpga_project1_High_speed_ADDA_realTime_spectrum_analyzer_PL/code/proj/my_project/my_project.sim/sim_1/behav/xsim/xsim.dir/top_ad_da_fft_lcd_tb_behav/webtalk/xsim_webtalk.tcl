@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/xsim.dir/top_ad_da_fft_lcd_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sun Apr  5 23:28:33 2026" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Thu Apr  9 23:07:36 2026" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "f920dedf-de56-46f4-9429-f08da29aaa04" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "b2d2722b6b2d46e8a0c52500f3e2d2ef" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "4" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "30" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "13th Gen Intel(R) Core(TM) i7-13620H" -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "16.000 GB" -context "us
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "3678060 ns" -context "xsim\\usage"
-webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "92.48_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "30048_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1391955035 -regid "" -xml D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/xsim.dir/top_ad_da_fft_lcd_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/xsim.dir/top_ad_da_fft_lcd_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/xsim.dir/top_ad_da_fft_lcd_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key runtime -value "89086500 ps" -context "xsim\\usage"
+webtalk_add_data -client xsim -key iteration -value "2" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Time -value "2.39_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "23284_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 583008470 -regid "" -xml D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/xsim.dir/top_ad_da_fft_lcd_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/xsim.dir/top_ad_da_fft_lcd_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/proj/my_project/my_project.sim/sim_1/behav/xsim/xsim.dir/top_ad_da_fft_lcd_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
