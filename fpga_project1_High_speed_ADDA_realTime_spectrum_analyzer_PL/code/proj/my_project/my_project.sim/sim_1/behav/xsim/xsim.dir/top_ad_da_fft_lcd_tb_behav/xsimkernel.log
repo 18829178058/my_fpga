@@ -1,7 +1,0 @@
-Running: xsim.dir/top_ad_da_fft_lcd_tb_behav/xsimk.exe -simmode gui -wdb top_ad_da_fft_lcd_tb_behav.wdb -simrunnum 0 -socket 60461
-Design successfully loaded
-Design Loading Memory Usage: 18112 KB (Peak: 18112 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 23284 KB (Peak: 23284 KB)
-Simulation CPU Usage: 2389 ms

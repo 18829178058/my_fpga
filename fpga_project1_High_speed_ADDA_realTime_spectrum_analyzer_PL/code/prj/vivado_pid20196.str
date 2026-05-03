@@ -1,0 +1,368 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 20196
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri May 01 08:19:23 CST 2026
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/Xilinx2020/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	D:/Xilinx2020/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	HC
+User home directory: C:/Users/HC
+User working directory: D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Xilinx2020/Vivado
+HDI_APPROOT: D:/Xilinx2020/Vivado/2020.2
+RDI_DATADIR: D:/Xilinx2020/Vivado/2020.2/data
+RDI_BINDIR: D:/Xilinx2020/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/HC/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/HC/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/HC/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	D:/Xilinx2020/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/vivado.log
+Vivado journal file location: 	D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/vivado.jou
+Engine tmp dir: 	D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/.Xil/Vivado-20196-LAPTOP-ECP6913Q
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx2020/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: D:/Xilinx2020/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: D:/Xilinx2020/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: D:/Xilinx2020/Vivado/2020.2
+XILINX_SDK: D:/Xilinx2020/Vitis/2020.2
+XILINX_VITIS: D:/Xilinx2020/Vitis/2020.2
+XILINX_VIVADO: D:/Xilinx2020/Vivado/2020.2
+XILINX_VIVADO_HLS: D:/Xilinx2020/Vivado/2020.2
+
+
+GUI allocated memory:	130 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,136 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 80 MB (+81030kb) [00:00:05]
+// [Engine Memory]: 1,136 MB (+1039337kb) [00:00:05]
+// Opening Vivado Project: D:\ZYNQ\ZYNQ_7020_FPGA\ZYNQ_7020_FPGA\37_top_ad_da_fir_lcd\prj\top_ad_da_fir_lcd.xpr. Version: Vivado v2020.2 
+// bz (cr):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 121 MB (+38945kb) [00:00:10]
+// WARNING: HEventQueue.dispatchEvent() is taking  2307 ms.
+// Tcl Message: open_project D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'G:/V3/4_Source_Code/1_FPGA_Design/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx2020/Vivado/2020.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,136 MB. GUI used memory: 64 MB. Current time: 5/1/26, 8:19:25 AM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1139.324 ; gain = 0.000 
+// Project name: top_ad_da_fir_lcd; location: D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj; part: xc7z020clg400-2
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 129 MB (+2247kb) [00:00:19]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 2); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_ad_da_fir_lcd (top_ad_da_fir_lcd.v)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 15); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, top_ad_da_fir_lcd.xdc]", 17, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, top_ad_da_fir_lcd.xdc]", 17, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 103, 57); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 144, 36); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 144, 36, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 273, 41); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 273, 41, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 311, 37); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 311, 37, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 381, 37); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 381, 37, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 486, 39); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 486, 39, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 416, 36); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 416, 36, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 307, 36); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 307, 36, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 268, 36); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 268, 36, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 409, 41); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 409, 41, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 138, 32); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 138, 32, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 42, 39); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 42, 39, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 68, 102); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 68, 102, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 56, 127); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 56, 127, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 52, 146); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 52, 146, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 57, 121); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 57, 121, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 60, 109); // bP
+selectCodeEditor("top_ad_da_fir_lcd.xdc", 60, 109, false, false, false, false, true); // bP - Double Click
+// [GUI Memory]: 145 MB (+9501kb) [00:00:48]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cr): Run Synthesis: addNotify
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Fri May  1 08:20:09 2026] Launched synth_1... Run output will be captured here: D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cr): Synthesis Completed: addNotify
+// Elapsed time: 1125 seconds
+dismissDialog("Synthesis Completed"); // ag
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: [Fri May  1 08:38:59 2026] Launched impl_1... Run output will be captured here: D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_ad_da_fir_lcd (top_ad_da_fir_lcd.v), u_pll : pll (pll.xci)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_ad_da_fir_lcd (top_ad_da_fir_lcd.v), u_pll : pll (pll.xci)]", 2, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// TclEventType: LOAD_FEATURE
+// N (cr):  Re-customize IP : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,262 MB. GUI used memory: 108 MB. Current time: 5/1/26, 8:39:11 AM CST
+// r (cr): Re-customize IP: addNotify
+// [Engine Memory]: 1,283 MB (+94868kb) [00:19:58]
+dismissDialog("Re-customize IP"); // N
+dismissDialog("Re-customize IP"); // r
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 155 MB (+3287kb) [00:20:24]
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cr): Implementation Completed: addNotify
+// Elapsed time: 221 seconds
+dismissDialog("Implementation Completed"); // ag
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// cD (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // cD
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Fri May  1 08:43:01 2026] Launched impl_1... Run output will be captured here: D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 44 seconds
+dismissDialog("Bitstream Generation Completed"); // ag
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bz (cr):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Open Hardware Manager"); // bz
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ak
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bz (cr):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2020.2   **** Build date : Nov 18 2020 at 10:01:48     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2020.2   ****** Build date   : Nov 04 2020-05:02:56     **** Build number : 2020.2.1604437376       ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1316.844 ; gain = 16.988 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  2552 ms.
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.runs/impl_1/top_ad_da_fir_lcd.bit} [get_hw_devices xc7z020_1] 
+// Tcl Message: current_hw_device [get_hw_devices xc7z020_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 2,367 MB (+1069187kb) [00:24:50]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0). 
+// Elapsed time: 12 seconds
+dismissDialog("Auto Connect"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 101 MB. Current time: 5/1/26, 8:44:06 AM CST
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cr): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cr):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7z020_1] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/ZYNQ/ZYNQ_7020_FPGA/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.runs/impl_1/top_ad_da_fir_lcd.bit} [get_hw_devices xc7z020_1] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7z020_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bz
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081 
+// o (cr): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// Elapsed time: 40 seconds
+dismissDialog("Close Hardware Target"); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 2,410 MB. GUI used memory: 101 MB. Current time: 5/1/26, 8:44:56 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,410 MB. GUI used memory: 95 MB. Current time: 5/1/26, 9:14:59 AM CST
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,410 MB. GUI used memory: 93 MB. Current time: 5/1/26, 9:45:02 AM CST
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081 
+// o (cr): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  31488 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1050 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1524 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1657 ms. Increasing delay to 4971 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,410 MB. GUI used memory: 92 MB. Current time: 5/1/26, 10:15:05 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,410 MB. GUI used memory: 92 MB. Current time: 5/1/26, 10:45:07 AM CST

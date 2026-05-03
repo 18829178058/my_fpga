@@ -1,0 +1,2 @@
+rom_col_axle.v,verilog,xil_defaultlib,../../../../top_ad_da_fir_lcd.gen/sources_1/ip/rom_col_axle/sim/rom_col_axle.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

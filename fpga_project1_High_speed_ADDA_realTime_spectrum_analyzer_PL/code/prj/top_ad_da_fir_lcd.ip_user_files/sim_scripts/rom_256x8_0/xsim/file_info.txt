@@ -1,0 +1,2 @@
+rom_256x8_0.v,verilog,xil_defaultlib,../../../../top_ad_da_fir_lcd.gen/sources_1/ip/rom_256x8_0/sim/rom_256x8_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

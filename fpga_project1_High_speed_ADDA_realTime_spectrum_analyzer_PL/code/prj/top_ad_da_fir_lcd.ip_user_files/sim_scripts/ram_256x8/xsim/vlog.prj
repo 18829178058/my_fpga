@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../top_ad_da_fir_lcd.gen/sources_1/ip/ram_256x8/sim/ram_256x8.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

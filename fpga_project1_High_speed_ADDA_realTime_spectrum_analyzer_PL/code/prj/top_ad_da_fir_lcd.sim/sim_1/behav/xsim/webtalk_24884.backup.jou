@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 25 16:30:46 2025
+# Process ID: 24884
+# Current directory: G:/V3/4_Source_Code/1_FPGA_Design/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source G:/V3/4_Source_Code/1_FPGA_Design/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.sim/sim_1/behav/xsim/xsim.dir/tb_top_ad_da_fir_lcd_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: G:/V3/4_Source_Code/1_FPGA_Design/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: G:/V3/4_Source_Code/1_FPGA_Design/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source G:/V3/4_Source_Code/1_FPGA_Design/ZYNQ_7020_FPGA/37_top_ad_da_fir_lcd/prj/top_ad_da_fir_lcd.sim/sim_1/behav/xsim/xsim.dir/tb_top_ad_da_fir_lcd_behav/webtalk/xsim_webtalk.tcl -notrace

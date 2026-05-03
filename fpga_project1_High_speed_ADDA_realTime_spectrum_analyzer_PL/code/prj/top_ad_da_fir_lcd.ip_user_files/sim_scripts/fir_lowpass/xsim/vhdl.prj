@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../top_ad_da_fir_lcd.gen/sources_1/ip/fir_lowpass/sim/fir_lowpass.vhd" \
+
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat May  2 23:05:04 2026
+# Process ID: 29260
+# Current directory: D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/prj/top_ad_da_fir_lcd.runs/rom_row_axle_synth_1
+# Command line: vivado.exe -log rom_row_axle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rom_row_axle.tcl
+# Log file: D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/prj/top_ad_da_fir_lcd.runs/rom_row_axle_synth_1/rom_row_axle.vds
+# Journal file: D:/GitHub/my_fpga/fpga_project1_High_speed_ADDA_realTime_spectrum_analyzer_PL/code/prj/top_ad_da_fir_lcd.runs/rom_row_axle_synth_1\vivado.jou
+#-----------------------------------------------------------
+source rom_row_axle.tcl -notrace
